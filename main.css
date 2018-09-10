@@ -1,0 +1,207 @@
+/* apply global defaults */
+* {
+          box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0; /* remove auto margins */
+  padding: 0; /* remove auto padding */  
+  font-size:  calc(16px + (21 - 16) * ((100vw - 320px) / (1600 - 320)));
+    /* font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
+     * https://css-tricks.com/snippets/css/fluid-typography/  */
+  font-family: sans-serif;
+  color: darkslategray;
+/*
+    border: 1px solid black;
+*/
+}
+
+/* style body as a centred flex container */
+body {
+  display: flex;
+  flex-direction: row; /* items 'flex' to the left to right */
+  justify-content: center; /* horizontally center contained items */
+  background-color: paleturquoise;
+}
+
+/* hide nav-bar radios */
+input {
+  display: none;
+}
+
+/* style navigation bar */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4.75rem;
+  display: flex; /* turn navbar into flex for easy centering ... */
+  flex-direction: row; /* ... flow items left to right ... */
+  align-items: center; /* ... and vertically center contained items */
+  justify-content: center;
+  z-index: 10000;
+  border-radius: 5px 5px 0 0;
+  background-color: darkturquoise;
+}
+
+/* style unpressed nav-buttons */
+.nav-button {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0.5rem; /* padding around the text within the button */
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#base-button {
+  height: 4rem;
+}
+
+label + label.nav-button { /* select all nav-buttons which immediately antecede another nav-button... */
+ margin-left: 0;           /* ... and remove the left-margin so the spacing isn't doubled */
+ }
+
+/* style pressed nav-buttons
+ * select element with id 'x-label' which is a child of a sibling to a checked element with id 'x-button' */
+#base-radio:checked    ~ * #base-button, 
+#about-radio:checked   ~ * #about-button,
+#work-radio:checked    ~ * #work-button,
+#blog-radio:checked    ~ * #blog-button,
+#connect-radio:checked ~ * #connect-button,
+#support-radio:checked ~ * #support-button {
+  background-color: white;
+  color: darkslategray;
+  border: 0.25rem solid teal;
+  padding: 0.25rem;
+  cursor: default;
+}
+
+/* 'frame' for button-shuttle */
+.button-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative; /* doesn't change position, but allows absolute positioning of .right-shadowing */
+  overflow: auto; /* add scrollbar if content exceeds container, else not */
+  font-size: 0; /* eliminates white-space nodes between buttons */
+  border-radius: 5px;
+  height: 3.75rem;
+  margin-right: 0.5rem;
+  background-color: paleturquoise;
+}
+
+ul {
+  padding: 1rem;
+}
+
+/* scrolling button container */
+.button-shuttle {
+  overflow: auto; /* add scrollbar if content exceeds container, else not */
+  font-size: 0; /* remove white space nodes between nav-buttons */
+  white-space: nowrap; /* prevent items (buttons) from wrapping */
+  padding-right: 1.5rem;
+}
+
+/* fade effect to right of button-track */
+.right-shadowing {
+  position: absolute; /* position relative to last positioned ancestor (.button-track) */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1.5rem;
+  border-radius: 0px 5px 5px 0px;
+  background-image: linear-gradient(to left, paleturquoise, transparent);
+}
+
+.content {
+  width: 100%;
+  max-width: 50ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0.5rem 5.5rem 0.5rem;
+}
+
+/* hide pages initially
+ * select all elements with class ending 'page' */
+*[class$="page"] {
+  display: none;
+}
+
+/* display page when respective button checked 
+ * select elements with class 'x-page' which are siblings of checked elements with id 'x-button' */
+#base-radio:checked    ~ * .base-page,
+#about-radio:checked   ~ * .about-page,
+#work-radio:checked    ~ * .work-page,
+#blog-radio:checked    ~ * .blog-page,
+#connect-radio:checked ~ * .connect-page,
+#support-radio:checked ~ * .support-page {
+  display: block;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5rem;
+/*
+  border: 5px solid teal;
+*/
+}
+
+/* different layout & tweaks for tablets/laptops/desktops */
+@media only screen and (min-width: 530px) {
+  .nav-bar {
+    top: 0; /* move nav-bar to bottom of screen */
+    padding: 0.5rem 0 0.5rem 0; /* remove side paddings for proper centering */
+    border-radius: 0 0 5px 5px; /* switch rounded corners from top to bottom */
+    height: 4.25rem;
+  }
+  /* eliminate jumping by calculating desktop scrollbar width and adding to left side */
+  .desktop-scrollbar-buffer {
+    width:calc(100vw - 100%);
+  }
+  #base-button {
+    height: 3.5rem;
+    font-size: 1.5rem;
+    padding-top: 0.875rem;
+  }
+  /* since all buttons exposed, no need to show scroll end */
+  .button-shuttle {
+    padding-right: 0rem;
+  }
+  .button-track {
+      height: 3.5rem;
+  }
+  /* since all buttons exposed, no need to hint */
+  .right-shadowing {
+    display: none;
+  }
+  .content {
+    padding: 4.75rem 0.5rem 0.5rem 0.5rem;
+  }
+  label:hover {
+    background-color: white;
+    color: darkslategray;
+  }
+  label:active {
+    background-color: white;
+    color: darkslategray;
+  }
+  #base-radio:checked    ~ * #base-button {
+    height: 3.5rem;
+    font-size: 1.5rem;
+    padding-top: 0.625rem;
+  }
+
+    
+}
+
+
+
+
+
+
+
+

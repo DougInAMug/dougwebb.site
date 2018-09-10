@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Doug Webb's site</title>
+  <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- set device width as page width, set initial zoom -->
+</head>
+<body>
+    
+<!-- radio inputs for navigation -->
+<input type="radio" name="nav-radio" id="base-radio" checked />
+<input type="radio" name="nav-radio" id="about-radio" />
+<input type="radio" name="nav-radio" id="work-radio" />
+<input type="radio" name="nav-radio" id="blog-radio" />
+<input type="radio" name="nav-radio" id="connect-radio" />
+<input type="radio" name="nav-radio" id="support-radio" />
+
+<!-- navigation bar -->
+<div class="nav-bar">
+  <div class="desktop-scrollbar-buffer"></div>
+  <label for="base-radio" class="nav-button" id="base-button">Doug Webb</label>
+<!--
+  <div class="left-bar"></div>
+-->
+  <div class="button-track">
+    <div class="button-shuttle">
+      <label for="about-radio"   class="nav-button" id="about-button">  About  </label>
+      <label for="work-radio"    class="nav-button" id="work-button">   Work   </label>
+      <label for="blog-radio"    class="nav-button" id="blog-button">   Blog   </label>
+      <label for="connect-radio" class="nav-button" id="connect-button">Connect</label>
+      <label for="support-radio" class="nav-button" id="support-button">Support</label>
+    </div>
+    <div class="right-shadowing"></div>
+  </div>
+</div>
+
+<!-- content -->
+<div class="desktop-scrollbar-buffer"></div>
+<div class="content">
+  <div class="base-page">
+    <p>Hi, I'm Doug</p>
+    <img src="Smiling_Kirchheim.jpg" style="display:block;margin:auto;max-width:75%;border-radius:50%;border:5px solid teal;">
+    <p>I develop cooperative processes</p>
+  </div>
+  <div class="about-page">
+    <p>I'm page B</p>
+    <p>I'm another para I'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another para</p>
+    <div class="nav-button">asdfas</div>
+  </div>
+  <div class="work-page">
+    https://kanthaus.online
+    https://ukuvota.world
+  </div>
+  <div class="blog-page">
+    <h1>Not quite yet...</h1>
+    <p>This site is so far completely hand-written. Until I figure out how I want to generate html posts, check out the <a href="https://kanthaus.online/en/blog">Kanthaus blog</a> for a flavor of what I might be experiencing, and my <a href="https://medium.com/@DougInAMug">Medium account</a> for a few things I wrote a while ago.</p>
+  </div>
+  
+  <div class="connect-page">
+    <ul>
+      <li>Email: <a href="mailto:doug@dougwebb.site">doug@dougwebb.site</a></li>
+      <li>ActivityPub/Mastodon: <a href="https://mastodon.xyz/@douginamug">@douginamug@mastodon.xyz</a></li>
+      <li>Twitter: <a href="https://twitter.com/DougInAMug">@douginamug</a></li>
+      <li>Github: <a href="https://github.com/DougInAMug">@douginamug</a></li>
+      <li>Gitlab: <a href="https://gitlab.com/DougInAMug">@douginamug</a></li>
+      <li>Medium: <a href="https://medium.com/@DougInAMug">@douginamug</a></li>
+    </ul>
+    <p><i>(In case you're wondering, I am not small and cylindrical, nor soluble in hot water: 'douginamug' is usually free while 'dougwebb' is not.)</i></p>
+  </div>
+</div>
+
+</body>
+</html>
+
+<!--
+
+on spacing: https://hackernoon.com/margin-or-padding-f5252562313
+Web accessibility: https://webaim.org/intro/
+Get node server to reload: http-server -c-1 -p 8080
+Nice use of gradients in buttons http://cssdeck.com/labs/push-the-buttons
+Aral Balkans wbsite: https://ar.al/
+https://4042302.org
+Cool personal website: https://mattboldt.com
+Max's website: https://maxlath.eu/
+Wolfi website: https://wolfi.space/
+Interesting, complex selector: https://hackernoon.com/margin-or-padding-f5252562313
+Amazing flex-box interactive: https://yoksel.github.io/flex-cheatsheet/
+
+-->
