@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <title>Doug Webb's site</title>
+  <link rel="stylesheet" href="normalize_v8.0.0.css">
   <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- set device width as page width, set initial zoom -->
 </head>
@@ -19,18 +21,24 @@
 <!-- navigation bar -->
 <div class="nav-bar">
   <div class="desktop-scrollbar-buffer"></div>
-  <label for="base-radio" class="nav-button" id="base-button">Doug Webb</label>
-<!--
-  <div class="left-bar"></div>
--->
-  <div class="button-track">
-    <div class="button-shuttle">
-      <label for="about-radio"   class="nav-button" id="about-button">  About  </label>
-      <label for="work-radio"    class="nav-button" id="work-button">   Work   </label>
-      <label for="blog-radio"    class="nav-button" id="blog-button">   Blog   </label>
-      <label for="connect-radio" class="nav-button" id="connect-button">Connect</label>
-      <label for="support-radio" class="nav-button" id="support-button">Support</label>
-    </div>
+  <div class="nav-spacer"></div>
+  <div class="nav-spacer"></div>
+  <label for="base-radio"      class="nav-button" id="base-button" style="font-weight:bold;">Doug Webb</label>
+  <div class="nav-spacer"></div>
+  <div class="nav-spacer"></div>
+  <div class="button-shuttle">
+    <label for="about-radio"   class="nav-button" id="about-button">  About  </label>
+    <div class="nav-spacer"></div>
+    <label for="work-radio"    class="nav-button" id="work-button">   Work   </label>
+    <div class="nav-spacer"></div>
+    <label for="blog-radio"    class="nav-button" id="blog-button">   Blog   </label>
+    <div class="nav-spacer"></div>
+    <label for="connect-radio" class="nav-button" id="connect-button">Connect</label>
+    <div class="nav-spacer"></div>
+    <label for="support-radio" class="nav-button" id="support-button">Support</label>
+    <div class="nav-spacer"></div>
+    <div class="nav-spacer"></div>
+    <div class="shadow-padding"></div>
     <div class="right-shadowing"></div>
   </div>
 </div>
@@ -39,21 +47,47 @@
 <div class="desktop-scrollbar-buffer"></div>
 <div class="content">
   <div class="base-page">
-    <p>Hi, I'm Doug</p>
-    <img src="Smiling_Kirchheim.jpg" style="display:block;margin:auto;max-width:75%;border-radius:50%;border:5px solid teal;">
-    <p>I develop cooperative processes</p>
+    <h1>Hello, I'm Doug</h1>
+    <p>I develop processes to help people live and work more cooperatively by building on the successes of coops and commons.</p>
+    <img src="Smiling_Kirchheim.jpg" style="display:block;margin:auto;max-width:50%;border-radius:50%;border:5px solid teal;" alt="me, smiling, facing you; there is long grass and trees in the background">
   </div>
+  
   <div class="about-page">
-    <p>I'm page B</p>
-    <p>I'm another para I'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another paraI'm another para</p>
-    <div class="nav-button">asdfas</div>
+    <h1>More about me</h1>
+    <p>I design cooperative processes; why?</p>
+    
+    <p>There are some challenging problems for humanity. For example: global warming, food waste or dramatic economic imbalances (which is amplified by automation and AI.) We might hope that such problems are solved through technological progress, government legislation, individual choices, or market forces, but unfortunately, these powers often <i>cause</i> the problems.</p>
+    
+    <p>Fortunately, many people are involved in associations based on cooperation such as communities, groups, unions, networks, commons, coops, etc. Over the last years I've had some great experiences with the Shrub coop, the yunity network and Kanthaus commons. However cooperating is not straight-forward due to a general lack of practice.</p>
+    
+    <p>The reason I focus on process over values is due to several observations. 1) processes give people direct experiences 2) process can be much more objectively tested 3) many processes I've seen are inconsistent with stated values. I've seen groups with lovely values do bad things due to process. My attention is currently (2018-09-14) still on decision-making which I believe is one of the most significant processes in any organization.</p>
+    
+    <p>When I'm not doing cooperative design stuff I <del>club seals</del> hitch-hike, read sci-fi/philosophy/surreal short-stories, do judo, climb trees...</p>   
+    
   </div>
   <div class="work-page">
-    https://kanthaus.online
-    https://ukuvota.world
+    <h1>Projects I'm involved in</h1>
+    <h2><a href="https://douginamug.gitlab.io/slides/poco_coop_dm/#1">Post-consensus decision-making</a></h2>
+    <p><i>Cooperative decisions without unanimity</i> | late-2016 - present</p>
+    <img src="mutualInterest.png" alt="a yin and yang esque image of two people thinking about each other" style="display:block;margin:auto;max-width:50%">
+    <p>In an effort to be as cooperative as possible, some groups attempt to make decisions by consensus. In many cases this works very well. However, when groups get bigger, more diverse or dynamic, this approach can break down. By considering the anatomy of decision-making, and what it means be cooperative, I put forward several features for such systems.</p>
+    
+    <h2><a href="https://github.com/kanthaus/kanthaus.online/blob/master/user/pages/40.governance/10.constitution/default.en.md">Common house constitution</a></h2>
+    <p><i>Fundamental agreements for a common house</i> | mid-2017 - present </p>
+    <p>Used by commoners, companies and pirates, constitutions have a proven utility. This constitution was largely inspired by the studies into Commons done by Elinor</p>
+    
+    <h2><a href="https://kanthaus.online">Kanthaus</a></h2>
+    <p><i>A house for purposeful project work(ers)</i> | late-2017 - present</p>
+    <p>Nomadic life is very inspiring, but it's challenging to be productive and give something back—as I and a sub-group of the yunity network discovered. I co-founded Kanthaus in late-2017 to provide a place for people to live and work together, cooperatively and ecologically.</p>
+    
+    <h1><a href="https://ukuvota.world">Ukuvota</a></h1>
+    <h2><i>Cooperative voting web-app</i></h2>
+    <p>All credit goes to <a href="https://wolfi.space/">Wolfi</a> for this project, for which I provided a little inspiration and </p>
+    
+    
   </div>
   <div class="blog-page">
-    <h1>Not quite yet...</h1>
+    <h1><pre>Not quite yet...</pre></h1>
     <p>This site is so far completely hand-written. Until I figure out how I want to generate html posts, check out the <a href="https://kanthaus.online/en/blog">Kanthaus blog</a> for a flavor of what I might be experiencing, and my <a href="https://medium.com/@DougInAMug">Medium account</a> for a few things I wrote a while ago.</p>
   </div>
   
@@ -86,5 +120,11 @@ Max's website: https://maxlath.eu/
 Wolfi website: https://wolfi.space/
 Interesting, complex selector: https://hackernoon.com/margin-or-padding-f5252562313
 Amazing flex-box interactive: https://yoksel.github.io/flex-cheatsheet/
+normalize css: https://necolas.github.io/normalize.css/
+http://browserl.ist
+https://elplatt.com/
+http://handbook.zaarly.com/#introduction
+https://iotcl.com/
+https://www.youtube.com/watch?v=BPwyHEsIAMc
 
 -->
