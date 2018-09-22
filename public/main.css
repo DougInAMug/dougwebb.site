@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
 
-
 /* apply global defaults */
 * {
           box-sizing: border-box;
@@ -117,6 +116,10 @@ h1 {
   font-size: 1.5rem;
 }
 
+h2 {
+  font-size: 1.25rem;
+}
+
 /* hide pages initially
  * select all elements with class ending 'page' */
 *[class$="page"] {
@@ -132,6 +135,14 @@ h1 {
 #connect-radio:checked ~ * .connect-page,
 #support-radio:checked ~ * .support-page {
   display: block;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.no-top-margin {
+  margin-top: 0;
 }
 
 /* different layout & tweaks for tablets/laptops/desktops */

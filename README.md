@@ -36,15 +36,26 @@
 install node http-server
 
 ```
+$
 npm install -g http-server
 ```
 
 serve without caching
 
 ```
+$
 cd /path/to/baseDirectory
 http-server -c-1 -p 8080
 ```
+
+## Nice CSS layout debugging
+Using Dev Tools console
+
+```
+>>
+$$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
+```
+
 ## Inspiring websites
 - Aral Balkan's website: https://ar.al/
 - Zaarly's handbook: http://handbook.zaarly.com/#introduction
@@ -54,6 +65,13 @@ http-server -c-1 -p 8080
 - Max's website: https://maxlath.eu/
 - Wolfi's website: https://wolfi.space/
 - Chandi's website: https://chandi.it/
+- John Otander's site: http://johnotander.com/writing/
+- Liz Denys's website: https://lizdenys.com
+- William Casarin's website: https://jb55.com/
+- Joey Hess's Website: http://joeyh.name/
+- Performance freaking: https://varvy.com/pagespeed/wicked-fast.html
+- Grant Ford's website: https://poetgrant.press/
+
 
 ## Web-design resources
 - on spacing: https://hackernoon.com/margin-or-padding-f5252562313
@@ -63,6 +81,7 @@ http-server -c-1 -p 8080
 - a complex selector: https://hackernoon.com/margin-or-padding-f5252562313
 - amazing flex-box interactive: https://yoksel.github.io/flex-cheatsheet/
 - normalize css: https://necolas.github.io/normalize.css/
+- on css writing styles, BEM+ http://getbem.com/introduction/
 
 ---
 
@@ -73,15 +92,15 @@ http-server -c-1 -p 8080
   - add some images
   - stop
 - add working email address to contact
-  - add new DNS entries
-  - there is already a MX entry - should I keep it?
-  - should I somehow scramble it?
-- test that 403.html and 404.html work in real life
+  - ~~add new DNS entries~~ wait to propagate
+  - ~~there is already a MX entry - should I keep it?~~ no
+  - ~~should I somehow scramble it?~~ yes, check out before:: after:: + content
+- ~~test that 403.html and 404.html work in real life~~
 - create basic funding accounts
-  - btc
+  - ~~btc~~
   - paypal
-  - patreon
-  - kofi? FAIR? Duniter? Liberpay? Bank deets? Kanthaus
+  - ~~patreon~~
+  - ~~kofi?~~ FAIR? Duniter? Liberapay? Bank deets? Kanthaus?
 
 ## To-do: at some point
 - degooglify fonts
@@ -92,3 +111,4 @@ http-server -c-1 -p 8080
 - research fb post writing algorithm: does rewriting help?
 - what's with navbar/content alignment?
 - content fading bar
+- add rss
