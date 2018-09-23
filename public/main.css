@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
 
-/* apply global defaults */
+/* make all box-sizes include padding and border */
 * {
           box-sizing: border-box;
      -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-size:  calc(16px + (21 - 16) * ((100vw - 320px) / (1600 - 320)));
+}
+
+html {
+  font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1600 - 320)));
     /* font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
      * https://css-tricks.com/snippets/css/fluid-typography/  */
-    color: darkslategray;
-    font-family: 'Libre Baskerville';
-    line-height: 1.5;
-/*
-    border: 1px solid black;
-*/
+  color: darkslategray;
+  font-family: 'Libre Baskerville';
+  line-height: 1.5;
 }
 
 body { 
@@ -52,6 +52,7 @@ input {
   text-align: center;
   align-items: center;
   font-size: 1.25rem;
+  line-height: 1.1;
   padding: 0.5rem;
   background-color: teal;
   color: whitesmoke;
@@ -71,7 +72,7 @@ input {
 }
 
 /* style pressed nav-buttons
- * select element with id 'x-label' which is a child of a sibling to a checked element with id 'x-button' */
+ * select element with id 'x-button' which is a child of a sibling to a checked element with id 'x-radio' */
 #base-radio:checked    ~ * #base-button, 
 #about-radio:checked   ~ * #about-button,
 #work-radio:checked    ~ * #work-button,
@@ -109,7 +110,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 1rem 5rem 1rem;
+  padding: 0 1rem 5rem 1rem;
 }
 
 h1 {

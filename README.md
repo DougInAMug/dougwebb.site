@@ -69,11 +69,11 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - Liz Denys's website: https://lizdenys.com
 - William Casarin's website: https://jb55.com/
 - Joey Hess's Website: http://joeyh.name/
-- Performance freaking: https://varvy.com/pagespeed/wicked-fast.html
 - Grant Ford's website: https://poetgrant.press/
 
 
 ## Web-design resources
+- html validator: https://validator.w3.org
 - on spacing: https://hackernoon.com/margin-or-padding-f5252562313
 - web accessibility in mind: https://webaim.org/intro/
 - nice use of gradients in buttons: http://cssdeck.com/labs/push-the-buttons
@@ -82,28 +82,41 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - amazing flex-box interactive: https://yoksel.github.io/flex-cheatsheet/
 - normalize css: https://necolas.github.io/normalize.css/
 - on css writing styles, BEM+ http://getbem.com/introduction/
+- Performance freaking: https://varvy.com/pagespeed/wicked-fast.html
 
 ---
 
 ## To do: minimal steps to 'good enough'
-- all pages
-  - review text
-  - write something that is good enough
-  - add some images
-  - stop
+- polish support page
 - add working email address to contact
+  - add temp/munged email address until chandi's
   - ~~add new DNS entries~~ wait to propagate
   - ~~there is already a MX entry - should I keep it?~~ no
   - ~~should I somehow scramble it?~~ yes, check out before:: after:: + content
+- once-through with formatting
+- all pages
+  - ~~review text~~
+  - ~~write something that is good enough~~
+  - add some images, make sure sizing not too goofy (do NOT 'perfect' desktop-view)
+  - stop
 - ~~test that 403.html and 404.html work in real life~~
-- create basic funding accounts
+- ~~create basic funding accounts~~
   - ~~btc~~
-  - paypal
   - ~~patreon~~
-  - ~~kofi?~~ FAIR? Duniter? Liberapay? Bank deets? Kanthaus?
+  - ~~kofi~~ 
+
 
 ## To-do: at some point
 - degooglify fonts
+- make desktop view nice
+- create some mad calendar reminder generator + feedback form
+- review/add other donation platforms
+  - paypal
+  - FAIR
+  - Duniter
+  - Liberapay
+  - Bank deets
+  - Kanthaus
 - write/test chron task to update TLS
 - add platform icons to connect list
 - update/add vcard to contact
