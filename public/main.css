@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
+/* @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
 
 /* make all box-sizes include padding and border */
 * {
@@ -12,7 +12,7 @@ html {
     /* font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
      * https://css-tricks.com/snippets/css/fluid-typography/  */
   color: darkslategray;
-  font-family: 'Libre Baskerville';
+  font-family: Serif;
   line-height: 1.5;
 }
 
@@ -145,6 +145,12 @@ h2 {
 .no-top-margin {
   margin-top: 0;
 }
+
+/*
+img {
+  padding: 1rem 0 1rem 0;
+}
+*/
 
 /* different layout & tweaks for tablets/laptops/desktops */
 @media only screen and (min-width: 530px) {

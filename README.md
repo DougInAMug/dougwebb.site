@@ -70,6 +70,7 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - William Casarin's website: https://jb55.com/
 - Joey Hess's Website: http://joeyh.name/
 - Grant Ford's website: https://poetgrant.press/
+- Douglas Blank's site: https://cs.brynmawr.edu/~dblank/
 
 
 ## Web-design resources
