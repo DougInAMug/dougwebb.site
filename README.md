@@ -67,6 +67,7 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - normalize css: https://necolas.github.io/normalize.css/
 - on css writing styles, BEM+ http://getbem.com/introduction/
 - Performance freaking: https://varvy.com/pagespeed/wicked-fast.html
+- js-free table filtering https://nddt-webdevelopment.de/html-css/filter-html-table-without-javascript-just-css
 
 ## Inspiring websites
 - Aral Balkan's website: https://ar.al/
