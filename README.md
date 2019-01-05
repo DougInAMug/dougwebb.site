@@ -19,6 +19,7 @@
 - simple
   - 'less is more'
   - 'it's perfect when nothing more can be taken away'
+  - progressive disclosure
 - accessible
   - add alt-text to images
   - don't otherwise mess up screen-readers
@@ -83,3 +84,11 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - Joey Hess's Website: http://joeyh.name/
 - Grant Ford's website: https://poetgrant.press/
 - Douglas Blank's site: https://cs.brynmawr.edu/~dblank/
+
+### thinking out loud
+dougwebb.site/
+  - doug
+  - projects
+  - posts
+  - support
+  - about

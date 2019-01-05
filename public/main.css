@@ -1,6 +1,26 @@
-/* @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
+/* ABOUT
+ * I'm new to CSS, so comments welcome! I've writtent this CSS as 
+ * `mobile-first`, as in the default CSS if for a mobile user (with nav 
+ * bar on the bottom of their screen) and used `@media` queries at the 
+ * end to alter the CSS for larger screen users (with nav bar at top.)
+ * 
+ * I've also written it 'top-to-bottom' from the perspective of the html
+ * (2019-01-05) */
+ 
+/* QUESTIONS
+ * - can I reduce the number of classes I use? (esp. `.no-top-margin` 
+ * and the whole navbar thing...)
+ * - can I use 'css-variables' natively with support? (e.g. 
+ * `navbar-height`)
+ * -
 
-/* make all box-sizes include padding and border */
+/* fonts (Fira Sans, its derivatives and Libre Baskerville) were served from google with:
+ * 
+ *  @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
+ * 
+ * but I've disabled this as I'd rather self-host */
+
+/* make all box-sizes include their respective padding and border */
 * {
           box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -18,17 +38,18 @@ html {
 
 body { 
   display: flex;
-  flex-direction: row; /* items 'flex' to the left to right */
-  justify-content: center; /* horizontally center contained items */
-  align-items: center;
+  flex-direction: row; /* items 'flex' from the left to right */
+  justify-content: center; /* horizontally center items contained in the `body` flexbox */
+  align-items: center; /* what does this do? */
   background-color: whitesmoke;
 }
 
+/* radio `input` buttons used with 'checkbox hack' to create JS-free nav bar, buttons hidden from view */
 input {
-  display: none; /* hide nav-bar radios */
+  display: none;
 }
 
-/* style navigation bar */
+/* style nav bar */
 .nav-bar {
   position: fixed;
   bottom: 0;
@@ -39,7 +60,6 @@ input {
   flex-direction: row; /* ... flow items left to right ... */
   align-items: center; /* ... and vertically center contained items */
   justify-content: center;
-  z-index: 10000;
   border-top: 0.25rem solid teal;
   border-bottom: 0.25rem solid teal;
   background-color: teal;
@@ -138,19 +158,10 @@ h2 {
   display: block;
 }
 
-.no-bottom-margin {
-  margin-bottom: 0;
+img.icon {
+  height: 5vw;
+  padding-right: 1vw;
 }
-
-.no-top-margin {
-  margin-top: 0;
-}
-
-/*
-img {
-  padding: 1rem 0 1rem 0;
-}
-*/
 
 /* different layout & tweaks for tablets/laptops/desktops */
 @media only screen and (min-width: 530px) {
@@ -185,11 +196,3 @@ img {
     color: darkslategray;
   }
 }
-
-
-
-
-
-
-
-
