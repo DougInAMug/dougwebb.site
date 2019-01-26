@@ -1,0 +1,26 @@
+{
+  "name": "mstoday",
+  "version": "1.0.0",
+  "description": "trying to do from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "jstransformer-markdown": "^1.2.1",
+    "jstransformer-nunjucks": "^0.5.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-date-formatter": "^1.0.2",
+    "metalsmith-debug": "^1.2.0",
+    "metalsmith-drafts": "^0.1.0",
+    "metalsmith-in-place": "^4.2.0",
+    "metalsmith-layouts": "^2.3.0",
+    "metalsmith-markdown": "^1.1.0",
+    "metalsmith-permalinks": "^2.0.0",
+    "metalsmith-word-count": "0.0.4"
+  }
+}
