@@ -22,13 +22,13 @@ Metalsmith(__dirname)         // __dirname defined by node.js:
   .destination('./public')    // destination directory
   .use(drafts())              // stops drafts (`draft: true`) from being built
   .use(markdown())            // transpile md into html
-  //.use(collections({          // create 'collections' metadata from `collections: blah` OR pattern, defined below
-    //articles: {
-      //pattern: 'articles/*.html',
-      //sortBy: 'date',
-      //reverse: true
-    //}
-  //}))
+  .use(collections({          // create 'collections' metadata from `collections: blah` OR pattern, defined below
+    articles: {
+      pattern: 'articles/*.html',
+      sortBy: 'date',
+      reverse: true
+    }
+  }))
   .use(permalinks())          // prettifies urls... but adds everything into it's own folder and calls it index.html... why?
   .use(dateFormatter({        // format date/time based on YFM key and 'moment' date formats: http://momentjs.com/
     dates: [
@@ -44,13 +44,10 @@ Metalsmith(__dirname)         // __dirname defined by node.js:
   }))
   .use(wordcount())
   .use(inplace())              // transform `contents` based on RTL file extenstions. Only necessary if inheriting template bits! Use absolute path.
-  //.use(layouts())              // injects content + metadata into a template
+  .use(layouts({
+    suppressNoFilesError: true              // injects content + metadata into a template
+  }))
   .use(debug())
-  //.use(function(files, metalsmith, done) {  // this is a method to view interstitial files, bad workaround for debug
-    //console.log(files);
-    //console.log(metalsmith);
-    //done();
-  //})
   .use(assets({
     source: './assets',
     destination: './assets'

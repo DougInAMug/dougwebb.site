@@ -1,15 +1,21 @@
 /* ABOUT
- * I'm new to CSS, so comments welcome! I've writtent this CSS as 
- * `mobile-first`, as in the default CSS if for a mobile user (with nav 
- * bar on the bottom of their screen) and used `@media` queries at the 
- * end to alter the CSS for larger screen users (with nav bar at top.)
+ * I'm new to CSS, so comments welcome! I'm trying to write this CSS 
+ * 'mobile-first'. The 'main' CSS is for mobile users (with nav bar at
+ * the bottom of their screens for easier navigation) and have used
+ * '@media' queries at the end to adapt CSS for devices with larger
+ * screens (with nav bar at top.)
  * 
  * I've also written it 'top-to-bottom' from the perspective of the html
- * (2019-01-05) */
+ * (2019-01-27) */
+ 
+/* NOTES TO SELF
+ * Don't use  `!important` or inline styling http://paulcpederson.com/articles/css-for-people-who-hate-css/
+ * https://codeburst.io/how-to-write-css-when-you-hate-css-feb5a235b7f1 
+ *   Classes for styles, tags for semantics, IDs for references.
  
 /* QUESTIONS
  * - can I reduce the number of classes I use? (esp. `.no-top-margin` 
- * and the whole navbar thing...)
+ * and the whole navbar thing...) ['CSS-golf']
  * - can I use 'css-variables' natively with support? (e.g. 
  * `navbar-height`)
  * -
@@ -19,12 +25,17 @@
  *  @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
  * 
  * but I've disabled this as I'd rather self-host */
+ 
+/* MOBILE
 
-/* make all box-sizes include their respective padding and border */
-* {
-          box-sizing: border-box;
-     -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+/* make all box-sizes include respective paddings and borders, but also 
+ * allow inheritance 
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 html {
@@ -104,6 +115,20 @@ input {
   cursor: default;
 }
 
+.mainProfilePic {
+  display: block;
+  margin: auto;
+  max-width: 50%;
+  border-radius: 50%;
+  border: 5px solid teal;
+}
+
+.projectsImg {
+  display: block;
+  margin: auto;
+  max-width:50%
+}
+
 .nav-spacer {
   height: 100%;
   background-image: linear-gradient(to bottom, teal, darkturquoise, teal);
@@ -149,12 +174,12 @@ h2 {
 
 /* display page when respective button checked 
  * select elements with class 'x-page' which are siblings of checked elements with id 'x-button' */
-#base-radio:checked    ~ * .base-page,
-#about-radio:checked   ~ * .about-page,
-#work-radio:checked    ~ * .work-page,
-#blog-radio:checked    ~ * .blog-page,
-#connect-radio:checked ~ * .connect-page,
-#support-radio:checked ~ * .support-page {
+#base-radio:checked         ~ * .base-page,
+#about-radio:checked        ~ * .about-page,
+#projects-radio:checked     ~ * .projects-page,
+#blog-radio:checked         ~ * .blog-page,
+#connect-radio:checked      ~ * .connect-page,
+#support-radio:checked      ~ * .support-page {
   display: block;
 }
 
@@ -172,25 +197,48 @@ h2 {
   display: flex;
   text-align: center;
   align-items: center;
-  font-size: 1.25rem;
-  line-height: 1.1;
   cursor: pointer;
-  font-family: 'Fira Sans Condensed';
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
 }
 
-svg.icon {
-  height: 1.5rem;
-  margin-right: 1vw;
-  margin-left: 1vw;
+.contact-entry * {
+  color: darkslategray;
+  font-family: 'Fira Sans Condensed';
+  font-size: 1.25rem;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.small-mono {
+  font-family: mono;
+  font-size: 1rem;
+}
+
+.icon {
+  height: 2rem;
+  fill: darkslategray;
+  margin-left: 0.5rem;
+}
+
+.tech-icon {
+  height: 1rem;
+  fill: darkslategray;
+}
+
+.contact-entry:hover * {
+  color: darkturquoise;
   fill: darkturquoise;
 }
 
-/* Make href 'traces' transparent. These were observed bottom right of icons links. */
-a {
-  color: #ffffff;
-}
 
-/* different layout & tweaks for tablets/laptops/desktops */
+/* DESKTOP
+ * Media queries for for tweaking tweaks for tablets/laptops/desktops */
 @media only screen and (min-width: 530px) {
   .nav-bar {
     top: 0; /* move nav-bar to bottom of screen */
