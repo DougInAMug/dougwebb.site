@@ -20,7 +20,6 @@
     "metalsmith-drafts": "^0.1.0",
     "metalsmith-in-place": "^4.2.0",
     "metalsmith-layouts": "^2.3.0",
-    "metalsmith-markdown": "^1.1.0",
     "metalsmith-permalinks": "^2.0.0",
     "metalsmith-word-count": "0.0.4"
   }

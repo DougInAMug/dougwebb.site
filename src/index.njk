@@ -101,18 +101,14 @@
   </div>
   
   <div class="blog-page">
-    <h1>Not quite yet...</h1>
-    <p>So far this site is completely 'hand-written'. Until I figure out how I want to generate posts, check out the <a href="https://kanthaus.online/en/blog">Kanthaus blog</a> for a flavour of what I might be experiencing.</p>
-    <ul>
-      {% for article in articles %}
-      <a href="{{ article.path }}">
-        <div class="blogBox">
-          <li>{{ article.title }}</li>
-          <li><small>{{ article.date }} | {{ article.wordCount }} words, ~{{ article.readingTime }}</small></li>
-        </div>
-      </a>
-      {% endfor %}
-    </ul>
+    {% for article in articles %}
+    <a href="{{article.path}}">
+      <div class="postBox">
+        <h1 class="postBox__title">{{article.title}}</h1>
+        <p class="postBox__subtitle">{{article.date}} | {{article.wordCount}} words, ~{{article.readingTime}}</p>
+      </div>
+    </a>
+    {% endfor %}
   </div>
   
   <div class="about-page">

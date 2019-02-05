@@ -11,15 +11,11 @@
 </head>
 <body>
     
-
+{% block body %}
 <section class="main-content">
-  <p>heart ache on heart ache</p>
-
-<h1>bloo bloo bear</h1>
-
-<p><em>now he has no hair</em></p>
+  {{ contents | safe }}
 </section>
-
+{% endblock %}
 
 </body>
 </html>
