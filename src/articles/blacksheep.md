@@ -2,6 +2,7 @@
 
 title: blah blah blahck sheep
 date: 2019-01-27
+layout: post.njk
 
 ---
 
