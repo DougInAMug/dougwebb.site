@@ -1,30 +1,43 @@
 /* ABOUT
- * I'm new to CSS, so comments welcome! I'm trying to write this CSS 
- * 'mobile-first'. The 'main' CSS is for mobile users (with nav bar at
- * the bottom of their screens for easier navigation) and have used
- * '@media' queries at the end to adapt CSS for devices with larger
- * screens (with nav bar at top.)
- * 
- * I've also written it 'top-to-bottom' from the perspective of the html
- * (2019-01-27) */
+ * I'm new to CSS, advice welcome! I'm trying to write this CSS 
+ * 'mobile-first' with the default CSS being for mobile users (navbar at
+ * bottom of screen for easier navigation) and '@media' queries at the 
+ * end to modify CSS for larger devices (navbar at top.) It's 
+ * 'top-to-bottom' from the perspective of the html (2019-02-05) */
  
 /* NOTES TO SELF
- * Don't use  `!important` or inline styling http://paulcpederson.com/articles/css-for-people-who-hate-css/
- * https://codeburst.io/how-to-write-css-when-you-hate-css-feb5a235b7f1 
- *   Classes for styles, tags for semantics, IDs for references.
+ * Use external stylesheets
+ *   Don't use inline styling
+ *   Don't use internal styling
+ * Style using classes
+ *   Don't style tags ('elements')
+ *   Don't style IDs
+ * Don't use `!important`
+ * Mobile first
+ * Be BEMy http://getbem.com/
+ *   Block     independent entity  .block          
+ *   Element   dependent entity    .block__element 
+ *   Modifier  entity modifier     .block--modifier
+ * Margins collapse vertically
+ *   Borders and padding don't.
+ * 
+ * http://learnlayout.com
+ * http://paulcpederson.com/articles/css-for-people-who-hate-css/
+ * "Classes for styles, tags for semantics, IDs for references." https://codeburst.io/how-to-write-css-when-you-hate-css-feb5a235b7f1 
+ */   
  
 /* QUESTIONS
- * - can I reduce the number of classes I use? (esp. `.no-top-margin` 
- * and the whole navbar thing...) ['CSS-golf']
- * - can I use 'css-variables' natively with support? (e.g. 
- * `navbar-height`)
+ * - can I reduce the number of classes I use? (esp. `.no-top-margin` and the whole navbar thing...) ['CSS-golf']
+ * - can I use 'css-variables' natively with support? (e.g. `navbar-height`)
  * -
+ */
 
 /* fonts (Fira Sans, its derivatives and Libre Baskerville) were served from google with:
  * 
  *  @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
  * 
- * but I've disabled this as I'd rather self-host */
+ * but I've disabled this as I'd rather self-host. 2019-02-05 looks like Firefox now has fira inbuilt... what coverage is there?
+ */
  
 /* MOBILE
 
