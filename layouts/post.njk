@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Doug Webb</title>
+  <title>{{ title }}</title>
   <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/shame.css">
@@ -10,12 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    
-{% block body %}
-<section class="postBox">
-  {{ contents | safe }}
-</section>
-{% endblock %}
+  
+  {% block body %}
+  <section class="content">
+    <h1>{{ title }}</h1>
+    {{ contents | safe }}
+  </section>
+  {% endblock %}
 
 </body>
 </html>

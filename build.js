@@ -26,11 +26,11 @@ Metalsmith(__dirname)           // __dirname defined by node.js:
 // PROCESS POSTS
 
   .use(inplace({                // in-place transpile to .html based on RTL file extenstions
-      pattern: "articles/*"     //   transpile files in `articles` (.md) into .html
+      pattern: "posts/*"        //   transpile files in `posts` (.md) into .html
   }))
   .use(collections({            // create collection metadata
-    articles: {                 // add `collection: [ 'articles' ]` ...
-      pattern: 'articles/*',    //    to files in `articles` ...
+    posts: {                    // add `collection: [ 'posts' ]` ...
+      pattern: 'posts/*',       //    to files in `posts` ...
       sortBy: 'date',           //    sort by date ...
       reverse: true             //    reverse date order
     }
@@ -38,8 +38,8 @@ Metalsmith(__dirname)           // __dirname defined by node.js:
   .use(dateFormatter({          // format date-time using 'moment' date formats: http://momentjs.com/
     dates: [
       {
-        key: 'date',            // change the standard `date` format
-        format: 'Do MMM YYYY'   // e.g. 27th Nov 2018
+        key: 'date',            //      change the standard `date` format
+        format: 'Do MMM YYYY'   //      e.g. 27th Nov 2018
       },
       {
         key: 'modifiedDate',
@@ -47,28 +47,33 @@ Metalsmith(__dirname)           // __dirname defined by node.js:
       }
     ]
   }))
-  .use(wordcount())            // REQUIRES .html, counts words, adds `wordCount` and `readingTime` metadata
-  .use(permalinks())           // REQUIRES .html, prettifies URLs by
-                               //   1. name.html       → name/index.html
-                               //   2. path: name.html → path: name
+  .use(wordcount())             // REQUIRES .html, counts words, adds `wordCount` and `readingTime` metadata
+  .use(permalinks({             // REQUIRES .html, prettifies URLs by 1. name.html → name/index.html 2. path: name.html → path: name
+    linksets: [
+      {
+        match: { collection: 'posts' }, // for files with `collection: 'posts'` ...
+        pattern: 'posts/:title'         // mkdir and change path to `'posts/:title'`
+      }
+    ]
+  }))
 
 // PROCESS REST
 
-  .use(inplace())              // in-place transpiling of remaining .html files (n.b. all `article` meta-data now available!)
-  .use(layouts({               // injects content + metadata into template specified by a files YFM `layout:`
-    suppressNoFilesError: true //   BAD. Suppresses errors when no layout found. This is lazy, fix it: https://www.npmjs.com/package/metalsmith-layouts          
+  .use(inplace())               // in-place transpiling of remaining .html files (n.b. all `posts` meta-data now available!)
+  .use(layouts({                // injects content + metadata into template specified by a files YFM `layout:`
+    suppressNoFilesError: true  //   BAD. Suppresses errors when no layout found. This is lazy, fix it: https://www.npmjs.com/package/metalsmith-layouts          
   }))
-  .use(assets({                // copy assets (note: plugin is deprecated, but working)
-    source: './assets',        //   from `$SOURCE/assets`
-    destination: './assets'    //   to `$DESTINATION/assets`
+  .use(assets({                 // copy assets (note: plugin is deprecated, but working)
+    source: './assets',         //   from `$SOURCE/assets`
+    destination: './assets'     //   to `$DESTINATION/assets`
   }))
   
 // BUILD
 
   .use(debug())
-  .build((err) => {            // build process
-    if (err) {                 //   error handling is required
-      throw err
+  .build((err) => {             // build process
+    if (err) {                  //   error handling is required
+      throw err 
     } else {
       console.log(chalk.bgGreen.bold('✓ Build successful'))
     }
