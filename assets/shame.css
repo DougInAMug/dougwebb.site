@@ -54,25 +54,31 @@ input {
 }
 
 /* style nav bar */
-.nav-bar {
+.navbar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4rem;
-  display: flex;       /* turn navbar into flex for easy centering ... */
-  flex-direction: row; /* ... flow items left to right ... */
-  align-items: center; /* ... and vertically center contained items */
-  justify-content: center;
+  height: 4rem;             /* not necessary: height could be based just on text height + padding */
+  display: flex;            /* turn navbar into flex parent */
+  flex-direction: row;      /* flow children left to right (main-axis is horizontal) */
+  justify-content: center;  /* align flex children along main axis */
+  align-items: center;      /* align flex children along cross axis */
   border-top: 0.25rem solid teal;
   border-bottom: 0.25rem solid teal;
   background-color: teal;
 }
 
-/* style unpressed nav-buttons */
-.nav-button {
+.navbar__spacer {
   height: 100%;
-  display: flex;
+  background-image: linear-gradient(to bottom, teal, darkturquoise, teal);
+  padding: 0.125rem; /* maintains width of 0.25rem... hacky flexy */
+}
+
+/* style unpressed nav-buttons */
+.navbar__button {
+  height: 100%;
+  display: flex;            /* BAD. Flex used to center text, but text padding could be used to determine button height. */
   text-align: center;
   align-items: center;
   font-size: 1.25rem;
@@ -84,8 +90,10 @@ input {
   font-family: 'Fira Sans Condensed';
 }
 
+
+
 /* scrolling button container */
-.button-shuttle {
+.navbar__buttonShuttle {
   height: 100%;
   display: flex; 
   align-items: center;  
@@ -99,7 +107,7 @@ input {
  * select element with id 'x-button' which is a child of a sibling to a checked element with id 'x-radio' */
 #base-radio:checked    ~ * #base-button, 
 #about-radio:checked   ~ * #about-button,
-#work-radio:checked    ~ * #work-button,
+#projects-radio:checked    ~ * #projects-button,
 #posts-radio:checked    ~ * #posts-button,
 #connect-radio:checked ~ * #connect-button,
 #support-radio:checked ~ * #support-button {
@@ -123,19 +131,15 @@ input {
   max-width:50%
 }
 
-.nav-spacer {
-  height: 100%;
-  background-image: linear-gradient(to bottom, teal, darkturquoise, teal);
-  padding: 0.125rem; /* maintains width of 0.25rem... hacky flexy */
-}
+
   
 .shadow-padding {
   padding: 0.75rem; /* maintains width of 1.50rem. see .right-shadowing */
 }
   
-/* fade effect to right of button-shuttle */
+/* fade effect to right of navbar__buttonShuttle */
 .right-shadowing {
-  position: absolute; /* fixed position relative to last positioned ancestor (.nav-bar) Overlaps buttons/spacers */
+  position: absolute; /* fixed position relative to last positioned ancestor (.navbar) Overlaps buttons/spacers */
   top: 0;
   right: 0;
   bottom: 0;
@@ -234,8 +238,8 @@ h2 {
 /* DESKTOP
  * Media queries for for tweaking tweaks for tablets/laptops/desktops */
 @media only screen and (min-width: 530px) {
-  .nav-bar {
-    top: 0; /* move nav-bar to bottom of screen */
+  .navbar {
+    top: 0;     /* move navbar to top of screen */
     padding: 0; /* remove side paddings for proper centering */
     height: 2.75rem;
   }
@@ -245,7 +249,7 @@ h2 {
     height: 100%;
   }
   /* since all buttons exposed, no need to show scroll end */
-  .button-shuttle {
+  .navbar__buttonShuttle {
     padding-right: 0rem;
     height: 100%;
   }

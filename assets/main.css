@@ -20,6 +20,8 @@
  *   Modifier  entity modifier     .block--modifier
  * Margins collapse vertically
  *   Borders and padding don't.
+ * 'max-width' shrinks, 'width' adds scrollbar
+ * "Percent is a measurement unit relative to the containing block."
  * 
  * http://learnlayout.com
  * http://paulcpederson.com/articles/css-for-people-who-hate-css/
