@@ -62,12 +62,12 @@ input {
 /* scrolling button container */
 .navbar__buttonShuttle {
   display: flex; 
-  overflow: auto; /* add scrollbar if content exceeds container, else not */
+  overflow: auto; /* add scrollbar if content exceeds container */
 }
 
 /* fade effect to right of navbar to hint options if scrolled  */
 .navbar__fader {
-  position: absolute; /* fixed position relative to last positioned ancestor (.navbar) Overlaps buttons/spacers */
+  position: absolute; /* fixed position relative to last positioned ancestor (.navbar) Layered above buttons/spacers */
   right: 0;
   bottom: 0;
   height: 100%;
@@ -77,7 +77,8 @@ input {
 
 /* 'empty button' gives definite end to the 'fader' to assure users they're not missing options */
 .navbar__ender {
-  padding: 0.75rem; /* BAD? seems like width should be done with width */
+  width: 1.5rem;
+  flex-shrink: 0;
 }
 
 /* style pressed nav-buttons
