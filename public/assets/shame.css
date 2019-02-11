@@ -1,7 +1,6 @@
 /* MOBILE
 
-/* make all box-sizes include respective paddings and borders, but also 
- * allow inheritance 
+/* make all box-sizes include paddings and borders, but also but allow inheritance 
  * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
   box-sizing: border-box;
@@ -10,23 +9,31 @@ html {
   box-sizing: inherit;
 }
 
-html {
-  font-size:  ;
+body {
+  font-size: ;
     /* font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
      * https://css-tricks.com/snippets/css/fluid-typography/  */
-  color: darkslategray;
-  font-family: Serif;
+  color: darkslategray; /* I want darkslategray to replace black as global default */
+  background-color: whitesmoke; /* I want whitesmoke to replace white globally as global default */
 }
 
+a {
+  color: darkslategray;
+  font-family: 'Fira Sans', Sans;
+}
+
+a:hover, a:active {
+  color: darkturquoise;
+}
+
+/* BAD? I've set <body> as a flex box, when I could use .content ... */
 body { 
   display: flex;
-  flex-direction: row; /* items 'flex' from the left to right */
-  justify-content: center; /* horizontally center items contained in the `body` flexbox */
-  align-items: center; /* what does this do? */
-  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* radio `input` buttons used with 'checkbox hack' to create JS-free nav bar, buttons hidden from view */
+/* radio `input` buttons used with 'checkbox hack' to create JS-free navbar, buttons hidden from view */
 input {
   display: none;
 }
@@ -34,7 +41,6 @@ input {
 .navbar {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
   display: flex;
   border-top: 0.25rem solid teal;
@@ -55,7 +61,7 @@ input {
   padding: 0.5rem;
   background-color: teal;
   color: whitesmoke;
-  cursor: pointer;
+  cursor: pointer; /* actually for desktop, just seems silly to duplicate selctor... */
   font-family: 'Fira Sans Condensed', Sans;
 }
 
@@ -77,7 +83,6 @@ input {
 
 /* 'empty button' gives definite end to the 'fader' to assure users they're not missing options */
 .navbar__ender {
-  /* padding: 0.75rem; /* BAD? seems like width should be done with width */
   width: 1.5rem;
   flex-shrink: 0;
 }
@@ -92,7 +97,7 @@ input {
 /* #connect-radio:checked  ~ * #connect-buttons */ {
   background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
   color: darkslategray;
-  cursor: default;
+  cursor: default; 
 }
 
 /* hide pages initially
@@ -116,8 +121,8 @@ input {
   width: 50ch;
   max-width: 100%;
   display: flex;
+  line-height: 1.5;
   flex-direction: column;
-  justify-content: center;
   padding: 0 1rem 5rem 1rem;
 }
 
@@ -144,16 +149,15 @@ h2 {
   font-size: 1.25rem;
 }
 
-.contact-bar {
+.linkbar {
   width: 100%;
-  height: 4rem;
   display: flex;       /* turn contactbar into flex for easy centering ... */
   flex-direction: row; /* ... flow items left to right ... */
   align-items: center; /* ... and vertically center contained items */
   justify-content: center;
 }
 
-.contact-entry {
+.linkbar__entry {
   height: 100%;
   display: flex;
   text-align: center;
@@ -164,15 +168,20 @@ h2 {
   margin-bottom: 0;
 }
 
-.contact-entry * {
-  color: darkslategray;
+.linkbar__entry * {
   font-family: 'Fira Sans Condensed';
+  color: darkslategray; /* to override hyprlink defaults */
   font-size: 1.25rem;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.no-underline {
+.linkbar__entry:hover * {
+  color: darkturquoise;
+  fill: darkturquoise;
+}
+
+.noTxtDec {
   text-decoration: none;
 }
 
@@ -189,11 +198,6 @@ h2 {
 .tech-icon {
   height: 1rem;
   fill: darkslategray;
-}
-
-.contact-entry:hover * {
-  color: darkturquoise;
-  fill: darkturquoise;
 }
 
 .postBox {
@@ -222,14 +226,13 @@ h2 {
  * Media queries for for tweaking tweaks for tablets/laptops/desktops */
 @media only screen and (min-width: 530px) {
   .navbar {
-    top: 0;     /* move navbar to top of screen */
-    bottom: initial;
-    padding: 0; /* remove side paddings for proper centering */
-    justify-content: center;
+    top: 0;           /* move navbar to top of screen */
+    bottom: initial;  /* reset! */
+    justify-content: center; /* BAD? center contents. perhaps nicer to have sam offset as content */
   }
   /* eliminate jumping by calculating desktop scrollbar width and adding to left side */
   .desktopScrollbarBuffer {
-    width:calc(100vw - 100%);
+    width: calc(100vw - 100%);
     height: 100%;
   }
   .content {
