@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Thin.woff') format('woff');
+    font-weight: thin;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
 /* MOBILE
 
 /* make all box-sizes include paddings and borders, but also but allow inheritance 
@@ -15,11 +43,12 @@ body {
      * https://css-tricks.com/snippets/css/fluid-typography/  */
   color: darkslategray; /* I want darkslategray to replace black as global default */
   background-color: whitesmoke; /* I want whitesmoke to replace white globally as global default */
+  font-family: Serif;
 }
 
 a {
   color: darkslategray;
-  font-family: 'Fira Sans', Sans;
+  font-family: 'FiraSans', Sans;
 }
 
 a:hover, a:active {
@@ -57,12 +86,12 @@ input {
 
 /* style unpressed nav-buttons */
 .navbar__button {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   background-color: teal;
   color: whitesmoke;
   cursor: pointer; /* actually for desktop, just seems silly to duplicate selctor... */
-  font-family: 'Fira Sans Condensed', Sans;
+  font-family: 'FiraSans', Sans;
 }
 
 /* scrolling button container */
@@ -129,7 +158,6 @@ input {
 .mainProfilePic {
   display: block;
   margin: auto;
-  margin-bottom: 20px;
   max-width: 50%;
   border-radius: 50%;
   border: 5px solid teal;
@@ -141,20 +169,13 @@ input {
   max-width:50%
 }
 
-h1 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 1.25rem;
-}
-
 .linkbar {
   width: 100%;
   display: flex;       /* turn contactbar into flex for easy centering ... */
   flex-direction: row; /* ... flow items left to right ... */
   align-items: center; /* ... and vertically center contained items */
   justify-content: center;
+  margin-top: 10px;
 }
 
 .linkbar__entry {
@@ -169,8 +190,6 @@ h2 {
 }
 
 .linkbar__entry * {
-  font-family: 'Fira Sans Condensed';
-  color: darkslategray; /* to override hyprlink defaults */
   font-size: 1.25rem;
   margin-bottom: 0;
   margin-top: 0;
@@ -187,7 +206,7 @@ h2 {
 
 .small-mono {
   font-family: mono;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .icon {
@@ -210,14 +229,13 @@ h2 {
 .postBox__title {
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: "Baskerville";
   margin: 0px 0px 10px 0px;
 }
 
 .postBox__subtitle {
   font-size: 1.1rem;
   font-weight: lighter;
-  font-family: Sans;
+  font-family: 'Firea Sans', Sans;
   margin: 0;
 }
 
