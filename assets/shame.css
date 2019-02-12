@@ -1,28 +1,34 @@
-.postBox {
-  border-radius: 10px;
-  margin: 30px 0 30px 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 15px;
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.postBox__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Baskerville";
-  margin: 0px 0px 10px 0px;
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
-.postBox__subtitle {
-  font-size: 1.1rem;
-  font-weight: lighter;
-  font-family: Sans;
-  margin: 0;
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Thin.woff') format('woff');
+    font-weight: thin;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSansCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
 }
 
 /* MOBILE
 
-/* make all box-sizes include respective paddings and borders, but also 
- * allow inheritance 
+/* make all box-sizes include paddings and borders, but also but allow inheritance 
  * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
   box-sizing: border-box;
@@ -31,87 +37,127 @@ html {
   box-sizing: inherit;
 }
 
-html {
-  font-size:  ;
+body {
+  font-size: ;
     /* font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
      * https://css-tricks.com/snippets/css/fluid-typography/  */
-  color: darkslategray;
+  color: darkslategray; /* I want darkslategray to replace black as global default */
+  background-color: whitesmoke; /* I want whitesmoke to replace white globally as global default */
   font-family: Serif;
-  line-height: 1.5;
 }
 
+a {
+  color: darkslategray;
+  font-family: 'FiraSans', Sans;
+}
+
+a:hover, a:active {
+  color: darkturquoise;
+}
+
+/* BAD? I've set <body> as a flex box, when I could use .content ... */
 body { 
   display: flex;
-  flex-direction: row; /* items 'flex' from the left to right */
-  justify-content: center; /* horizontally center items contained in the `body` flexbox */
-  align-items: center; /* what does this do? */
-  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* radio `input` buttons used with 'checkbox hack' to create JS-free nav bar, buttons hidden from view */
+/* radio `input` buttons used with 'checkbox hack' to create JS-free navbar, buttons hidden from view */
 input {
   display: none;
 }
 
-/* style nav bar */
-.nav-bar {
+.navbar {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
-  height: 4rem;
-  display: flex;       /* turn navbar into flex for easy centering ... */
-  flex-direction: row; /* ... flow items left to right ... */
-  align-items: center; /* ... and vertically center contained items */
-  justify-content: center;
+  display: flex;
   border-top: 0.25rem solid teal;
   border-bottom: 0.25rem solid teal;
+  border-left: 0.25rem solid teal;
   background-color: teal;
+}
+
+.navbar__spacer {
+  background-image: linear-gradient(to bottom, teal, darkturquoise, teal);
+  width: 0.25rem;
+  flex-shrink: 0; /* spacer has no content and would otherwise shrink to nothing */
 }
 
 /* style unpressed nav-buttons */
-.nav-button {
-  height: 100%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  font-size: 1.25rem;
-  line-height: 1.1;
+.navbar__button {
+  font-size: 1.5rem;
   padding: 0.5rem;
   background-color: teal;
   color: whitesmoke;
-  cursor: pointer;
-  font-family: 'Fira Sans Condensed';
+  cursor: pointer; /* actually for desktop, just seems silly to duplicate selctor... */
+  font-family: 'FiraSans', Sans;
 }
 
 /* scrolling button container */
-.button-shuttle {
-  height: 100%;
+.navbar__buttonShuttle {
   display: flex; 
-  align-items: center;  
-  overflow: auto; /* add scrollbar if content exceeds container, else not */
-  font-size: 0; /* remove white space nodes between nav-buttons */
-  white-space: nowrap; /* prevent items (buttons) from wrapping */
-  padding-right: 1.5rem;
+  overflow: auto; /* add scrollbar if content exceeds container */
+}
+
+/* fade effect to right of navbar to hint options if scrolled  */
+.navbar__fader {
+  position: absolute; /* fixed position relative to last positioned ancestor (.navbar) Layered above buttons/spacers */
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1.5rem;
+  background-image: linear-gradient(to left, teal, transparent);
+}
+
+/* 'empty button' gives definite end to the 'fader' to assure users they're not missing options */
+.navbar__ender {
+  width: 1.5rem;
+  flex-shrink: 0;
 }
 
 /* style pressed nav-buttons
  * select element with id 'x-button' which is a child of a sibling to a checked element with id 'x-radio' */
-#base-radio:checked    ~ * #base-button, 
-#about-radio:checked   ~ * #about-button,
-#work-radio:checked    ~ * #work-button,
+#base-radio:checked     ~ * #base-button, 
+#projects-radio:checked ~ * #projects-button,
 #posts-radio:checked    ~ * #posts-button,
-#connect-radio:checked ~ * #connect-button,
-#support-radio:checked ~ * #support-button {
+#support-radio:checked  ~ * #support-button
+/* #about-radio:checked    ~ * #about-button */
+/* #connect-radio:checked  ~ * #connect-buttons */ {
   background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
   color: darkslategray;
-  cursor: default;
+  cursor: default; 
+}
+
+/* hide pages initially
+ * select all elements with class ending 'page' */
+*[class$="page"] {
+  display: none;
+}
+
+/* display page when respective button checked 
+ * select elements with class 'x-page' which are siblings of checked elements with id 'x-button' */
+#base-radio:checked     ~ * .base-page,
+#projects-radio:checked ~ * .projects-page,
+#posts-radio:checked    ~ * .posts-page,
+#support-radio:checked  ~ * .support-page
+/* #about-radio:checked    ~ * .about-page */
+/* #connect-radio:checked  ~ * .connect-page */ {
+  display: block;
+}
+
+.content {
+  width: 50ch;
+  max-width: 100%;
+  display: flex;
+  line-height: 1.5;
+  flex-direction: column;
+  padding: 0 1rem 5rem 1rem;
 }
 
 .mainProfilePic {
   display: block;
   margin: auto;
-  margin-bottom: 20px;
   max-width: 50%;
   border-radius: 50%;
   border: 5px solid teal;
@@ -123,70 +169,16 @@ input {
   max-width:50%
 }
 
-.nav-spacer {
-  height: 100%;
-  background-image: linear-gradient(to bottom, teal, darkturquoise, teal);
-  padding: 0.125rem; /* maintains width of 0.25rem... hacky flexy */
-}
-  
-.shadow-padding {
-  padding: 0.75rem; /* maintains width of 1.50rem. see .right-shadowing */
-}
-  
-/* fade effect to right of button-shuttle */
-.right-shadowing {
-  position: absolute; /* fixed position relative to last positioned ancestor (.nav-bar) Overlaps buttons/spacers */
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 1.5rem; /* see .shadow-padding */
-  background-image: linear-gradient(to left, teal, transparent);
-}
-
-.content {
+.linkbar {
   width: 100%;
-  max-width: 50ch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 1rem 5rem 1rem;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 1.25rem;
-}
-
-/* hide pages initially
- * select all elements with class ending 'page' */
-*[class$="page"] {
-  display: none;
-}
-
-/* display page when respective button checked 
- * select elements with class 'x-page' which are siblings of checked elements with id 'x-button' */
-#base-radio:checked         ~ * .base-page,
-#about-radio:checked        ~ * .about-page,
-#projects-radio:checked     ~ * .projects-page,
-#posts-radio:checked         ~ * .posts-page,
-#connect-radio:checked      ~ * .connect-page,
-#support-radio:checked      ~ * .support-page {
-  display: block;
-}
-
-.contact-bar {
-  width: 100%;
-  height: 4rem;
   display: flex;       /* turn contactbar into flex for easy centering ... */
   flex-direction: row; /* ... flow items left to right ... */
   align-items: center; /* ... and vertically center contained items */
   justify-content: center;
+  margin-top: 10px;
 }
 
-.contact-entry {
+.linkbar__entry {
   height: 100%;
   display: flex;
   text-align: center;
@@ -197,22 +189,24 @@ h2 {
   margin-bottom: 0;
 }
 
-.contact-entry * {
-  color: darkslategray;
-  font-family: 'Fira Sans Condensed';
+.linkbar__entry * {
   font-size: 1.25rem;
-  line-height: 1.1;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.no-underline {
+.linkbar__entry:hover * {
+  color: darkturquoise;
+  fill: darkturquoise;
+}
+
+.noTxtDec {
   text-decoration: none;
 }
 
 .small-mono {
   font-family: mono;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .icon {
@@ -225,33 +219,39 @@ h2 {
   fill: darkslategray;
 }
 
-.contact-entry:hover * {
-  color: darkturquoise;
-  fill: darkturquoise;
+.postBox {
+  border-radius: 10px;
+  margin: 30px 0 30px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px;
+}
+
+.postBox__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0px 0px 10px 0px;
+}
+
+.postBox__subtitle {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  font-family: 'Firea Sans', Sans;
+  margin: 0;
 }
 
 
 /* DESKTOP
  * Media queries for for tweaking tweaks for tablets/laptops/desktops */
 @media only screen and (min-width: 530px) {
-  .nav-bar {
-    top: 0; /* move nav-bar to bottom of screen */
-    padding: 0; /* remove side paddings for proper centering */
-    height: 2.75rem;
+  .navbar {
+    top: 0;           /* move navbar to top of screen */
+    bottom: initial;  /* reset! */
+    justify-content: center; /* BAD? center contents. perhaps nicer to have sam offset as content */
   }
   /* eliminate jumping by calculating desktop scrollbar width and adding to left side */
-  .desktop-scrollbar-buffer {
-    width:calc(100vw - 100%);
+  .desktopScrollbarBuffer {
+    width: calc(100vw - 100%);
     height: 100%;
-  }
-  /* since all buttons exposed, no need to show scroll end */
-  .button-shuttle {
-    padding-right: 0rem;
-    height: 100%;
-  }
-  /* since all buttons exposed, no need to hint */
-  .right-shadowing {
-    display: none;
   }
   .content {
     padding: 2.75rem 0.5rem 0.5rem 0.5rem;

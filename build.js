@@ -19,13 +19,13 @@ const assets        = require('metalsmith-assets')
 // SETUP
 
 Metalsmith(__dirname)           // __dirname defined by node.js:
-  .source('./src')              // source directory
-  .destination('./public')      // destination directory
+  .source('./src')              // specify source directory
+  .destination('./public')      // specify destination directory
   .use(drafts())                // omit drafts (YFM `draft: true`) from process 
   
 // PROCESS POSTS
 
-  .use(inplace({                // in-place transpile to .html based on RTL file extenstions
+  .use(inplace({                // transpile files to .html based on RTL file extenstions
       pattern: "posts/*"        //   transpile files in `posts` (.md) into .html
   }))
   .use(collections({            // create collection metadata
@@ -47,8 +47,8 @@ Metalsmith(__dirname)           // __dirname defined by node.js:
       }
     ]
   }))
-  .use(wordcount())             // REQUIRES .html, counts words, adds `wordCount` and `readingTime` metadata
-  .use(permalinks({             // REQUIRES .html, prettifies URLs by 1. name.html → name/index.html 2. path: name.html → path: name
+  .use(wordcount())             // REQUIRES .html! counts words, adds `wordCount` and `readingTime` metadata
+  .use(permalinks({             // REQUIRES .html! CAUTION don't break URLs! Prettifies URLs by 1. name.html → name/index.html 2. path: name.html → path: name
     linksets: [
       {
         match: { collection: 'posts' }, // for files with `collection: 'posts'` ...
@@ -61,7 +61,7 @@ Metalsmith(__dirname)           // __dirname defined by node.js:
 
   .use(inplace())               // in-place transpiling of remaining .html files (n.b. all `posts` meta-data now available!)
   .use(layouts({                // injects content + metadata into template specified by a files YFM `layout:`
-    suppressNoFilesError: true  //   BAD. Suppresses errors when no layout found. This is lazy, fix it: https://www.npmjs.com/package/metalsmith-layouts          
+    suppressNoFilesError: true  //   BAD! Suppresses errors when no layout found. This is lazy, fix it: https://www.npmjs.com/package/metalsmith-layouts          
   }))
   .use(assets({                 // copy assets (note: plugin is deprecated, but working)
     source: './assets',         //   from `$SOURCE/assets`
