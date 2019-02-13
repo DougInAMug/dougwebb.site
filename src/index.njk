@@ -2,15 +2,17 @@
 <html lang="en">
   <head>
     <title>Doug Webb</title>
-    <!-- <link rel="stylesheet" href="/assets/fonts.css"> -->
+<!--
+    <link rel="stylesheet" href="../assets/fonts.css">
+-->
       <!-- Custom fonts, currently disabled as not sure it's worth it... -->
-    <link rel="stylesheet" href="/assets/normalize_v8.0.0.css"> 
+    <link rel="stylesheet" href="../assets/normalize_v8.0.0.css"> 
       <!-- "Normalize.css makes browsers render all elements more consistently" https://necolas.github.io/normalize.css/ OVERRIDDEN BY main.css -->
-    <link rel="stylesheet" href="/assets/main.css">             
+    <link rel="stylesheet" href="assets/main.css">             
       <!-- All intentional CSS here. OVERRIDDEN BY shame.css -->
-    <link rel="stylesheet" href="/assets/shame.css">            
+    <link rel="stylesheet" href="../assets/shame.css">            
       <!-- "shame.css ... a way of allowing ... hacks when necessary" https://csswizardry.com/2013/04/shame-css/ -->
-    <link rel="shortcut icon" type="image/png" href="assets/img/icons/favicon-256.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/icons/favicon-256.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set device width as page width, set initial zoom. -->
   </head>
@@ -54,11 +56,11 @@
 
     <!-- content -->
     <div class="desktopScrollbarBuffer"></div>
-    <div class="content">
-      <div class="base-page">
+    <div class="contentFrame">
+      <div id="base-page" class="page">
         <h1>Hi, I'm Doug</h1>
         <p>I develop practices for effective cooperation, with a focus on post-consensus decision-making.</p>
-        <img src="assets/img/Smiling_Kirchheim.jpg" class="mainProfilePic" alt="Me, smiling, facing you; there is long grass and trees in the background.">
+        <img src="../assets/img/Smiling_Kirchheim.jpg" class="mainProfilePic" alt="Me, smiling, facing you; there is long grass and trees in the background.">
         <div class="linkbar">
           <div class="linkbar__entry">
             <a href="mailto:doug@dougwebb.site" class="noTxtDec">
@@ -87,24 +89,24 @@
         </div>
       </div>
       
-      <div class="projects-page">
+      <div id="projects-page" class="page">
         <h1 class="noBottomMargin"><a href="https://douginamug.gitlab.io/slides/poco_coop_dm/#1">Cooperative decision-making</a></h1>
         <p class="noTopMargin"><i>—when consensus can't be found</i></p>
-        <img src="assets/img/mutualInterest.png" alt="A yin-yang-like image of two people thinking about each other." class="projectsImg">
+        <img src="../assets/img/mutualInterest.png" alt="A yin-yang-like image of two people thinking about each other." class="projectsImg">
         <p>Consensus decision-making has become a go-to method for groups wanting to decide cooperatively. However it becomes increasingly difficult to achieve the conditions for success when groups get bigger, more diverse or dynamic—even groups which have the conditions for consensus can fail to reach it. In the presentation <a href="https://douginamug.gitlab.io/slides/poco_coop_dm/#1">Post-consensus, cooperative decision-making</a>, I explore why modified score voting is cooperative and how it can be used to make decisions when consensus isn't possible. <a href="https://ukuvota.world">Ukuvota</a> is an open-source web-app which implements all the features outlined in the presentation, developed by <a href="https://wolfi.space/">Wolfi</a>.</p>
 
         <h1 class="noBottomMargin"><a href="https://kanthaus.online">Kanthaus</a></h1>
         <p class="noTopMargin"><i>—a home for purposeful project work(ers)</i></p>
-        <img src="assets/img/kanthaus.jpg" alt="A street-view of an old building with happy people waving out of the windows." class="projectsImg">
+        <img src="../assets/img/kanthaus.jpg" alt="A street-view of an old building with happy people waving out of the windows." class="projectsImg">
         <p>I co-founded <a href="https://kanthaus.online">Kanthaus</a> to create a place for people to live and work together in a way that is social, ecological and economical. Together we are figuring out how to share a home and support each other reach our goals. Kanthaus doubles up lab for me to trial organizational innovations on willing subjects.</p>
         
         <h1 class="noBottomMargin"><a href="https://github.com/kanthaus/kanthaus.online/blob/master/user/pages/40.governance/10.constitution/default.en.md">Common house constitution</a></h1>
         <p class="noTopMargin"><i>—fundamental agreements for a common house</i></p>
-        <img src="assets/img/const.svg" alt="A scroll with with the outline of a house on it." class="projectsImg">
+        <img src="../assets/img/const.svg" alt="A scroll with with the outline of a house on it." class="projectsImg">
         <p>A common house is owned, used and maintained by the same group. Common houses are great—and come with their own set of challanges! I wrote a constitution for Kanthaus largely based on Elinor Ostrom's research into how commons succeed (or fail). A copy is now collectively developed by the Kanthaus members: <a href="https://github.com/kanthaus/kanthaus.online/blob/master/user/pages/40.governance/10.constitution/default.en.md">Kanthaus Constitution</a>.</p>
       </div>
       
-      <div class="posts-page">
+      <div id="posts-page" class="page">
         {% for post in posts %}
         <a href="{{ post.path }}">
           <div class="postBox">
@@ -115,7 +117,7 @@
         {% endfor %}
       </div>
       
-      <div class="about-page">
+      <div id="about-page" class="page">
         <h1>My motivation</h1>
         <p>I believe that life is an absurd gift; my gratitude for receiving it is my fundamental motivation for the work I do. I want to help make life as excellent as possible for all that (will) live, which firstly means reducing unnecessary suffering.</p>
         
@@ -144,7 +146,7 @@
         <p>When I'm <i>not</i> doing cooperative process stuff I <del>club seals</del> hitch-hike, read sci-fi/surreal short-stories, do judo, climb trees, camp, watch insects, do yoga, explore abandoned building, forage, brew... </p>
       </div>
       
-      <div class="support-page">
+      <div id="support-page" class="page">
         <h1>Me supporting you</h1>
         <p><b>Resources:</b> All the work I make is free <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode">(CC0)</a>, so <i>please</i> save, copy, share, edit, etc, without further permission.</p>
         <p><b>Events:</b> Workshops, talks, presentations, etc: I'm really into bringing relevant content to people that want it </p>

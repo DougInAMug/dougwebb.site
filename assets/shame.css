@@ -9,8 +9,8 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  font-size: calc(16px + 4.5 * ((100vw - 320px) / 680));
+html {
+  font-size: calc(16px + 4.5 * ((100vw - 320px) / 1200));
     /* font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
      * https://css-tricks.com/snippets/css/fluid-typography/  */
   color: darkslategray; /* I want darkslategray to replace black as global default */
@@ -48,26 +48,43 @@ input {
 }
 
 /* 3/4, initially render no pages */
-/* select all elements with class ending 'page' */
-*[class$="page"] {
+/* select divs with id ending 'page' */
+div[id$="page"] {
   display: none;
 }
 
 /* 4/4, display page when respective button checked */
-/* select elements with class 'x-page' which are siblings of checked elements with id 'x-button' */
-#base-radio:checked     ~ * .base-page,
-#projects-radio:checked ~ * .projects-page,
-#posts-radio:checked    ~ * .posts-page,
-#support-radio:checked  ~ * .support-page {
+/* select elements with id 'x-page' which are siblings of checked elements with id 'x-button' */
+#base-radio:checked     ~ * #base-page,
+#projects-radio:checked ~ * #projects-page,
+#posts-radio:checked    ~ * #posts-page,
+#support-radio:checked  ~ * #support-page {
   display: block;
 }
 
-.content {
+.contentFrame {
   margin: auto;
-  width: 50ch;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 530px) {
+  .contentFrame {
+    margin-bottom: initial;
+    margin-top: 3rem;
+  }
+}
+
+/* page content and images* grow up to 35rem, and centered. (*jstransformer-nunkucks wraps img in p for some reason) */
+.page, .page p img {
   max-width: 100%;
+  width: 25rem;
+  margin: auto;
+}
+
+.page > p {
   line-height: 1.5;
-  padding: 0 1rem 5rem 1rem;
 }
 
 .mainProfilePic {
@@ -87,10 +104,9 @@ input {
 .linkbar {
   width: 100%;
   display: flex;      
-  flex-direction: row; 
   align-items: center; 
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 2rem;
 }
 
   .linkbar__entry {
@@ -159,21 +175,4 @@ input {
   font-weight: lighter;
   font-family: 'FiraSans', Sans;
   margin: 0;
-}
-
-
-/* DESKTOP
- * Media queries for for tweaking tweaks for tablets/laptops/desktops */
-@media only screen and (min-width: 530px) {
-  .content {
-    padding: 2.75rem 0.5rem 0.5rem 0.5rem;
-  }
-  label:hover {
-  background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
-    color: darkslategray;
-  }
-  label:active {
-  background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
-    color: darkslategray;
-  }
 }
