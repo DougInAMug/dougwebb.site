@@ -27,14 +27,7 @@ a {
 
 a:hover, a:active {
   color: darkturquoise;
-/*  border-bottom: 0.1rem solid darkturquoise; /* Possibly nicer way to style hyperlink undrlines */
-}
-
-/* BAD? I've set <body> as a flex box, when I could use .content ... */
-body { 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/*  border-bottom: 0.1rem solid darkturquoise; /* Possibly nicer way to style hyperlink underlines */
 }
 
 /* Checkbox hacking to achieve JS-free navbar for single page. */
@@ -70,11 +63,10 @@ input {
 }
 
 .content {
+  margin: auto;
   width: 50ch;
   max-width: 100%;
-  display: flex;
   line-height: 1.5;
-  flex-direction: column;
   padding: 0 1rem 5rem 1rem;
 }
 
