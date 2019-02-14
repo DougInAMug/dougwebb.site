@@ -8,6 +8,7 @@ const Metalsmith    = require('metalsmith')
 const debug         = require('metalsmith-debug')
 const layouts       = require('metalsmith-layouts')
 const msSymlink     = require('metalsmith-symlink')
+const assets        = require('metalsmith-assets')
 const dateFormatter = require('metalsmith-date-formatter')
 const inplace       = require('metalsmith-in-place')
 const collections   = require('metalsmith-collections')
@@ -22,14 +23,14 @@ Metalsmith(__dirname)           // __dirname defined by node.js:
   .source('./src')              // specify source directory
   .destination('./public')      // specify destination directory
   .use(drafts())                // omit drafts (YFM `draft: true`) from process 
-  .use(msSymlink({              // create symlink to `assets` (instead of copying)
-      paths: [
-        {	
-          src: './assets',  // relative to the directory the script was executed from (i.e. `dougwebb.site`)
-          dest: 'assets'    // relative to the destination directory given to Metalsmith above (i.e. 'dougwebb.site/public)
-        }
-      ]
-    }))
+  //.use(msSymlink({              // create symlink to `assets` (instead of copying)
+      //paths: [
+        //{	
+          //src: './assets',  // relative to the directory the script was executed from (i.e. `dougwebb.site`)
+          //dest: 'assets'    // relative to the destination directory given to Metalsmith above (i.e. 'dougwebb.site/public)
+        //}
+      //]
+    //}))
   
 // PROCESS POSTS
 
@@ -71,9 +72,14 @@ Metalsmith(__dirname)           // __dirname defined by node.js:
   .use(layouts({                // injects content + metadata into template specified by a files YFM `layout:`
     suppressNoFilesError: true  //   BAD! Suppresses errors when no layout found. This is lazy, fix it: https://www.npmjs.com/package/metalsmith-layouts          
   }))
+  .use(assets({                 // copy assets (note: plugin is deprecated, but working)
+	    source: './assets',         //   from `$SOURCE/assets`
+	    destination: './assets'     //   to `$DESTINATION/assets`
+  }))
   
 // BUILD
 
+  .clean(true)
   .use(debug())
   .build((err) => {             // build process
     if (err) {                  //   error handling is required
