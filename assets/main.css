@@ -2,8 +2,7 @@
  * I'm new to CSS, advice welcome! I'm trying to write this CSS 
  * 'mobile-first' with the default CSS being for mobile users (navbar at
  * bottom of screen for easier navigation) and '@media' queries at the 
- * end to modify CSS for larger devices (navbar at top.) It's 
- * 'top-to-bottom' from the perspective of the html (2019-02-05) */
+ * end to modify CSS for larger devices (navbar at top.) (2019-02-05) */
  
 /* NOTES TO SELF
  * Use external stylesheets
@@ -38,18 +37,73 @@
  * - global selector: * vs html vs body
  */
 
-/* FONTS
- * Fira Sans, its derivatives and Libre Baskerville were served from google with:
- * 
- *  @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Libre+Baskerville');
- * 
- * but I've disabled this as I'd rather avoid the goog. 
- * 2019-02-05 looks like Firefox now has fira inbuilt... what coverage is there?
- */
- 
-/* All gone! 2019-02-05
- * 
- * In the quest for best practice, I've moved all my css to shame.css until I go over it properly. After cleaning it up, I'll bring the good stuff back here
- */ 
- 
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  border-top: 0.25rem solid teal;
+  border-bottom: 0.25rem solid teal;
+  border-left: 0.25rem solid teal;
+  background-color: teal;
+}
+
+@media only screen and (min-width: 530px) {
+  .navbar {
+    top: 0;                   /* move navbar to top of screen */
+    bottom: initial;          /* reset to prevent navbar filling screen! */
+    justify-content: center;  /* IMPROVE. perhaps nicer to have aligned with content */
+  }
+  .desktopScrollbarBuffer {
+    width: calc(100vw - 100%); /* eliminate jumping by calculating desktop scrollbar width and adding to left side */
+    height: 100%;
+  }
+}
+
+  .navbar__spacer {
+    background-image: linear-gradient(to bottom, teal, darkturquoise, teal);
+    width: 0.25rem;
+    flex-shrink: 0; /* to prevent it shrinking to nothing */
+  }
+
+  .navbar__button /* i.e. unpressed */ { 
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    background-color: teal;
+    color: whitesmoke;
+    cursor: pointer;
+    font-family: 'FiraSans', Sans;
+  }
+
+  @media only screen and (min-width: 530px) {
+    .navbar__button:hover, .navbar__button:active {
+    background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
+    color: darkslategray;
+    }
+  }
+
+  /* scrolling button container */
+  .navbar__buttonShuttle {
+    display: flex; 
+    overflow: auto; /* add scrollbar if content exceeds container */
+  }
+
+  /* fade effect to right of navbar to hint options if scrolled  */
+  .navbar__fader {
+    position: absolute; /* fixed position relative to last positioned ancestor (.navbar) Layered above buttons/spacers */
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 1.5rem;
+    background-image: linear-gradient(to left, teal, transparent);
+  }
+
+  /* 'empty button' gives definite end to the 'fader' to assure users they're not missing options */
+  .navbar__ender {
+    width: 1.5rem;
+    flex-shrink: 0;
+  }
+
+
 
