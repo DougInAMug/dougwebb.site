@@ -79,7 +79,7 @@ div[id$="page"] {
 /* page content and images* grow up to 35rem, and centered. (*jstransformer-nunkucks wraps img in p for some reason) */
 .page, .page p img {
   max-width: 100%;
-  width: 25rem;
+  width: 30rem;
   margin: auto;
 }
 
@@ -87,10 +87,15 @@ div[id$="page"] {
   line-height: 1.36;
 }
 
+.page h1:first-child {
+  margin-top: 0;
+}
+
 .mainProfilePic {
   display: block;
   margin: auto;
-  max-width: 50%;
+  width: 50%;
+  max-width: 12.5rem;
   border-radius: 50%;
   border: 5px solid teal;
 }
@@ -106,7 +111,7 @@ div[id$="page"] {
   display: flex;      
   align-items: center; 
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
   .linkbar__entry {
