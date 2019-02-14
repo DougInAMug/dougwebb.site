@@ -1,0 +1,183 @@
+/* MOBILE
+
+/* make all box-sizes include paddings and borders, but also but allow inheritance 
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: calc(16px + 4.5 * ((100vw - 320px) / 1200));
+    /* font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
+     * https://css-tricks.com/snippets/css/fluid-typography/  */
+  color: darkslategray; /* I want darkslategray to replace black as global default */
+  background-color: whitesmoke; /* I want whitesmoke to replace white globally as global default */
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+a {
+  color: darkslategray;
+  font-family: Roboto, 'FiraSans', Sans;
+/* border-bottom: 0.1rem solid darkslategray; /* Possibly nicer way to style hyperlink underlines */
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  color: darkturquoise;
+/*  border-bottom: 0.1rem solid darkturquoise; /* Possibly nicer way to style hyperlink underlines */
+}
+
+/* Checkbox hacking to achieve JS-free navbar for single page. */
+/* 1/4, don't render (completely hide) input radios  */
+input {
+  display: none; 
+}
+
+/* 2/4, style pressed nav-buttons */
+/* select element with id 'x-button' which is a child of a sibling to a checked element with id 'x-radio' */
+#base-radio:checked     ~ * #base-button, 
+#projects-radio:checked ~ * #projects-button,
+#posts-radio:checked    ~ * #posts-button,
+#support-radio:checked  ~ * #support-button {
+  background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
+  color: darkslategray;
+  cursor: default; 
+}
+
+/* 3/4, initially render no pages */
+/* select divs with id ending 'page' */
+div[id$="page"] {
+  display: none;
+}
+
+/* 4/4, display page when respective button checked */
+/* select elements with id 'x-page' which are siblings of checked elements with id 'x-button' */
+#base-radio:checked     ~ * #base-page,
+#projects-radio:checked ~ * #projects-page,
+#posts-radio:checked    ~ * #posts-page,
+#support-radio:checked  ~ * #support-page {
+  display: block;
+}
+
+.contentFrame {
+  margin: auto;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 530px) {
+  .contentFrame {
+    margin-bottom: initial;
+    margin-top: 3rem;
+  }
+}
+
+/* page content and images* grow up to 35rem, and centered. (*jstransformer-nunkucks wraps img in p for some reason) */
+.page, .page p img {
+  max-width: 100%;
+  width: 30rem;
+  margin: auto;
+}
+
+.page > p {
+  line-height: 1.36;
+}
+
+.page h1:first-child {
+  margin-top: 0;
+}
+
+.mainProfilePic {
+  display: block;
+  margin: auto;
+  width: 50%;
+  max-width: 12.5rem;
+  border-radius: 50%;
+  border: 5px solid teal;
+}
+
+.projectsImg {
+  display: block;
+  margin: auto;
+  max-width:50%
+}
+
+.linkbar {
+  width: 100%;
+  display: flex;      
+  align-items: center; 
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+  .linkbar__entry {
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .linkbar__entry * {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .linkbar__entry:hover * {
+    color: darkturquoise;
+    fill: darkturquoise;
+}
+
+.noTxtDec {
+  text-decoration: none;
+}
+
+.noTopMargin {
+  margin-top: 0;
+}
+
+.noBottomMargin {
+  margin-bottom: 0;
+}
+
+.small-mono {
+  font-family: mono;
+  font-size: 0.9rem;
+}
+
+.icon {
+  height: 2rem;
+  fill: darkslategray;
+}
+
+.tech-icon {
+  height: 1rem;
+  fill: darkslategray;
+}
+
+.postBox {
+  border-radius: 10px;
+  margin: 30px 0 30px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px;
+}
+
+.postBox__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0px 0px 10px 0px;
+}
+
+.postBox__subtitle {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  font-family: 'FiraSans', Sans;
+  margin: 0;
+}
