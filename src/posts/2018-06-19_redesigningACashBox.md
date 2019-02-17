@@ -1,6 +1,6 @@
 ---
-title: "Re-designing a cash box"
-subtitle: "A case study of the importance of simplification"
+title: "Redesigning a cash box"
+subtitle: "A case study of simplification"
 description: ""
 tags: [design, kanthaus]
 date: 2018-06-19
