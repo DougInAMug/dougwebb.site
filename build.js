@@ -2,7 +2,9 @@
 
 'use strict'
 
-// build.js: metalsmith API method (alternative is metalsmith.json https://github.com/segmentio/metalsmith/wiki/The-basics-of-Metalsmith)
+// build.js: metalsmith API method (alternative method: metalsmith.json https://github.com/segmentio/metalsmith/wiki/The-basics-of-Metalsmith)
+
+// Recommendation to use `const` when the identifier won't be reassigned https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75
 
 const Metalsmith    = require('metalsmith')
 const debug         = require('metalsmith-debug')
@@ -18,96 +20,99 @@ const permalinks    = require('metalsmith-permalinks')
 const copy          = require('metalsmith-copy')
 const chalk         = require('chalk')
 
-// This guy suggests only using `const` when the identifier won't be reassigned, `let` if it can be and to not use `var` at all. https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75
-
-// SETUP
-
-Metalsmith(__dirname)           // __dirname defined by node.js:
-
-  .source('./src')              // specify source directory
+// Start
+// In Node.js, `__dirname` is always the directory in which the currently executing script resides
+Metalsmith(__dirname)
   
-  .destination('./public')      // specify destination directory
+  // Specify source file directory
+  .source('./src')              
   
-  .use(drafts())                // omit drafts (YFM `draft: true`) from process 
+  // Specify destination directory
+  .destination('./public')
   
-  //.use(msSymlink({              // create symlink to `assets` (instead of copying)
-      //paths: [
-        //{	
-          //src: './assets',  // relative to the directory the script was executed from (i.e. `dougwebb.site`)
-          //dest: 'assets'    // relative to the destination directory given to Metalsmith above (i.e. 'dougwebb.site/public)
-        //}
-      //]
-    //}))
-  
-// PROCESS SLIDES
-
-  .use(copy({ // rename the extension of slides from .md to .html
-    pattern: 'slides/*.md',
+  // Omit drafts (i.e. YFM `draft: true`) 
+  .use(drafts())                
+    
+  // Rename `slides/*.md` to `slides/*.html` 
+  // (Remark requires markdown: renaming files `.html` prevents `inplace` from transpiling them; `layouts` keeps the extensions it finds.)
+  .use(copy({
+    pattern: 'slides/*.md', 
     extension: '.html',
-    move: true
+    move: true // move, don't copy
   }))  
   
-// PROCESS POSTS
-
-  .use(inplace({                // transpile files to .html based on RTL file extenstions
-      pattern: "posts/*"        //   transpile files in `posts` (.md) into .html
+  // Transpile `posts/*.md` to html then update file extension
+  .use(inplace({
+      pattern: 'posts/*.md'
   }))
   
-  .use(collections({            // create collection metadata
-    posts: {                    // add `collection: [ 'posts' ]` ...
-      pattern: 'posts/*',       //    to files in `posts` ...
-      sortBy: 'date',           //    sort by date ...
-      reverse: true             //    reverse date order
+  // Create `posts` collection data
+  // Add `collection: [ 'posts' ]` to `posts/*.md`, and create `posts` collection object in reverse date order
+  .use(collections({
+    posts: {
+      pattern: 'posts/*.html',
+      sortBy: 'date',
+      reverse: true
     }
   }))
   
-  .use(dateFormatter({          // format date-time using 'moment' date formats: http://momentjs.com/
+  // Calculate reading data
+  // REQUIRES .html! Counts words, adds `wordCount` and `readingTime` metadata
+  .use(wordcount())
+  
+  // Prettify date format
+  // Uses 'moment' date formats: http://momentjs.com/
+  .use(dateFormatter({
     dates: [
       {
-        key: 'date',            //      change the standard `date` format
-        format: 'Do MMM YYYY'   //      e.g. 27th Nov 2018
+        key: 'date',
+        format: 'Do MMM YYYY' // e.g. 27th Nov 2018
       },
       {
-        key: 'modifiedDate',
+        key: 'modifiedDate', // not currently used
         format: 'MM YYYY'
       }
     ]
   }))
   
-  .use(wordcount())             // REQUIRES .html! counts words, adds `wordCount` and `readingTime` metadata
-  
-  .use(permalinks({             // REQUIRES .html! CAUTION don't break URLs! Prettifies URLs by 1. name.html → name/index.html 2. path: name.html → path: name
+  // Prettify URLs (`/x` vs `/x.html`)
+  // REQUIRES .html! DON'T break URLs! Creates folder with filename, renames file to `item.html` then moves it into newly created folder
+  .use(permalinks({
     linksets: [
       {
-        match: { collection: 'posts' }, // for files with `collection: 'posts'` ...
-        pattern: 'posts/:title'         // mkdir and change path to `'posts/:title'`
+        match: { collection: 'posts' },
+        pattern: 'posts/:title' // name folders using `title` from YFM instead of 'YYYY-MM-DD_FILENAME'
       }
     ]
   }))
-
-// PROCESS REST
-
-  .use(inplace({
-    //pattern: ["*", "!slides/*"]
-  }))               // in-place transpiling of remaining .html files (n.b. all `posts` meta-data now available!)
   
-  .use(layouts({                // injects content + metadata into template specified by a files YFM `layout:`
-    suppressNoFilesError: true  //   BAD! Suppresses errors when no layout found. This is lazy, fix it: https://www.npmjs.com/package/metalsmith-layouts          
+  // Inject source files into layouts
+  // Layouts specified with YFM `layout`
+  .use(layouts({
+    pattern: ['posts/*/*.html', 'slides/*/*.html'], // `/*` since URLs have been prettified at this point
   }))
   
-  .use(assets({                 // copy assets (note: plugin is deprecated, but working)
-	    source: './assets',         //   from `$SOURCE/assets`
-	    destination: './assets'     //   to `$DESTINATION/assets`
+  // Transpile `base` pages (index.html, 404, 403)
+  // N.B. At this point `collection`, `wordCount`, etc now available: this allows the posts index to be built
+  .use(inplace())
+  
+  // Copy assets to `public`
+  // Plugin deprecated, but working
+  .use(assets({
+	    source: './assets',
+	    destination: './assets'
   }))
   
-// BUILD
-
+  // Delete existing files in destination directory
   .clean(true)
   
+  // Debugging data during build
+  // LOTS!
   .use(debug())
   
-  .build((err) => {             // build process
-    if (err) {                  //   error handling is required
+  // Let's build this thing!
+  .build((err) => {
+    if (err) { // error handling is required
       throw err 
     } else {
       console.log(chalk.bgGreen.bold('✓ Build successful'))
