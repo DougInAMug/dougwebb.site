@@ -30,6 +30,9 @@ Metalsmith(__dirname)
   // Specify destination directory
   .destination('./public')
   
+  // Ignore a test folder
+  .ignore('public/test')
+  
   // Omit drafts (i.e. YFM `draft: true`) 
   .use(drafts())                
     
@@ -97,7 +100,7 @@ Metalsmith(__dirname)
   .use(inplace())
   
   // Copy assets to `public`
-  // Plugin deprecated, but working
+  // IMPROVE, seems wasteful to copy each time. Could be possible to set `clean` as false, move assets to `destination` then symlink in base directory. Plugin deprecated, but working.
   .use(assets({
 	    source: './assets',
 	    destination: './assets'
