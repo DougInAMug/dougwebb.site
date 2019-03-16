@@ -85,17 +85,7 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - Joey Hess's Website: http://joeyh.name/
 - Grant Ford's website: https://poetgrant.press/
 - Douglas Blank's site: https://cs.brynmawr.edu/~dblank/
+- Wu-lee, metalsmith example: https://git.coop/wu-lee/metalsmith-ssg/tree/master
 
-### thinking out loud
-dougwebb.site/
-  - doug
-  - projects
-  - posts
-  - support
-  - about
-  
 - https://tallyco.in/
 
-testing test
-testing test 2
-yet another test

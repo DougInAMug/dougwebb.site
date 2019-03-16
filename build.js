@@ -2,7 +2,9 @@
 
 'use strict'
 
-// build.js: metalsmith API method (alternative is metalsmith.json https://github.com/segmentio/metalsmith/wiki/The-basics-of-Metalsmith)
+// build.js: metalsmith API method (alternative method: metalsmith.json https://github.com/segmentio/metalsmith/wiki/The-basics-of-Metalsmith)
+
+// Recommendation to use `const` when the identifier won't be reassigned https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75
 
 const Metalsmith    = require('metalsmith')
 const debug         = require('metalsmith-debug')
@@ -15,74 +17,123 @@ const collections   = require('metalsmith-collections')
 const drafts        = require('metalsmith-drafts')
 const wordcount     = require('metalsmith-word-count')
 const permalinks    = require('metalsmith-permalinks')
+const copy          = require('metalsmith-copy')
+const markdown      = require('metalsmith-markdown')
+const feed          = require('metalsmith-feed')
 const chalk         = require('chalk')
 
-// SETUP
+// Start
+// In Node.js, `__dirname` is always the directory in which the currently executing script resides
+Metalsmith(__dirname)
 
-Metalsmith(__dirname)           // __dirname defined by node.js:
-  .source('./src')              // specify source directory
-  .destination('./public')      // specify destination directory
-  .use(drafts())                // omit drafts (YFM `draft: true`) from process 
-  //.use(msSymlink({              // create symlink to `assets` (instead of copying)
-      //paths: [
-        //{	
-          //src: './assets',  // relative to the directory the script was executed from (i.e. `dougwebb.site`)
-          //dest: 'assets'    // relative to the destination directory given to Metalsmith above (i.e. 'dougwebb.site/public)
-        //}
-      //]
-    //}))
+  // Define global metadata
+  .metadata({
+    site: {
+      name: 'dougwebb.site',
+      url: 'https://dougwebb.site',
+      author: 'Doug Webb'
+    }
+  })
+      
+  // Specify source file directory
+  .source('./src')              
   
-// PROCESS POSTS
+  // Specify destination directory
+  .destination('./public')
+  
+  // Ignore a test folder
+  .ignore('public/test')
+  
+  // Omit drafts (i.e. YFM `draft: true`) 
+  .use(drafts())                
+    
+  // Rename `slides/*.md` to `slides/*.html` 
+  // (Remark requires markdown: renaming files `.html` prevents `inplace` from transpiling them; `layouts` keeps the extensions it finds.)
+  .use(copy({
+    pattern: 'slides/*.md', 
+    extension: '.html',
+    move: true // move, don't copy
+  }))  
 
-  .use(inplace({                // transpile files to .html based on RTL file extenstions
-      pattern: "posts/*"        //   transpile files in `posts` (.md) into .html
+  // Transpile `posts/*.md` to html and update file extenstion
+  // (Used instead of inplace for table and html support, jstransformer not updated)
+  .use(markdown({
+    pattern: 'posts/*.md',
+    smartypants: true
   }))
-  .use(collections({            // create collection metadata
-    posts: {                    // add `collection: [ 'posts' ]` ...
-      pattern: 'posts/*',       //    to files in `posts` ...
-      sortBy: 'date',           //    sort by date ...
-      reverse: true             //    reverse date order
+  
+  // Create `posts` collection data
+  // Add `collection: [ 'posts' ]` to `posts/*.md`, and create `posts` collection object in reverse date order
+  .use(collections({
+    posts: {
+      pattern: 'posts/*.html',
+      sortBy: 'date',
+      reverse: true
     }
   }))
-  .use(dateFormatter({          // format date-time using 'moment' date formats: http://momentjs.com/
+  
+  // Calculate reading data
+  // REQUIRES .html! Counts words, adds `wordCount` and `readingTime` metadata
+  .use(wordcount())
+  
+  // Prettify date format
+  // Uses 'moment' date formats: http://momentjs.com/
+  .use(dateFormatter({
     dates: [
       {
-        key: 'date',            //      change the standard `date` format
-        format: 'Do MMM YYYY'   //      e.g. 27th Nov 2018
+        key: 'date',
+        format: 'Do MMM YYYY' // e.g. 27th Nov 2018
       },
       {
-        key: 'modifiedDate',
+        key: 'modifiedDate', // not currently used
         format: 'MM YYYY'
       }
     ]
   }))
-  .use(wordcount())             // REQUIRES .html! counts words, adds `wordCount` and `readingTime` metadata
-  .use(permalinks({             // REQUIRES .html! CAUTION don't break URLs! Prettifies URLs by 1. name.html → name/index.html 2. path: name.html → path: name
+  
+  // Prettify URLs (`/x` vs `/x.html`)
+  // REQUIRES .html! DON'T break URLs! Creates folder with filename, renames file to `item.html` then moves it into newly created folder
+  .use(permalinks({
     linksets: [
       {
-        match: { collection: 'posts' }, // for files with `collection: 'posts'` ...
-        pattern: 'posts/:title'         // mkdir and change path to `'posts/:title'`
+        match: { collection: 'posts' },
+        pattern: 'posts/:title' // name folders using `title` from YFM instead of 'YYYY-MM-DD_FILENAME'
       }
     ]
   }))
-
-// PROCESS REST
-
-  .use(inplace())               // in-place transpiling of remaining .html files (n.b. all `posts` meta-data now available!)
-  .use(layouts({                // injects content + metadata into template specified by a files YFM `layout:`
-    suppressNoFilesError: true  //   BAD! Suppresses errors when no layout found. This is lazy, fix it: https://www.npmjs.com/package/metalsmith-layouts          
-  }))
-  .use(assets({                 // copy assets (note: plugin is deprecated, but working)
-	    source: './assets',         //   from `$SOURCE/assets`
-	    destination: './assets'     //   to `$DESTINATION/assets`
+  
+  // Inject source files into layouts
+  // Layouts specified with YFM `layout`
+  .use(layouts({
+    pattern: ['posts/*/*.html', 'slides/*/*.html'], // `/*` since URLs have been prettified at this point
   }))
   
-// BUILD
-
+  // Generate rss.xml
+  .use(feed({
+    collection: 'posts'
+  }))
+  
+  // Transpile `base` pages (index.html, 404, 403)
+  // N.B. At this point `collection`, `wordCount`, etc now available: this allows the posts index to be built
+  .use(inplace())
+  
+  // Copy assets to `public`
+  // IMPROVE, seems wasteful to copy each time. Could be possible to set `clean` as false, move assets to `destination` then symlink in base directory. Plugin deprecated, but working.
+  .use(assets({
+	    source: './assets',
+	    destination: './assets'
+  }))
+  
+  // Delete existing files in destination directory
   .clean(true)
+  
+  // Debugging data during build
+  // LOTS!
   .use(debug())
-  .build((err) => {             // build process
-    if (err) {                  //   error handling is required
+  
+  // Let's build this thing!
+  .build((err) => {
+    if (err) { // error handling is required
       throw err 
     } else {
       console.log(chalk.bgGreen.bold('✓ Build successful'))
