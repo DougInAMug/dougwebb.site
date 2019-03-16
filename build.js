@@ -18,12 +18,23 @@ const drafts        = require('metalsmith-drafts')
 const wordcount     = require('metalsmith-word-count')
 const permalinks    = require('metalsmith-permalinks')
 const copy          = require('metalsmith-copy')
+const markdown      = require('metalsmith-markdown')
+const feed          = require('metalsmith-feed')
 const chalk         = require('chalk')
 
 // Start
 // In Node.js, `__dirname` is always the directory in which the currently executing script resides
 Metalsmith(__dirname)
-  
+
+  // Define global metadata
+  .metadata({
+    site: {
+      name: 'dougwebb.site',
+      url: 'https://dougwebb.site',
+      author: 'Doug Webb'
+    }
+  })
+      
   // Specify source file directory
   .source('./src')              
   
@@ -43,10 +54,12 @@ Metalsmith(__dirname)
     extension: '.html',
     move: true // move, don't copy
   }))  
-  
-  // Transpile `posts/*.md` to html then update file extension
-  .use(inplace({
-      pattern: 'posts/*.md'
+
+  // Transpile `posts/*.md` to html and update file extenstion
+  // (Used instead of inplace for table and html support, jstransformer not updated)
+  .use(markdown({
+    pattern: 'posts/*.md',
+    smartypants: true
   }))
   
   // Create `posts` collection data
@@ -93,6 +106,11 @@ Metalsmith(__dirname)
   // Layouts specified with YFM `layout`
   .use(layouts({
     pattern: ['posts/*/*.html', 'slides/*/*.html'], // `/*` since URLs have been prettified at this point
+  }))
+  
+  // Generate rss.xml
+  .use(feed({
+    collection: 'posts'
   }))
   
   // Transpile `base` pages (index.html, 404, 403)

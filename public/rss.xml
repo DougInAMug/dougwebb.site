@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 16 Mar 2019 01:39:02 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>hello world...</title>
+    <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/shame.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="contentFrame">
+      <div class="page">
+        
+          <h1>hello world...</h1>
+          <p>While far from satisfaction, I’d better swallow the bitter pill of the iterative philosophy I profess and publish my site improvements so far, namely:</p>
+<ul>
+<li>moving to <a href="https://metalsmith.io/">metalsmith</a></li>
+<li>a posts section</li>
+<li>simplified content</li>
+<li>contact icons on first page</li>
+<li>lot’s of ‘tidying’</li>
+</ul>
+<p>I intend to go into a bit more detail about the technical aspects later. For now, with this post primarily for testing, I’ll say goodbye (world).</p>
+
+        
+      </div>
+    </div>  
+  </body>
+</html>
+]]></description><link>https://dougwebb.site/posts/hello-world...</link><guid isPermaLink="true">https://dougwebb.site/posts/hello-world...</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Redesigning a cash box]]></title><description><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Redesigning a cash box</title>
+    <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/shame.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="contentFrame">
+      <div class="page">
+        
+          <h1>Redesigning a cash box</h1>
+          <p>Today I was transferring some coins from the donation jar at <a href="https://kanthaus.online">Kanthaus</a> to the cash box. Although this was my first time, I guessed the relatively trivial task would be easy—yet it turned out to be surprisingly difficult. I blame the design. The box looked like this:</p>
+<p><img src="postImages/cashBoxPre.jpg" alt=""></p>
+<p>The coins are separated into three horizontal trays and two containers. Each tray contains a mixture of coins as indicated by labels written on their bases, from top to bottom: 20c &amp; 1c, 50c &amp; 2c and €1 &amp; 10c. The tube container is marked for €2 and the egg-shaped one for 5c. This isn’t technically very challenging: much simpler than a jigsaw puzzle for example. However it is more complicated than necessary. Consider:</p>
+<ul>
+<li>the tray labels are covered by the coins, making the mixtures look random,</li>
+<li>there is no obvious order of coins, meaning the place for each coin has to be learned independently,</li>
+<li>the open trays and closed containers require different types of visual identification (i.e. image of coin vs. label,)</li>
+<li>the open trays and closed containers require different physical actions (i.e. dropping into place vs. opening and adding,)</li>
+</ul>
+<p>These points may seem trivial; none by themself is particularly taxing. However they add up, presenting a new user with the task of learning before they can carry out their task at hand. Aside from redesigning it better, my options were to:</p>
+<ol>
+<li><strong>learn the design</strong> with its unnecessary complexity, wasting my time and that of future users,</li>
+<li><strong>break the design</strong> by throwing the coins in randomly, wasting the time of users now familiar with the current design,</li>
+<li><strong>avoid the design</strong> by giving up on the task, leading to a centralization of work on fewer users,</li>
+</ol>
+<p>I added cardboard spacers to the trays to make one section for each coin and ordered the sections from most valuable to least:</p>
+<p><img src="postImages/cashBoxPost.jpg" alt=""></p>
+<p>These small changes greatly simplify the process of sorting coins: a user now simply needs to visually match the coin (one identification) and drop them into place (one action). The observant reader will realise this ‘new’ design isn’t really—it resembles a standard money tray. Copying or mimicking popular designs is not particularly exciting, but it can dramatically reduces the amount of learning a user needs to do. For example, if you were designing a set of taps, you’d probably want to colour the cold one blue and the hot one red.</p>
+<p><img src="postImages/standardMoneyTray.jpeg" alt="A blue plastic tray with &#39;channels&#39; for each coin"></p>
+<p>The responsibility for designers to understand user needs was impressed upon me from reading Don Norman’s book, <a href="http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf">‘The Design of Everyday Things.’</a> Don explains how fantastically error-prone and cognitively-limited humans are, and that the effort of learning is increased with every new procedure a person has to learn. Designers, being completely familiar with their own designs, can be blinded to the difficulties users will face unless they’re careful.</p>
+<p><img src="postImages/doet.jpg" alt=""></p>
+<p>This is about more than a cash box! The ease with which people can confidently take on tasks is directly related to personal autonomy. If things are unnecessarily complicated (or necessarily complex without documentation) it’s often easier for the person who already knows how to do it to just do it themselves. Specialization to the point of centralization introduces points of failure from burn-out, absence and even manipulation. Social interventions such as job rotation can counteract centralization, but if the same effect can be reached with passive design, it is perhaps even more resilient.</p>
+<p>At Kanthaus we have the principles of <em>self-determination, equivalence and mutual-interest</em>. Designing well is perhaps the most crucial method for systematically upholding our principles. This is especially important for us at Kanthaus to remember with our strong anti-waste convictions: a thing is not designed well simply because it’s made with upcycled material!</p>
+<p>Having empathy for users seems to be critical to good design. Indeed the ‘goodness’ of a design appears to be dependent on users experience, not the designer’s opinion. Through good design we help people use their time and effort more effectively with fewer mistakes; designers should share their users frustrations and joy. Happy designing and user-testing!</p>
+<hr>
+<p><em>Syndicated to the <a href="https://kanthaus.online/en/blog/2018-07-17_cash-box-design">Kanthaus blog</a></em></p>
+
+        
+      </div>
+    </div>  
+  </body>
+</html>
+]]></description><link>https://dougwebb.site/posts/redesigning-a-cash-box</link><guid isPermaLink="true">https://dougwebb.site/posts/redesigning-a-cash-box</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
