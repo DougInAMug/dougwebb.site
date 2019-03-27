@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//www.marudot.com//iCal Event Maker
+X-WR-CALNAME:Introducing Kanthaus
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+TZURL:http://tzurl.org/zoneinfo-outlook/Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20171204T165029Z
+UID:20171204T165029Z-545025584@marudot.com
+DTSTART;TZID="Europe/Berlin":20171217T170000
+DTEND;TZID="Europe/Berlin":20171217T220000
+SUMMARY:Introducing Kanthaus @ Lightening Lectures: LivingRoomLectures turns 2
+DESCRIPTION:# Introducing Kanthaus\n\nTwo shabby buildings in a German town you've probably never heard of before have become home for a group of post-waste activists: we call it Kanthaus.\n\nLocated within the mesh of global challenges is the fact that 1/3 of edible food isn't eaten. The issue of waste is a focal point for our project\, inherited from our involvement with yunity.org and foodsharing.de. We believe that most waste is due to outdated economics and that sharing provides solutions. Kanthaus is a platform for people promote sharing and/or reduce waste.\n\nI fell into this project early on and I'll present about the history\, first 6 months and future plans in a ~5 minute flash-talk.\n\nOriginally posted here: https://douginamug.gitlab.io/post/2017-12-04_introducingkanthaus/\n\n------\n\n# Lightening Lectures\n\nWE'VE MADE IT TO LIVING ROOM LECTURES' 2ND BIRTHDAY !! & we're going to throw a shindig to celebrate!\n\nSunday 17th December\nG.A.S//53 Kilbirnie St\, Glasgow G5 8JD5\nThere will be food from 5 and a cheap bar running from 8PM\nFree in but donations welcome\n\n5-6PM\nThere will be FOOD [!] and an exhibition of our anniversary pamphlet/zine with contributions from past lecturers\, artwork\, stories and anecdotes on learning\, living rooms and more besides.\n\n7-8.30PM\nwe'll get on with the LIGHTENING LECTURES !! a series of 3-5 minute talks followed by a 5-7 minute discussion. 10 MINUTES MAX to test any ideas/projects/thoughts you've had going on.\nso far we've got ..\nCee Smith with some period chat / Victoria McNulty with a lightening lecture about Capitalism and Travel / James McAveety discussing the album 'The La's'\, by The La's / Adam Cheshire with some chat about mimetics / Gabe Featherstone with a song about moral hygiene and vegetables\nMORE YET TO BE ANNOUNCED ! / give us a message if u want a shot\n\n8.30-10PM\nLive music. We've got some interested acts lined up\, which we'll be revealing over the next few weeks\n\n10 - till whenever we chuck you out PM\nA DJ set from Natasha Lal\n\ngive us a message on here or an email over to livingroomlecturesglasgow@gmail.com if you're up for doing a living room lecture or playing music on the night ! there's still space going\n\nOriginally posted here: https://www.facebook.com/events/1494599233959629/
+LOCATION:Glasgow Autonomous Space\, 53 Kilbirnie St\, Glasgow\, G5 8JD\, UK
+END:VEVENT
+END:VCALENDAR
