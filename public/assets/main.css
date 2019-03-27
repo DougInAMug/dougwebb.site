@@ -11,7 +11,7 @@
  * Style using classes
  *   Don't style tags ('elements')
  *   Don't style IDs
- * Don't use `!important`
+ *    Don't use `!important`
  * Mobile first
  * Be BEMy http://getbem.com/
  *   Block     independent entity  .block          
@@ -26,6 +26,7 @@
  *   flex-wrap: nowrap;
  *   justify-content: flex-start;
  *   align-content: stretch;
+ * use modifier for external geometry (i.e. margin) to reuse blocks anywhere!
  * 
  * http://learnlayout.com
  * http://paulcpederson.com/articles/css-for-people-who-hate-css/
@@ -104,6 +105,63 @@
     width: 1.5rem;
     flex-shrink: 0;
   }
+  
+.contentFrame {
+  margin: auto;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  width: 100%;
+}
 
+@media only screen and (min-width: 530px) {
+  .contentFrame {
+    margin-bottom: initial;
+    margin-top: 3rem;
+  }
+}
+  
+.image {
+  display: block;
+  margin: auto;
+  max-width: 50%;
+}
 
+  .image--profilePic {
+    width: 50%;
+    max-width: 12.5rem;
+    border-radius: 50%;
+    border: 5px solid teal;
+  }
+  
+.icon {
+  height: 2rem;
+  fill: darkslategray;
+}
+
+  .icon--tech {
+    height: 1rem;
+  }
+
+.entryBox {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px;
+}
+
+  .entryBox--posts {
+    margin: 30px 0 30px 0;
+  }  
+
+  .entryBox__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .entryBox__subtitle {
+    font-size: 1.1rem;
+    font-weight: lighter;
+    font-family: 'FiraSans', Sans;
+    margin: 0;
+  }
 
