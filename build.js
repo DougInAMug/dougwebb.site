@@ -41,9 +41,6 @@ Metalsmith(__dirname)
   // Specify destination directory
   .destination('./public')
   
-  // Ignore a test folder
-  .ignore('public/test')
-  
   // Omit drafts (i.e. YFM `draft: true`) 
   .use(drafts())                
     
@@ -97,7 +94,8 @@ Metalsmith(__dirname)
     linksets: [
       {
         match: { collection: 'posts' },
-        pattern: 'posts/:title' // name folders using `title` from YFM instead of 'YYYY-MM-DD_FILENAME'
+        pattern: 'posts/:title', // name folders using `title` from YFM instead of 'YYYY-MM-DD_FILENAME'
+        relative: 'off'
       }
     ]
   }))
@@ -125,7 +123,7 @@ Metalsmith(__dirname)
   }))
   
   // Delete existing files in destination directory
-  .clean(true)
+  .clean(false)
   
   // Debugging data during build
   // LOTS!

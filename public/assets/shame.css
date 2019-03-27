@@ -62,20 +62,6 @@ div[id$="page"] {
   display: block;
 }
 
-.contentFrame {
-  margin: auto;
-  margin-bottom: 3rem;
-  padding: 1rem;
-  width: 100%;
-}
-
-@media only screen and (min-width: 530px) {
-  .contentFrame {
-    margin-bottom: initial;
-    margin-top: 3rem;
-  }
-}
-
 /* page content and images* grow up to 35rem, and centered. (*jstransformer-nunkucks wraps img in p for some reason) */
 .page, .page p img {
   max-width: 100%;
@@ -89,21 +75,6 @@ div[id$="page"] {
 
 .page h1:first-child {
   margin-top: 0;
-}
-
-.mainProfilePic {
-  display: block;
-  margin: auto;
-  width: 50%;
-  max-width: 12.5rem;
-  border-radius: 50%;
-  border: 5px solid teal;
-}
-
-.projectsImg {
-  display: block;
-  margin: auto;
-  max-width:50%
 }
 
 .linkbar {
@@ -150,36 +121,6 @@ div[id$="page"] {
 .small-mono {
   font-family: mono;
   font-size: 0.9rem;
-}
-
-.icon {
-  height: 2rem;
-  fill: darkslategray;
-}
-
-.tech-icon {
-  height: 1rem;
-  fill: darkslategray;
-}
-
-.postBox {
-  border-radius: 10px;
-  margin: 30px 0 30px 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 15px;
-}
-
-.postBox__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0px 0px 10px 0px;
-}
-
-.postBox__subtitle {
-  font-size: 1.1rem;
-  font-weight: lighter;
-  font-family: 'FiraSans', Sans;
-  margin: 0;
 }
 
 
