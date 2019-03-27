@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 16 Mar 2019 01:39:02 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Wed, 27 Mar 2019 11:44:21 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>hello world...</title>
@@ -29,7 +29,51 @@
     </div>  
   </body>
 </html>
-]]></description><link>https://dougwebb.site/posts/hello-world...</link><guid isPermaLink="true">https://dougwebb.site/posts/hello-world...</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Redesigning a cash box]]></title><description><![CDATA[<!DOCTYPE html>
+]]></description><link>https://dougwebb.site/posts/hello-world...</link><guid isPermaLink="true">https://dougwebb.site/posts/hello-world...</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Post-consensus, cooperative decision-making]]></title><description><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Post-consensus, cooperative decision-making</title>
+    <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/shame.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="contentFrame">
+      <div class="page">
+        
+          <h1>Post-consensus, cooperative decision-making</h1>
+          <p>What should we do when consensus can’t be reached? What if cooperative decision-making is better achieved in such cases with practices other than “reaching consensus”?</p>
+<p><img src="postImages/pccdm_dmexpanded.png" alt=""></p>
+<p>For decades people wishing to organize in more cooperative ways have been encouraged to make decisions by consensus, and for good reason: when it works well, it’s awesome. However—when it doesn’t work—it can lead to  guilt, frustration; organizational paralysis or disintegration.</p>
+<p>In these talks I will explore how score voting can provide a simple, scalable and systematically cooperative alternative to the often utopian ideal of consensus—and explain how to do it.</p>
+<h3 id="edinburgh">Edinburgh</h3>
+<ul>
+<li>When: Thursday the 26th of July, 18:30 - 20:00</li>
+<li>Where: <a href="https://www.openstreetmap.org/node/3972572583#map=19/55.94823/-3.18844&amp;layers=N">Shrub, 17 Guthrie Street, Edinburgh EH1 1JG</a></li>
+<li>Links: <a href="/data/2018-07-26_Post-consensus,_cooperative_decision-making_talk_@_Shrub.ics">iCal</a>, <a href="https://www.facebook.com/events/251221582324340/">Facebook event</a>, <a href="https://www.eventbrite.co.uk/e/post-consensus-cooperative-decision-making-tickets-47851556293?aff=efbeventtix">Eventbrite event</a></li>
+</ul>
+<h3 id="glasgow">Glasgow</h3>
+<ul>
+<li>When: Monday the 30th of July, 18:30 - 20:00</li>
+<li>Where: <a href="https://www.openstreetmap.org/way/169761241">Glasgow Autonomous Space {GAS,} Unit 11, 53 Kilbirnie Steet, Tradestone, Glasgow G5 8JD</a></li>
+<li>Links: <a href="/data/2018-07-30_Post-consensus,_cooperative_decision-making_talk_@_GAS.ics">iCal</a>, <a href="https://www.facebook.com/events/197830640883115/">Facebook event</a></li>
+</ul>
+<h3 id="london">London</h3>
+<ul>
+<li>When: Thursday the 16th of August, 18:30 - 21:30</li>
+<li>Where: <a href="https://www.google.co.uk/maps/place/Newspeak+House/@51.5250985,-0.0734279,17z/data=!3m1!4b1!4m7!1m4!3m3!1s0x48761cb7f97779b1:0xdd191795dcc3bd07!2s135+Bethnal+Green+Rd,+London+E2!3b1!3m1!1s0x48761cb7f0bd369f:0x8e14db13c9e8ae7f?shorturl=1">Newspeak House, 133-135 Bethnal Green Road, Shoreditch, London E2 7DG</a></li>
+<li>Links: Please book through <a href="https://www.eventbrite.co.uk/e/round-table-on-post-consensus-cooperative-decision-making-tickets-48757539112">Eventbrite</a>. Also viewable on <a href="https://www.nwspk.com/events">Newspeak House Events page</a> and <a href="https://www.facebook.com/events/253216935292961/?notif_t=plan_user_invited&amp;notif_id=1533410894807171">Facebook event</a></li>
+</ul>
+
+        
+      </div>
+    </div>  
+  </body>
+</html>
+]]></description><link>https://dougwebb.site/posts/post-consensus-cooperative-decision-making</link><guid isPermaLink="true">https://dougwebb.site/posts/post-consensus-cooperative-decision-making</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Redesigning a cash box]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Redesigning a cash box</title>
@@ -77,4 +121,35 @@
     </div>  
   </body>
 </html>
-]]></description><link>https://dougwebb.site/posts/redesigning-a-cash-box</link><guid isPermaLink="true">https://dougwebb.site/posts/redesigning-a-cash-box</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
+]]></description><link>https://dougwebb.site/posts/redesigning-a-cash-box</link><guid isPermaLink="true">https://dougwebb.site/posts/redesigning-a-cash-box</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Introducing Kanthaus]]></title><description><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Introducing Kanthaus</title>
+    <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/shame.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="contentFrame">
+      <div class="page">
+        
+          <h1>Introducing Kanthaus</h1>
+          <p>Two shabby buildings in a German town you’ve probably never heard of before have become home for a group of post-waste activists: we call it <a href="https://kanthaus.online">Kanthaus</a>. </p>
+<p><img src="postImages/sunnyDayKH.png" alt=""></p>
+<p>Located within the mesh of global challenges is the fact that 1/3 of edible food isn’t eaten. The issue of waste is a focal point for our project, inherited from our involvement with <a href="https://yunity.org/en">yunity.org</a> and <a href="https://foodsharing.de/">foodsharing.de</a>. We believe that most waste is due to outdated economics and that sharing provides solutions. Kanthaus is a platform for people to promote sharing and/or reduce waste.</p>
+<p>Hi, I’m Doug. I fell into this project early on and I’ll present about the history, first 6 months and future plans—</p>
+<ul>
+<li>on Friday 15th December, 17:30 as a standalone event at The Shrub, 13 Guthrie Street, Edinburgh EH1 1JG. This will be an interactive ~45 minute presentation with time for further discussion afterwards. Add it to your <a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20171215T173000Z%2F20171215T193000Z&amp;text=Introducing%20Kanthaus&amp;location=The%20Shrub%2C%2013%20Guthrie%20Street%2C%20Edinburgh%20EH1%201JG.&amp;details=Two%20shabby%20buildings%20in%20a%20German%20town%20you&#39;ve%20probably%20never%20heard%20of%20before%20have%20become%20home%20for%20a%20group%20of%20post-waste%20activists%3A%20we%20call%20it%20Kanthaus.%0A%0ALocated%20within%20the%20mesh%20of%20global%20challenges%20is%20the%20fact%20that%201%2F3%20of%20edible%20food%20isn&#39;t%20eaten.%20The%20issue%20of%20waste%20is%20a%20focal%20point%20for%20our%20project%2C%20inherited%20from%20our%20involvement%20with%20yunity.org%20and%20foodsharing.de.%20We%20believe%20that%20most%20waste%20is%20due%20to%20outdated%20economics%20and%20that%20sharing%20provides%20solutions.%20Kanthaus%20is%20a%20platform%20for%20people%20promote%20sharing%20and%2For%20reduce%20waste.%0A%0AI%20fell%20into%20this%20project%20early%20on%20and%20I&#39;ll%20present%20about%20the%20history%2C%20first%206%20months%20and%20future%20plans%20in%20a%20~40%20minutes%2C%20interactive%20talk.%0A%0AOriginally%20posted%20here%3A%20https%3A%2F%2Fdouginamug.gitlab.io%2Fpost%2F2017-12-04_introducingkanthaus%2F">Google calendar</a>, <a href="/data/15_Introducing_Kanthaus.ics">any other calendar</a> or via <a href="https://www.facebook.com/events/1245750915525444/">Facebook</a>.</li>
+<li>on Sunday 17th December as part of the Lightening Lectures event at Glasgow Autonomous Space, 53 Kilbirnie St, Glasgow, G5 8JD, UK. This will be a ~5 minute lecture will a ~5 minute discussion immediately afterwards. This event starts with food at 17:00 and with lectures starting at 19:00. Original event posted on <a href="https://www.facebook.com/events/1494599233959629/?active_tab=about">Facebook</a>, add it to your <a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20171217T170000Z%2F20171217T220000Z&amp;text=Introducing%20Kanthaus%20%40%20Lightening%20Lectures%3A%20LivingRoomLectures%20turns%202&amp;location=Glasgow%20Autonomous%20Space%2C%2053%20Kilbirnie%20St%2C%20Glasgow%2C%20G5%208JD%2C%20UK&amp;details=%23%20Introducing%20Kanthaus%0A%0ATwo%20shabby%20buildings%20in%20a%20German%20town%20you&#39;ve%20probably%20never%20heard%20of%20before%20have%20become%20home%20for%20a%20group%20of%20post-waste%20activists%3A%20we%20call%20it%20Kanthaus.%0A%0ALocated%20within%20the%20mesh%20of%20global%20challenges%20is%20the%20fact%20that%201%2F3%20of%20edible%20food%20isn&#39;t%20eaten.%20The%20issue%20of%20waste%20is%20a%20focal%20point%20for%20our%20project%2C%20inherited%20from%20our%20involvement%20with%20yunity.org%20and%20foodsharing.de.%20We%20believe%20that%20most%20waste%20is%20due%20to%20outdated%20economics%20and%20that%20sharing%20provides%20solutions.%20Kanthaus%20is%20a%20platform%20for%20people%20promote%20sharing%20and%2For%20reduce%20waste.%0A%0AI%20fell%20into%20this%20project%20early%20on%20and%20I&#39;ll%20present%20about%20the%20history%2C%20first%206%20months%20and%20future%20plans%20in%20a%20~5%20minute%20flash-talk.%0A%0AOriginally%20posted%20here%3A%20https%3A%2F%2Fdouginamug.gitlab.io%2Fpost%2F2017-12-04_introducingkanthaus%2F%0A%0A------%0A%0A%23%20Lightening%20Lectures%0A%0AWE&#39;VE%20MADE%20IT%20TO%20LIVING%20ROOM%20LECTURES&#39;%202ND%20BIRTHDAY%20!!%20%26%20we&#39;re%20going%20to%20throw%20a%20shindig%20to%20celebrate!%0A%0ASunday%2017th%20December%0AG.A.S%2F%2F53%20Kilbirnie%20St%2C%20Glasgow%20G5%208JD5%0AThere%20will%20be%20food%20from%205%20and%20a%20cheap%20bar%20running%20from%208PM%0AFree%20in%20but%20donations%20welcome%0A%0A5-6PM%0AThere%20will%20be%20FOOD%20%5B!%5D%20and%20an%20exhibition%20of%20our%20anniversary%20pamphlet%2Fzine%20with%20contributions%20from%20past%20lecturers%2C%20artwork%2C%20stories%20and%20anecdotes%20on%20learning%2C%20living%20rooms%20and%20more%20besides.%0A%0A7-8.30PM%0Awe&#39;ll%20get%20on%20with%20the%20LIGHTENING%20LECTURES%20!!%20a%20series%20of%203-5%20minute%20talks%20followed%20by%20a%205-7%20minute%20discussion.%2010%20MINUTES%20MAX%20to%20test%20any%20ideas%2Fprojects%2Fthoughts%20you&#39;ve%20had%20going%20on.%0Aso%20far%20we&#39;ve%20got%20..%0ACee%20Smith%20with%20some%20period%20chat%20%2F%20Victoria%20McNulty%20with%20a%20lightening%20lecture%20about%20Capitalism%20and%20Travel%20%2F%20James%20McAveety%20discussing%20the%20album%20&#39;The%20La&#39;s&#39;%2C%20by%20The%20La&#39;s%20%2F%20Adam%20Cheshire%20with%20some%20chat%20about%20mimetics%20%2F%20Gabe%20Featherstone%20with%20a%20song%20about%20moral%20hygiene%20and%20vegetables%0AMORE%20YET%20TO%20BE%20ANNOUNCED%20!%20%2F%20give%20us%20a%20message%20if%20u%20want%20a%20shot%0A%0A8.30-10PM%0ALive%20music.%20We&#39;ve%20got%20some%20interested%20acts%20lined%20up%2C%20which%20we&#39;ll%20be%20revealing%20over%20the%20next%20few%20weeks%0A%0A10%20-%20till%20whenever%20we%20chuck%20you%20out%20PM%0AA%20DJ%20set%20from%20Natasha%20Lal%0A%0Agive%20us%20a%20message%20on%20here%20or%20an%20email%20over%20to%20livingroomlecturesglasgow%40gmail.com%20if%20you&#39;re%20up%20for%20doing%20a%20living%20room%20lecture%20or%20playing%20music%20on%20the%20night%20!%20there&#39;s%20still%20space%20going%20%0A%0AOriginally%20posted%20here%3A%20https%3A%2F%2Fwww.facebook.com%2Fevents%2F1494599233959629%2F">Google calendar</a> or <a href="/data/17_Introducing_Kanthaus.ics">any other calendar</a>.</li>
+</ul>
+<p>Hope to see you there!</p>
+
+        
+      </div>
+    </div>  
+  </body>
+</html>
+]]></description><link>https://dougwebb.site/posts/introducing-kanthaus</link><guid isPermaLink="true">https://dougwebb.site/posts/introducing-kanthaus</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
