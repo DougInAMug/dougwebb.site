@@ -11,7 +11,7 @@ layout: post.njk
 
 What should we do when consensus can't be reached? What if cooperative decision-making is better achieved in such cases with practices other than "reaching consensus"?
 
-![](postImages/pccdm_dmexpanded.png)
+![](../postImages/pccdm_dmexpanded.png)
 
 For decades people wishing to organize in more cooperative ways have been encouraged to make decisions by consensus, and for good reason: when it works well, it's awesome. However—when it doesn't work—it can lead to  guilt, frustration; organizational paralysis or disintegration.
 
