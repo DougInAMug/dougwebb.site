@@ -10,7 +10,7 @@ layout: post.njk
 
 Two shabby buildings in a German town you've probably never heard of before have become home for a group of post-waste activists: we call it [Kanthaus](https://kanthaus.online). 
 
-![](postImages/sunnyDayKH.png)
+![](../postImages/sunnyDayKH.png)
 
 Located within the mesh of global challenges is the fact that 1/3 of edible food isn't eaten. The issue of waste is a focal point for our project, inherited from our involvement with [yunity.org](https://yunity.org/en) and [foodsharing.de](https://foodsharing.de/). We believe that most waste is due to outdated economics and that sharing provides solutions. Kanthaus is a platform for people to promote sharing and/or reduce waste.
 
