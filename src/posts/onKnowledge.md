@@ -35,15 +35,28 @@ This library would contain all books: all known books, the books lost to history
 
 From curiosity to universal library, how did I get here? Why do I keep coming back to such an overwhelming place? 
 
-I know that 
+Earlier I gave reasons: learning to achieve something and learning for the fun of it. 
 
+Much as it pains me, I must accept I can't read all the books, visit all the places, nor _x_ all the _y_. These can never be goals I hope to achieve.
+
+The reasons for curiosity I gave earlier were 1) to learn to achieve something and 2) to learn for fun. 
+
+
+
+As far as I can tell, this means my curiosity is _unsatiable_.
 
 David Foster Wallace, This is Water http://metastatic.org/text/This%20is%20Water.pdf
 
 "there is  actually  no such thing as  atheism. There is no such thing as not worshipping. Everybody worships. The only choice we get is what to worship.  And  an outstanding reason for choosing some sort of God ... is that pretty much anything else you worship will eat you alive. ... Worship your intellect, being seen as smart —  you will end up feeling stupid, a fraud, always on the verge of being found out."
 
+Popper's translation of Xenophanes:
 
-absurdism -> anarchism
-anarchism ->  absurdism, iterative
-
-Popper
+The gods did not reveal, from the beginning,
+All things to us, but in the course of time
+Through seeking we may learn and know things better.
+But as for certain truth, no man has known it,
+Nor shall he know it, neither of the gods
+Nor yet of all the things of which I speak.
+For even if by chance he were to utter
+The final truth, he would himself not know it:
+For all is but a woven web of guesses.

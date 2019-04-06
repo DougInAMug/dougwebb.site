@@ -15,12 +15,17 @@ html {
      * https://css-tricks.com/snippets/css/fluid-typography/  */
   color: darkslategray; /* I want darkslategray to replace black as global default */
   background-color: whitesmoke; /* I want whitesmoke to replace white globally as global default */
+  font-family: Roboto, 'FiraSans', Sans;
+}  
+
+/*
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-}
+*/
+
 
 a {
   color: darkslategray;
-  font-family: Roboto, 'FiraSans', Sans;
+  font-family: inherit;
 /* border-bottom: 0.1rem solid darkslategray; /* Possibly nicer way to style hyperlink underlines */
   cursor: pointer;
 }
@@ -67,6 +72,7 @@ div[id$="page"] {
   max-width: 100%;
   width: 30rem;
   margin: auto;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
 .page > p {
