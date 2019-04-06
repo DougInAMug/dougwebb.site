@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 06 Apr 2019 09:44:59 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 06 Apr 2019 10:40:45 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>hello world...</title>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="contentFrame">
-      <div class="page">
+      <div class="page page--post">
         
           <h1>hello world...</h1>
           <p>While far from satisfaction, I’d better swallow the bitter pill of the iterative philosophy I profess and publish my site improvements so far, namely:</p>
@@ -42,7 +42,7 @@
   </head>
   <body>
     <div class="contentFrame">
-      <div class="page">
+      <div class="page page--post">
         
           <h1>Post-consensus, cooperative decision-making</h1>
           <p>What should we do when consensus can’t be reached? What if cooperative decision-making is better achieved in such cases with practices other than “reaching consensus”?</p>
@@ -86,7 +86,7 @@
   </head>
   <body>
     <div class="contentFrame">
-      <div class="page">
+      <div class="page page--post">
         
           <h1>Redesigning a cash box</h1>
           <p>Today I was transferring some coins from the donation jar at <a href="https://kanthaus.online">Kanthaus</a> to the cash box. Although this was my first time, I guessed the relatively trivial task would be easy—yet it turned out to be surprisingly difficult. I blame the design. The box looked like this:</p>
@@ -134,7 +134,7 @@
   </head>
   <body>
     <div class="contentFrame">
-      <div class="page">
+      <div class="page page--post">
         
           <h1>Introducing Kanthaus</h1>
           <p>Two shabby buildings in a German town you’ve probably never heard of before have become home for a group of post-waste activists: we call it <a href="https://kanthaus.online">Kanthaus</a>. </p>
