@@ -132,4 +132,7 @@ div[id$="page"] {
   font-size: 0.9rem;
 }
 
-
+code {
+  font-family: mono;
+  font-style: normal;
+}
