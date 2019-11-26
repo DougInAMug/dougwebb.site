@@ -89,7 +89,7 @@ Metalsmith(__dirname)
   }))
   
   // Prettify URLs (`/x` vs `/x.html`)
-  // REQUIRES .html! DON'T break URLs! Creates folder with filename, renames file to `item.html` then moves it into newly created folder
+  // REQUIRES .html! DON'T break URLs! Creates folder with filename, renames file to `item.html`, moves it into newly created folder and updates $path
   .use(permalinks({
     linksets: [
       {
