@@ -30,7 +30,7 @@ Doug Webb | Last updated: 2018-08-16 | [pdf](/assets/data/poco_coop_dm.pdf)
 - nomadic, living almost without money
 - now a [project network](https://yunity.org/en)
 
-<img src="/pics/poco_coop_dm/wuppdaysMalo.jpg" width=75%>
+<img src="slideImages/wuppdaysMalo.jpg" width=75%>
 
 ---
 
@@ -40,7 +40,7 @@ Doug Webb | Last updated: 2018-08-16 | [pdf](/assets/data/poco_coop_dm.pdf)
 - built in what I'd learned previously
 - it's called [Kanthaus](https://kanthaus.online)
 
-<img src="/pics/poco_coop_dm/kanthaus.jpg" width=75%>
+<img src="slideImages/kanthaus.jpg" width=75%>
 
 ---
 
@@ -230,7 +230,7 @@ class: center, middle
 
 We often think of deciding as selecting...
 
-<img src="/pics/poco_coop_dm/decisionAsSelection.png">
+<img src="slideImages/decisionAsSelection.png">
 
 ---
 
@@ -238,7 +238,7 @@ We often think of deciding as selecting...
 
 ... but it's clearer to think of it as eliminating.
 
-<img src="/pics/poco_coop_dm/decisionAsCutting.png" width=60% >
+<img src="slideImages/decisionAsCutting.png" width=60% >
 
 > _"decide (v.) ... from Latin_ decidere ... _literally_ **"to cut off"**" 
 
@@ -250,7 +250,7 @@ We often think of deciding as selecting...
 
 A basic model for the sub-processes during collective decision-making
 
-<img src="/pics/poco_coop_dm/dmDetail.png" width=100%>
+<img src="slideImages/dmDetail.png" width=100%>
 
 1. forming opinions (_outwith process scope_)
 2. compressing opinions (a.k.a. voting (_yes, there is voting in consensus_))
@@ -262,7 +262,7 @@ A basic model for the sub-processes during collective decision-making
 
 Antecedes option creation, precedes decision implementation.
 
-<img src="/pics/poco_coop_dm/creativeDecisiveActive.png" width=100%>
+<img src="slideImages/creativeDecisiveActive.png" width=100%>
 
 ---
 
@@ -325,7 +325,7 @@ Study on front-brain vs group size suggests a cognitive limit to social relation
 > --> limit to shared perception 
 >> --> limit on consensus.
 
-<img src="/pics/poco_coop_dm/dunbar.jpg" width=80%>
+<img src="slideImages/dunbar.jpg" width=80%>
 
 ---
 
@@ -350,7 +350,7 @@ I'm putting forward a philosophy of cooperation based on 3 values:
 
 a.k.a. **Freedom, self-determination, _Liberté_**
 
-<img src="/pics/poco_coop_dm/autonomy.png">
+<img src="slideImages/autonomy.png">
 
 Regarding decision-making:
 - people determine outcome (vs. chance, lottery)
@@ -362,7 +362,7 @@ Regarding decision-making:
 
 a.k.a. **Equality of worth, _Égalité_**
 
-<img src="/pics/poco_coop_dm/equivalence.png" width=60%>
+<img src="slideImages/equivalence.png" width=60%>
 
 Regarding decision-making:
 - _'one person, one vote'_
@@ -374,7 +374,7 @@ Regarding decision-making:
 
 a.k.a. **Care for others, mutual-aid, _Fraternité_**
 
-<img src="/pics/poco_coop_dm/mutualInterest.png" width=50%>
+<img src="slideImages/mutualInterest.png" width=50%>
 
 Regarding decision-making:
 - **?**
@@ -387,7 +387,7 @@ Regarding decision-making:
 
 > —Jeremy Bentham, 1776. _A fragment on Government_
 
-<img src="/pics/poco_coop_dm/utilityBalanceEven.png" width=50%>
+<img src="slideImages/utilityBalanceEven.png" width=50%>
 
 - increasing happiness = reducing suffering
 - would you give a cake to:
@@ -402,7 +402,7 @@ Regarding decision-making:
 
 > —Karl Popper, 1945. _The Open Society and Its Enemies_
 
-<img src="/pics/poco_coop_dm/utilityBalanceWeighted.png" width=45%>
+<img src="slideImages/utilityBalanceWeighted.png" width=45%>
 
 - increasing happiness < reducing suffering
 - would you give a cake to:
@@ -415,7 +415,7 @@ Regarding decision-making:
 
 a.k.a. **Care for others, mutual-aid, _Fraternité_**
 
-<img src="/pics/poco_coop_dm/mutualInterest.png" width=55%>
+<img src="slideImages/mutualInterest.png" width=55%>
 
 Regarding decision-making:
 - select the **most acceptable, achievable option**
@@ -450,7 +450,7 @@ class: center, middle
 
 Examination of how each element can support cooperation.
 
-<img src="/pics/poco_coop_dm/dmDetail.png" width=100%>
+<img src="slideImages/dmDetail.png" width=100%>
 
 1. options
 2. voting
@@ -462,7 +462,7 @@ Examination of how each element can support cooperation.
 
 Otherwise there is nothing to 'decide' on.
 
-<img src="/pics/poco_coop_dm/creativeDecisiveActive.png" width=100%>
+<img src="slideImages/creativeDecisiveActive.png" width=100%>
 
 ---
 
@@ -471,7 +471,7 @@ Otherwise there is nothing to 'decide' on.
 One option must be to _change something_ (a specific proposal, 𝝙).  
 There is always the option to _change nothing_ (the current status quo, 0). 
 
-<img src="/pics/poco_coop_dm/creativeDecisiveActiveBinary.png" width=100%>
+<img src="slideImages/creativeDecisiveActiveBinary.png" width=100%>
 
 _(The counter-proposal in consensus is what happens if proposal fails, usually further discussion.)_
 
@@ -481,7 +481,7 @@ _(The counter-proposal in consensus is what happens if proposal fails, usually f
 
 You probably want _more_ than two.
 
-<img src="/pics/poco_coop_dm/brexitQuestion.png" width=70%>
+<img src="slideImages/brexitQuestion.png" width=70%>
 
 ---
 
@@ -489,7 +489,7 @@ You probably want _more_ than two.
 
 You probably want _more_ than two.
 
-<img src="/pics/poco_coop_dm/brexitQuestionHighlighted.png" width=70%>
+<img src="slideImages/brexitQuestionHighlighted.png" width=70%>
 
 - Vague proposals lead to conflict if selected
 - Specific proposals are polarizing
@@ -500,7 +500,7 @@ You probably want _more_ than two.
 
 Having more options increases the likelihood of acceptable option for all... 
 
-<img src="/pics/poco_coop_dm/creativeDecisiveActivePoly.png" width=95%>
+<img src="slideImages/creativeDecisiveActivePoly.png" width=95%>
 
 ...and participant overload.
 
@@ -510,7 +510,7 @@ Having more options increases the likelihood of acceptable option for all...
 
 Having _"Revote on other options"_ ensures an acceptable option for all without overloading.
 
-<img src="/pics/poco_coop_dm/creativeDecisiveActiveROOO.png" width=100%>
+<img src="slideImages/creativeDecisiveActiveROOO.png" width=100%>
 
 Should outline:
 - arrangements for adding new options, and
@@ -522,7 +522,7 @@ Should outline:
 
 In rock-paper-scissors the play is independent, not secret.
 
-<img src="/pics/poco_coop_dm/rockPaperScissors.png" width=50%>
+<img src="slideImages/rockPaperScissors.png" width=50%>
 
 --
 
@@ -546,7 +546,7 @@ In rock-paper-scissors the play is independent, not secret.
 
 Vote for favorite. 
 
-<img src="/pics/poco_coop_dm/votingMedal.png" width=25%>
+<img src="slideImages/votingMedal.png" width=25%>
 
 - problems: vote splitting, wasted votes, lesser evil, etc.
 - can't express positive/negative opinion
@@ -557,7 +557,7 @@ Vote for favorite.
 
 Rank options best to worst.
 
-<img src="/pics/poco_coop_dm/votingMedals.png" width=75%>
+<img src="slideImages/votingMedals.png" width=75%>
 
 Better than majority, but...
 
@@ -567,7 +567,7 @@ Better than majority, but...
 
 Unavoidable paradoxes and manipulation strategies present whenever there are more than 3 options, as shown by [Arrows Impossibility Theorem](https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem) then [Gibbard-Satterthwaite Theorem](https://en.wikipedia.org/wiki/Gibbard%E2%80%93Satterthwaite_theorem).
 
-<img src="/pics/poco_coop_dm/impossTheorem.png" width=60%>
+<img src="slideImages/impossTheorem.png" width=60%>
 
 - and participants _still_ can't express positive/negative opinion
 
@@ -584,7 +584,7 @@ No ranked system satisfies the following criteria
 
 Give each option a rating.
 
-<img src="/pics/poco_coop_dm/votingStars.png" width=75%>
+<img src="slideImages/votingStars.png" width=75%>
 
 - numeric representation: 1, 2, 3, 4, 5
 - can (ambiguously) express positive/negative opinion
@@ -595,7 +595,7 @@ Give each option a rating.
 
 Give each option a rating.
 
-<img src="/pics/poco_coop_dm/votingEmojis.png" width=75%>
+<img src="slideImages/votingEmojis.png" width=75%>
 
 - numeric representation: -2, -1, 0, 1, 2
 - can unambiguously express positive/negative opinion
@@ -609,7 +609,7 @@ _(Consensus essentially allows you to score, but just the proposal.)_
 
 Simulation shows scoring results in best utility outcome, even with non-cooperative participants. (Note: 'Range' = 'Score')
 
-<img src="/pics/poco_coop_dm/bayesRegret.png" width=70%>
+<img src="slideImages/bayesRegret.png" width=70%>
 
 ---
 
@@ -617,7 +617,7 @@ Simulation shows scoring results in best utility outcome, even with non-cooperat
 
 However, direct addition equates positive and negative scores...
 
-<img src="/pics/poco_coop_dm/utilityBalanceEven.png" width=50%>
+<img src="slideImages/utilityBalanceEven.png" width=50%>
 
 - e.g. _'negative two'_ plus _'two'_ equals zero
 
@@ -627,7 +627,7 @@ However, direct addition equates positive and negative scores...
 
 Multiplying negative scores elevates acceptable over preferable. (e.g. "multiply negative scores by 3 before totalling")
 
-<img src="/pics/poco_coop_dm/utilityBalanceWeighted.png" width=50%>
+<img src="slideImages/utilityBalanceWeighted.png" width=50%>
 
 - greater than 1
 - less than ∞ (otherwise not enough motivation to do it)
@@ -729,7 +729,7 @@ _What do you need? What can you give?_
 - attribution is nice, not necessary
   - *_not my work: Brexit, Arrows Theorem, Dunbar and Bayesian Regret images; all quoted text._
 
-<img src="/pics/poco_coop_dm/cc0.png" width=25%>
+<img src="slideImages/cc0.png" width=25%>
 
 **Contact: questions, corrections, feedback...**
 - site: [dougwebb.site](https://dougwebb.site/) ~~[douginamug.gitlab.io](https://douginamug.gitlab.io/)~~
