@@ -1,5 +1,5 @@
 ---
-title: "Talk, Post-consensus, cooperative decision-making"
+title: "Talk: Post-consensus, cooperative decision-making"
 permalink: "posts/post-consensus-cooperative-decision-making"
 subtitle: "Edinburgh 26th July, Glasgow 30th July, London 16th August"
 description: "Talks about the philosophy, theory and practice of making cooperative decisions when consensus is not possible."

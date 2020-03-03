@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 03 Mar 2020 20:18:51 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 03 Mar 2020 21:31:45 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>hello world...</title>
@@ -29,10 +29,10 @@
     </div>  
   </body>
 </html>
-]]></description><link>https://dougwebb.site/posts/hello-world...</link><guid isPermaLink="true">https://dougwebb.site/posts/hello-world...</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Talk, Post-consensus, cooperative decision-making]]></title><description><![CDATA[<!DOCTYPE html>
+]]></description><link>https://dougwebb.site/posts/hello-world...</link><guid isPermaLink="true">https://dougwebb.site/posts/hello-world...</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Talk: Post-consensus, cooperative decision-making]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Talk, Post-consensus, cooperative decision-making</title>
+    <title>Talk: Post-consensus, cooperative decision-making</title>
     <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
     <link rel="stylesheet" href="/assets/main.css">
     <link rel="stylesheet" href="/assets/shame.css">
@@ -44,7 +44,7 @@
     <div class="contentFrame">
       <div class="page page--post">
         
-          <h1>Talk, Post-consensus, cooperative decision-making</h1>
+          <h1>Talk: Post-consensus, cooperative decision-making</h1>
           <p>What should we do when consensus can’t be reached? What if cooperative decision-making is better achieved in such cases with practices other than “reaching consensus”?</p>
 <p><img src="../postImages/pccdm_dmexpanded.png" alt=""></p>
 <p>For decades people wishing to organize in more cooperative ways have been encouraged to make decisions by consensus, and for good reason: when it works well, it’s awesome. However—when it doesn’t work—it can lead to  guilt, frustration; organizational paralysis or disintegration.</p>
@@ -73,7 +73,7 @@
     </div>  
   </body>
 </html>
-]]></description><link>https://dougwebb.site/posts/talk-post-consensus-cooperative-decision-making</link><guid isPermaLink="true">https://dougwebb.site/posts/talk-post-consensus-cooperative-decision-making</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Talk: Introducing Kanthaus]]></title><description><![CDATA[<!DOCTYPE html>
+]]></description><link>https://dougwebb.site/posts/post-consensus-cooperative-decision-making</link><guid isPermaLink="true">https://dougwebb.site/posts/post-consensus-cooperative-decision-making</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Talk: Introducing Kanthaus]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Talk: Introducing Kanthaus</title>
@@ -104,4 +104,4 @@
     </div>  
   </body>
 </html>
-]]></description><link>https://dougwebb.site/posts/talk:-introducing-kanthaus</link><guid isPermaLink="true">https://dougwebb.site/posts/talk:-introducing-kanthaus</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
+]]></description><link>https://dougwebb.site/posts/introducing-kanthaus</link><guid isPermaLink="true">https://dougwebb.site/posts/introducing-kanthaus</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>

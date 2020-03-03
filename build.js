@@ -41,26 +41,25 @@ Metalsmith(__dirname)
   // Specify destination directory
   .destination('./public')
   
-  // Omit drafts (i.e. YFM `draft: true`) 
+  // Omit drafts (i.e. `draft: true`) 
   .use(drafts())                
     
-  // Rename `slides/*.md` to `slides/*.html` 
-  // (Remark requires markdown: renaming files `.html` prevents `inplace` from transpiling them; `layouts` keeps the extensions it finds.)
+  // `slides/*.md` --> `slides/*.html` 
+  // (Remark (js for slides) requires markdown: renaming `.md` as `.html` prevents `inplace` from transpiling them, while reatining content as markdown; `layouts` keeps the extensions it finds.)
   .use(copy({
     pattern: 'slides/*.md', 
     extension: '.html',
     move: true // move, don't copy
   }))  
 
-  // Transpile `posts/*.md` to html and update file extenstion
+  // `posts/*.md` --transpile-to-html--> `posts/*.html`
   // (Used instead of inplace for table and html support, jstransformer not updated)
   .use(markdown({
     pattern: 'posts/*.md',
     smartypants: true
   }))
   
-  // Create `posts` collection data
-  // Add `collection: [ 'posts' ]` to `posts/*.md`, and create `posts` collection object in reverse date order
+  // Add `collection: [ 'posts' ]` to `posts/*.md` & create `posts` collection object in reverse date order
   .use(collections({
     posts: {
       pattern: 'posts/*.html',
@@ -70,7 +69,7 @@ Metalsmith(__dirname)
   }))
   
   // Calculate reading data
-  // REQUIRES .html! Counts words, adds `wordCount` and `readingTime` metadata
+  // REQUIRES .html Counts words, adds `wordCount` and `readingTime` metadata
   .use(wordcount())
   
   // Prettify date format
@@ -88,7 +87,7 @@ Metalsmith(__dirname)
     ]
   }))
   
-  // Prettify URLs (`/x` vs `/x.html`)
+  // /example.html --> example/item.html (i.e. '.html'-free urls)
   // REQUIRES .html! DON'T break URLs! Creates folder with filename, renames file to `item.html`, moves it into newly created folder and updates $path
   .use(permalinks({
     linksets: [
