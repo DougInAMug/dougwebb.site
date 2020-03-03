@@ -123,7 +123,7 @@ Metalsmith(__dirname)
   }))
   
   // Delete existing files in destination directory
-  .clean(false)
+  .clean(true)
   
   // Debugging data during build
   // LOTS!
