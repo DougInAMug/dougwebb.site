@@ -1,13 +1,12 @@
 ---
-title: "Post-consensus, cooperative decision-making"
+title: "Talk: Post-consensus, cooperative decision-making"
 subtitle: "Edinburgh 26th July, Glasgow 30th July, London 16th August"
-description: "Talks on the philosophy, theory and practice of making cooperative decisions when consensus is not possible."
+description: "Talks about the philosophy, theory and practice of making cooperative decisions when consensus is not possible."
 tags: [event]
 date: 2018-07-10
 draft: false
 layout: post.njk
 ---
-
 
 What should we do when consensus can't be reached? What if cooperative decision-making is better achieved in such cases with practices other than "reaching consensus"?
 

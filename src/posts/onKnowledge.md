@@ -7,13 +7,13 @@ layout: post.njk
 
 ---
 
-_Curiosity killed the cat_, so the saying goes. A warning: question things and face the consequences. I agree that there are consequences. Although curiosity may lead to premature death, I write here about the consequences it presents me while living.
+_Curiosity killed the cat_, so the saying goes. A warning: question things and there'll be consequences! Prematurely deceased felines aside, I write here about the consequences curiosity presents me while _alive_.
 
 The desire to know—by experience or understanding—appears to be the essence of my curiosity. Sometimes I seek knowledge in order to do something else (a means to an end), sometimes simply because I like learning (an end in itself). Reading, theorising, travelling, testing: this desire takes many forms.
 
-The issue I have with curiosity is somewhat paradoxical. In embracing my curiosity I become _more_ curious. The more I learn, the more I'm aware of what I don't know; the more I explore, the more I realise how much there is to discover. At the end of a scientific paper, there's a list of references to other papers, each in turn with its own list of references and so on. It seems to be a positive feedback loop.
+The issue I have with curiosity is somewhat paradoxical. In embracing my curiosity I become _more_ curious. The more I learn, the more I'm aware of what I don't know; the more I explore, the more I realise how much there is to discover. At the end of a scientific paper, there's a list of references to other papers, each in turn with its own list of references and so on. A positive feedback loop.
 
-This leads me to the disconcerting feeling that the more I learn, the less I know. In dark moments (Wikipedia trawling into the night) it even feels like learning _decreases_ my intelligence. I do understand the temptation of dogmatic ignorance.
+This leads me to the disconcerting feeling that _the more I learn, the less I know_. In dark moments (Wikipedia trawling into the early hours) it even feels like learning _decreases_ my intelligence. I do understand the temptation of dogmatic ignorance.
 
 I want to focus on books. Books are like bricks of materialized information, sliced into pages. You can sense the weight shifting from the back of a book to the front as you turn the pages, a tactile progress indicator. You can write in notes—I'm not just a defendant, but a proponent of the practice—to customise the book to your particular interest. 
 

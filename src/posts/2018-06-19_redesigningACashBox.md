@@ -5,9 +5,11 @@ description: ""
 tags: [design, kanthaus]
 date: 2018-06-19
 lastEdit: 2019-02-17
-draft: false
+draft: true
 layout: post.njk
 ---
+
+### Just delete this? It's pretty long/lame :/ ###
 
 Today I was transferring some coins from the donation jar at [Kanthaus](https://kanthaus.online) to the cash box. Although this was my first time, I guessed the relatively trivial task would be easy—yet it turned out to be surprisingly difficult. I blame the design. The box looked like this:
 
