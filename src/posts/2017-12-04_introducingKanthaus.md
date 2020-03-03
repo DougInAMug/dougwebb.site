@@ -1,5 +1,6 @@
 ---
 title: "Talk: Introducing Kanthaus"
+permalink: "posts/introducing-kanthaus"
 subtitle: "Talks in Glasgow and Edinburgh, Dec 2017"
 description: "Two shabby buildings in a German town you've probably never heard of before have become home for a group of post-waste activists: we call it Kanthaus."
 tags: [event, UK]

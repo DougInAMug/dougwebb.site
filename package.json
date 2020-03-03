@@ -25,6 +25,7 @@
     "metalsmith-markdown": "^1.2.0",
     "metalsmith-permalinks": "^2.0.0",
     "metalsmith-symlink": "0.0.4",
-    "metalsmith-word-count": "0.0.4"
+    "metalsmith-word-count": "0.0.4",
+    "nodemon": "^2.0.2"
   }
 }
