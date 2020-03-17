@@ -135,4 +135,12 @@ div[id$="page"] {
 code {
   font-family: mono;
   font-style: normal;
+  background-color: lightblue;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;  
+}
+
+pre::before {
+  content: "$ ";
+  background-color: lavender;
 }
