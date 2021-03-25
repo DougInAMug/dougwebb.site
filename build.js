@@ -44,13 +44,7 @@ Metalsmith(__dirname)
   // Omit drafts (i.e. `draft: true`) 
   .use(drafts())                
     
-  // `slides/*.md` --> `slides/*.html` 
-  // (Remark (js for slides) requires markdown: renaming `.md` as `.html` prevents `inplace` from transpiling them, while reatining content as markdown; `layouts` keeps the extensions it finds.)
-  .use(copy({
-    pattern: 'slides/*.md', 
-    extension: '.html',
-    move: true // move, don't copy
-  }))  
+ 
 
   // `posts/*.md` --transpile-to-html--> `posts/*.html`
   // (Used instead of inplace for table and html support, jstransformer not updated)
@@ -90,19 +84,23 @@ Metalsmith(__dirname)
   // /example.html --> example/item.html (i.e. '.html'-free urls)
   // REQUIRES .html! DON'T break URLs! Creates folder with filename, renames file to `item.html`, moves it into newly created folder and updates $path
   .use(permalinks({
+    // 'default'
+    relative: 'folder',
+    
     linksets: [
       {
         match: { collection: 'posts' },
         pattern: 'posts/:title', // name folders using `title` from YFM instead of 'YYYY-MM-DD_FILENAME'
-        relative: 'off'
+        relative: 'false'
       }
     ]
+       
   }))
   
   // Inject source files into layouts
   // Layouts specified with YFM `layout`
   .use(layouts({
-    pattern: ['posts/*/*.html', 'slides/*/*.html'], // `/*` since URLs have been prettified at this point
+    pattern: ['posts/*/*.html'], // `/*` since URLs have been prettified at this point
   }))
   
   // Generate rss.xml
@@ -120,7 +118,7 @@ Metalsmith(__dirname)
 	    source: './assets',
 	    destination: './assets'
   }))
-  
+   
   // Delete existing files in destination directory
   .clean(true)
   
