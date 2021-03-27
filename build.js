@@ -9,18 +9,16 @@
 const Metalsmith    = require('metalsmith')
 const debug         = require('metalsmith-debug')
 const layouts       = require('metalsmith-layouts')
-const msSymlink     = require('metalsmith-symlink')
-const assets        = require('metalsmith-assets')
 const dateFormatter = require('metalsmith-date-formatter')
 const inplace       = require('metalsmith-in-place')
 const collections   = require('metalsmith-collections')
 const drafts        = require('metalsmith-drafts')
 const wordcount     = require('metalsmith-word-count')
-const permalinks    = require('metalsmith-permalinks')
-const copy          = require('metalsmith-copy')
 const markdown      = require('metalsmith-markdown')
 const feed          = require('metalsmith-feed')
 const chalk         = require('chalk')
+const renamer       = require('metalsmith-renamer')
+const paths         = require('metalsmith-paths')
 
 // Start
 // In Node.js, `__dirname` is always the directory in which the currently executing script resides
@@ -43,20 +41,18 @@ Metalsmith(__dirname)
   
   // Omit drafts (i.e. `draft: true`) 
   .use(drafts())                
-    
- 
 
   // `posts/*.md` --transpile-to-html--> `posts/*.html`
-  // (Used instead of inplace for table and html support, jstransformer not updated)
+  // (Used instead of inplace for table and html support since the jstransformer componenet is not updated)
   .use(markdown({
-    pattern: 'posts/*.md',
+    pattern: 'posts/*/*.md',
     smartypants: true
   }))
   
   // Add `collection: [ 'posts' ]` to `posts/*.md` & create `posts` collection object in reverse date order
   .use(collections({
     posts: {
-      pattern: 'posts/*.html',
+      pattern: 'posts/*/*.html',
       sortBy: 'date',
       reverse: true
     }
@@ -80,28 +76,34 @@ Metalsmith(__dirname)
       }
     ]
   }))
-  
-  // /example.html --> example/item.html (i.e. '.html'-free urls)
-  // REQUIRES .html! DON'T break URLs! Creates folder with filename, renames file to `item.html`, moves it into newly created folder and updates $path
-  .use(permalinks({
-    // 'default'
-    relative: 'folder',
-    
-    linksets: [
-      {
-        match: { collection: 'posts' },
-        pattern: 'posts/:title', // name folders using `title` from YFM instead of 'YYYY-MM-DD_FILENAME'
-        relative: 'false'
-      }
-    ]
-       
-  }))
-  
+   
   // Inject source files into layouts
   // Layouts specified with YFM `layout`
   .use(layouts({
+    default: "post.njk",
     pattern: ['posts/*/*.html'], // `/*` since URLs have been prettified at this point
   }))
+  
+  // Adds property with different paths
+  // e.g. 'post.paths.dir'
+  .use(paths({
+    property: "paths"
+  }))
+  
+  // rename post and slide *.html to index.html
+  // somehow easier than metalsmith-permalinks, because I want to keep imgs as subfolders
+  .use(
+    renamer({
+      "posts": { // this name is only used to help organize different settings
+        pattern: "posts/**/*.html",
+        rename: "index.html",
+      }, // and as many more patterns as you want
+      "slides": { 
+        pattern: "slides/**/*.html",
+        rename: "index.html",
+      }, 
+    })
+  )
   
   // Generate rss.xml
   .use(feed({
@@ -111,20 +113,20 @@ Metalsmith(__dirname)
   // Transpile `base` pages (index.html, 404, 403)
   // N.B. At this point `collection`, `wordCount`, etc now available: this allows the posts index to be built
   .use(inplace())
-  
-  // Copy assets to `public`
-  // IMPROVE, seems wasteful to copy each time. Could be possible to set `clean` as false, move assets to `destination` then symlink in base directory. Plugin deprecated, but working.
-  .use(assets({
-	    source: './assets',
-	    destination: './assets'
-  }))
-   
+    
   // Delete existing files in destination directory
   .clean(true)
   
   // Debugging data during build
   // LOTS!
-  .use(debug())
+  .use(debug({
+    log: "first debug",      // any comment you like
+    metadata: true,         // default: true
+    source: false,           // default: true
+    destination: false,      // default: true
+    files: false,             // default: true
+    match: "**/index.html"         // default: all files
+  }))
   
   // Let's build this thing!
   .build((err) => {

@@ -115,7 +115,7 @@
       
       <div id="posts-page" class="page">
         {% for post in posts %}
-        <a href="{{ post.path }}">
+        <a href="{{ post.paths.dir }}">
           <div class="entryBox entryBox--posts">
             <h1 class="entryBox__title">{{ post.title }}</h1>
             <p class="entryBox__subtitle">{{ post.date }} — {{ post.wordCount }} words, ~{{ post.readingTime }}</p>
