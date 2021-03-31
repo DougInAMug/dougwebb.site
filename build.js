@@ -56,7 +56,12 @@ Metalsmith(__dirname)
       pattern: 'posts/*/*.html',
       sortBy: 'date',
       reverse: true
-    }
+    },
+    slides: {
+      pattern: 'slides/*/*.html',
+      sortBy: 'date',
+      reverse: true
+    }    
   }))
   
   // Calculate reading data

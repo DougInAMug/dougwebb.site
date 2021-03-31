@@ -135,7 +135,7 @@
     border: 5px solid teal;
   }
   
-.icon {
+.icon, .svg-inline--fa {
   height: 2rem;
   fill: darkslategray;
 }
