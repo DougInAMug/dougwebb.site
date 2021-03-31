@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doug Webb</title>
+    <link rel="stylesheet" href="assets/fonts.css">
+      <!-- Custom fonts -->
+    <link rel="stylesheet" href="assets/normalize_v8.0.0.css"> 
+      <!-- "Normalize.css makes browsers render all elements more consistently" https://necolas.github.io/normalize.css/ OVERRIDDEN BY main.css -->
+    <link rel="stylesheet" href="assets/main.css">             
+      <!-- All intentional CSS here. OVERRIDDEN BY shame.css -->
+    <link rel="stylesheet" href="assets/shame.css">            
+      <!-- "shame.css ... a way of allowing ... hacks when necessary" https://csswizardry.com/2013/04/shame-css/ -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/icons/favicon-256.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set device width as page width, set initial zoom. -->
+  </head>
+  <body>
+    {% include "layouts/_nav.njk" %}
+    {% block main %}
+    {% endblock %}
+  </body>
+</html>

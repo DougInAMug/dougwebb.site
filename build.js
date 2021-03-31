@@ -19,6 +19,7 @@ const feed          = require('metalsmith-feed')
 const chalk         = require('chalk')
 const renamer       = require('metalsmith-renamer')
 const paths         = require('metalsmith-paths')
+const assets         = require('metalsmith-assets')
 
 // Start
 // In Node.js, `__dirname` is always the directory in which the currently executing script resides
@@ -81,7 +82,7 @@ Metalsmith(__dirname)
   // Layouts specified with YFM `layout`
   .use(layouts({
     default: "post.njk",
-    pattern: ['posts/*/*.html'], // `/*` since URLs have been prettified at this point
+    pattern: ['**' ,'!slides/**'], // `/*` since URLs have been prettified at this point
   }))
   
   // Adds property with different paths
@@ -113,6 +114,11 @@ Metalsmith(__dirname)
   // Transpile `base` pages (index.html, 404, 403)
   // N.B. At this point `collection`, `wordCount`, etc now available: this allows the posts index to be built
   .use(inplace())
+  
+  .use(assets({
+    source: './assets', // relative to the working directory
+    destination: './assets' // relative to the build directory
+  }))
     
   // Delete existing files in destination directory
   .clean(true)
@@ -122,7 +128,7 @@ Metalsmith(__dirname)
   .use(debug({
     log: "first debug",      // any comment you like
     metadata: true,         // default: true
-    source: false,           // default: true
+    source: true,           // default: true
     destination: false,      // default: true
     files: false,             // default: true
     match: "**/index.html"         // default: all files
