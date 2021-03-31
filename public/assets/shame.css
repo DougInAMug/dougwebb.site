@@ -35,38 +35,6 @@ a:hover, a:active {
 /*  border-bottom: 0.1rem solid darkturquoise; /* Possibly nicer way to style hyperlink underlines */
 }
 
-/* Checkbox hacking to achieve JS-free navbar for single page. */
-/* 1/4, don't render (completely hide) input radios  */
-input {
-  display: none; 
-}
-
-/* 2/4, style pressed nav-buttons */
-/* select element with id 'x-button' which is a child of a sibling to a checked element with id 'x-radio' */
-#base-radio:checked     ~ * #base-button, 
-#projects-radio:checked ~ * #projects-button,
-#posts-radio:checked    ~ * #posts-button,
-#support-radio:checked  ~ * #support-button {
-  background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
-  color: darkslategray;
-  cursor: default; 
-}
-
-/* 3/4, initially render no pages */
-/* select divs with id ending 'page' */
-div[id$="page"] {
-  display: none;
-}
-
-/* 4/4, display page when respective button checked */
-/* select elements with id 'x-page' which are siblings of checked elements with id 'x-button' */
-#base-radio:checked     ~ * #base-page,
-#projects-radio:checked ~ * #projects-page,
-#posts-radio:checked    ~ * #posts-page,
-#support-radio:checked  ~ * #support-page {
-  display: block;
-}
-
 /* page content and images* grow up to 35rem, and centered. (*jstransformer-nunkucks wraps img in p for some reason) */
 .page, .page p img {
   max-width: 100%;

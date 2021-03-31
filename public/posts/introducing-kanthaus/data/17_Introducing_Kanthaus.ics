@@ -1,4 +1,21 @@
-BEGIN:VCALENDAR
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/shame.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="contentFrame">
+      <div class="page page--post">
+        
+          <h1></h1>
+          <p><i></i></p>
+          BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//www.marudot.com//iCal Event Maker
 X-WR-CALNAME:Introducing Kanthaus
@@ -32,3 +49,8 @@ DESCRIPTION:# Introducing Kanthaus\n\nTwo shabby buildings in a German town you'
 LOCATION:Glasgow Autonomous Space\, 53 Kilbirnie St\, Glasgow\, G5 8JD\, UK
 END:VEVENT
 END:VCALENDAR
+        
+      </div>
+    </div>  
+  </body>
+</html>

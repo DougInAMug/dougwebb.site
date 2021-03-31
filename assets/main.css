@@ -39,7 +39,7 @@
  */
 
 
-.navbar {
+.nav {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -51,9 +51,9 @@
 }
 
 @media only screen and (min-width: 530px) {
-  .navbar {
-    top: 0;                   /* move navbar to top of screen */
-    bottom: initial;          /* reset to prevent navbar filling screen! */
+  .nav {
+    top: 0;                   /* move nav to top of screen */
+    bottom: initial;          /* reset to prevent nav filling screen! */
     justify-content: center;  /* IMPROVE. perhaps nicer to have aligned with content */
   }
   .desktopScrollbarBuffer {
@@ -62,44 +62,39 @@
   }
 }
 
-/* And experiment for left aligning navbar
-  .navbar__starter {
+/* And experiment for left aligning nav
+  .nav__starter {
     width: calc((100vw - 30rem - 2rem) / 2);
     flex-shrink: 0;
   }
 */
 
-  .navbar__spacer {
-    background-image: linear-gradient(to bottom, teal, darkturquoise, teal);
-    width: 0.25rem;
-    flex-shrink: 0; /* to prevent it shrinking to nothing */
-  }
-
-  .navbar__button /* i.e. unpressed */ { 
+  .nav__tab /* i.e. unpressed */ { 
     font-size: 1.25rem;
     padding: 0.5rem;
     background-color: teal;
     color: whitesmoke;
     cursor: pointer;
     font-family: 'FiraSans', Sans;
+    text-decoration: none;
   }
 
   @media only screen and (min-width: 530px) {
-    .navbar__button:hover, .navbar__button:active {
+    .nav__tab:hover, .nav__tab:active, .nav__tab--current  {
     background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
     color: darkslategray;
     }
   }
 
-  /* scrolling button container */
-  .navbar__buttonShuttle {
+  /* scrolling tab container */
+  .nav__tabShuttle {
     display: flex; 
     overflow: auto; /* add scrollbar if content exceeds container */
   }
 
-  /* fade effect to right of navbar to hint options if scrolled  */
-  .navbar__fader {
-    position: absolute; /* fixed position relative to last positioned ancestor (.navbar) Layered above buttons/spacers */
+  /* fade effect to right of nav to hint options if scrolled  */
+  .nav__fader {
+    position: absolute; /* fixed position relative to last positioned ancestor (.nav) Layered above tabs/spacers */
     right: 0;
     bottom: 0;
     height: 100%;
@@ -107,8 +102,8 @@
     background-image: linear-gradient(to left, teal, transparent);
   }
 
-  /* 'empty button' gives definite end to the 'fader' to assure users they're not missing options */
-  .navbar__ender {
+  /* 'empty tab' gives definite end to the 'fader' to assure users they're not missing options */
+  .nav__ender {
     width: 1.5rem;
     flex-shrink: 0;
   }
@@ -140,7 +135,7 @@
     border: 5px solid teal;
   }
   
-.icon {
+.icon, .svg-inline--fa {
   height: 2rem;
   fill: darkslategray;
 }
