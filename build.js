@@ -92,6 +92,7 @@ Metalsmith(__dirname)
   
   // Adds property with different paths
   // e.g. 'post.paths.dir'
+  // https://github.com/ahmadnassri/metalsmith-paths
   .use(paths({
     property: "paths"
   }))

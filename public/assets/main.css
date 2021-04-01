@@ -79,11 +79,9 @@
     text-decoration: none;
   }
 
-  @media only screen and (min-width: 530px) {
-    .nav__tab:hover, .nav__tab:active, .nav__tab--current  {
+  .nav__tab:hover, .nav__tab:active, .nav__tab--current  {
     background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
     color: darkslategray;
-    }
   }
 
   /* scrolling tab container */
