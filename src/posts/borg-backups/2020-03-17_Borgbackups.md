@@ -9,7 +9,7 @@ Long overdue a proper backup setup, prompted by a housemate's presentation on th
 
 Until know I've been periodically/sporadically backing up my home folder to an external harddrive with `rsync`:
 
-```
+```bash
 rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk 
 ```
 
@@ -27,28 +27,28 @@ After always having done unencrypted backups, where I could directly see the res
 
 Create a temporary mount directory...
 
-```
+```bash
 mkdir /tmp/tempBorgMount
 ```
 
 Mount the borg archive. Get the names of your archives with `borg list ...`. Use the special `::` to indicate a particular archive...
 
-```
+```bash
 sudo borg mount /path/to/archives::a-particular-archive /tmp/tempBorgMount
 ```
 
 View files by 1) navigating as root...
 
-```
+```bash
 sudo su
-```  
 ```
+```bash
 cd /tmp/tempBorgMount
 ```
 
 or 2) opening a file browser with root permission...
 
-```
+```bash
 sudo nemo
 ```
 

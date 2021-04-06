@@ -1,53 +1,85 @@
-/* ABOUT
- * I'm new to CSS, advice welcome! I'm trying to write this CSS 
- * 'mobile-first' with the default CSS being for mobile users (navbar at
- * bottom of screen for easier navigation) and '@media' queries at the 
- * end to modify CSS for larger devices (navbar at top.) (2019-02-05) */
- 
-/* NOTES TO SELF
- * Use external stylesheets
- *   Don't use inline styling
- *   Don't use internal styling
- * Style using classes
- *   Don't style tags ('elements')
- *   Don't style IDs
- *    Don't use `!important`
- * Mobile first
- * Be BEMy http://getbem.com/
- *   Block     independent entity  .block          
- *   Element   dependent entity    .block__element 
- *   Modifier  entity modifier     .block--modifier
- * Margins collapse vertically
- *   Borders and padding don't.
- * 'max-width' shrinks, 'width' adds scrollbar
- * "Percent is a measurement unit relative to the containing block."
- * Initial setting for `display: flex;`
- *   flex-direction: row;
- *   flex-wrap: nowrap;
- *   justify-content: flex-start;
- *   align-content: stretch;
- * use modifier for external geometry (i.e. margin) to reuse blocks anywhere!
- * 
- * http://learnlayout.com
- * http://paulcpederson.com/articles/css-for-people-who-hate-css/
- * "Classes for styles, tags for semantics, IDs for references." https://codeburst.io/how-to-write-css-when-you-hate-css-feb5a235b7f1 
- */   
- 
-/* QUESTIONS
- * - can I use 'css-variables' natively with support? (e.g. `navbar-height`)
- * - global selector: * vs html vs body
- */
+/**********/
+/* GLOBAL */
+/**********/
 
+/* make all box-sizes include respective paddings and borders, but also but allow inheritance 
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* 'Fluid typography' → https://css-tricks.com/snippets/css/fluid-typography/
+ * font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width]))) */
+html {
+  font-size: calc(16px + 4.5 * ((100vw - 320px) / 1200));
+}
+
+/* other global defaults */
+html {
+  color: darkslategray;
+  background-color: whitesmoke;
+  font-family: Roboto, 'FiraSans', Sans;
+}
+
+/*************/
+/* ELEMENTAL */
+/*************/
+
+p, li {
+  line-height: 1.36;
+}
+
+a {
+  color: darkslategray;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  color: darkturquoise;
+}
+
+/* inline code, from markdown `code` */
+code {
+  color: black;
+  background-color: lightgray;
+  border-radius: 0.25rem;
+  padding: 0 0.15rem 0 0.15rem;
+}
+
+/* block code, from markdown ``` construction */
+pre code {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+code.language-bash::before {
+  content: "$ ";
+  color: gray;
+  background-color: none;
+}
+
+/**********/
+/* CLASSY */
+/**********/
 
 .nav {
   position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
-  border-top: 0.25rem solid teal;
-  border-bottom: 0.25rem solid teal;
-  border-left: 0.25rem solid teal;
+  border: 0.25rem solid teal;
   background-color: teal;
+  overflow: auto; /* scroll if content exceeds container (e.g. mobile) */
 }
 
 @media only screen and (min-width: 530px) {
@@ -56,38 +88,20 @@
     bottom: initial;          /* reset to prevent nav filling screen! */
     justify-content: center;  /* IMPROVE. perhaps nicer to have aligned with content */
   }
-  .desktopScrollbarBuffer {
-    width: calc(100vw - 100%); /* eliminate jumping by calculating desktop scrollbar width and adding to left side */
-    height: 100%;
-  }
 }
-
-/* And experiment for left aligning nav
-  .nav__starter {
-    width: calc((100vw - 30rem - 2rem) / 2);
-    flex-shrink: 0;
-  }
-*/
 
   .nav__tab /* i.e. unpressed */ { 
     font-size: 1.25rem;
-    padding: 0.5rem;
-    background-color: teal;
+    padding: 0.25rem;
     color: whitesmoke;
-    cursor: pointer;
-    font-family: 'FiraSans', Sans;
     text-decoration: none;
+    margin: 0 0.125rem 0 0.125rem;
   }
 
-  .nav__tab:hover, .nav__tab:active, .nav__tab--current  {
-    background-image: linear-gradient(teal, whitesmoke 10%, whitesmoke 90%, teal);
+  .nav__tab--current, .nav__tab:hover, .nav__tab:active {
+    background-color: whitesmoke;
     color: darkslategray;
-  }
-
-  /* scrolling tab container */
-  .nav__tabShuttle {
-    display: flex; 
-    overflow: auto; /* add scrollbar if content exceeds container */
+    border-radius: 0.25rem;
   }
 
   /* fade effect to right of nav to hint options if scrolled  */
@@ -106,17 +120,59 @@
     flex-shrink: 0;
   }
   
-.contentFrame {
+/* page content and images* grow up to 35rem, and centered. (*jstransformer-nunkucks wraps img in p for some reason) */
+.page {
+  display: flex;
   margin: auto;
   margin-bottom: 3rem;
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
   width: 100%;
 }
 
 @media only screen and (min-width: 530px) {
-  .contentFrame {
+  .page {
     margin-bottom: initial;
-    margin-top: 3rem;
+    margin-top: 2.40rem; /* hmm, not sure why this isn't 2.25 as I calculted... */
+  }
+}
+
+.page__content {
+  flex-direction: column;
+  max-width: 100%;
+  width: 30rem;
+  margin: auto;    
+}
+
+.page p img {
+  width: 100%
+}
+
+.page--post {
+  margin-top: 0;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+.linkbar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+  .linkbar__entry {
+    text-align: center;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .linkbar__entry * {
+    margin-bottom: 0;
+  }
+  
+/* eliminate content jumping by calculating desktop scrollbar width and adding to left side */
+@media only screen and (min-width: 530px) {
+  .scrollBuffer {
+    width: calc(100vw - 100%); 
+    height: 100%;
   }
 }
   
@@ -149,7 +205,7 @@
 }
 
   .entryBox--posts {
-    margin: 0px 0 30px 0;
+    margin: 1rem 0 0 0;
   }  
 
   .entryBox__title {
@@ -165,3 +221,19 @@
     margin: 0;
   }
 
+.backButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(whitesmoke 50%, transparent 65%)
+}
+
+.backButton .svg-inline--fa {
+  height: 60%;
+}

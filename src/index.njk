@@ -6,46 +6,41 @@ dougTab: "nav__tab--current"
 
 {% block main %}
 
-<div class="contentFrame">
-  <div class="desktopScrollbarBuffer"></div>
-  <div id="base-page" class="page">
   <h3>Hi, I'm Doug</h3>
   <p>I develop practices for effective cooperation, with a focus on post-consensus decision-making.</p>
   <img src="/assets/img/Smiling_Kirchheim.jpg" class="image image--profilePic" alt="Me, smiling, facing you; there is long grass and trees in the background.">
   <div class="linkbar">
     <div class="linkbar__entry">
-    <a href="mailto:doug@dougwebb.site" class="noTxtDec">
-      <p>Email</p>
-      {% include "./assets/img/icons/email.svg" %} <!-- svg code must be in doc for styling, including nicer than raw -->
-    </a>
+      <a href="mailto:doug@dougwebb.site" class="noTxtDec">
+        <p>Email</p>
+        {% include "./assets/img/icons/email.svg" %} <!-- svg code must be in doc for styling, including nicer than raw -->
+      </a>
     </div>
     <div class="linkbar__entry">
-    <a href="https://mastodon.xyz/@douginamug" class="noTxtDec">
-      <p>Mastodon</p>
-      {% include "./assets/img/icons/mastodon.svg" %}
-    </a>
+      <a href="https://mastodon.xyz/@douginamug" class="noTxtDec">
+        <p>Mastodon</p>
+        {% include "./assets/img/icons/mastodon.svg" %}
+      </a>
     </div>
     <div class="linkbar__entry">
-    <a href="https://twitter.com/DougInAMug" class="noTxtDec">
-      <p>Twitter</p>
-      {% include "./assets/img/icons/twitter.svg" %}
-    </a>
+      <a href="https://twitter.com/DougInAMug" class="noTxtDec">
+        <p>Twitter</p>
+        {% include "./assets/img/icons/twitter.svg" %}
+      </a>
     </div>
   </div>
   <div class="linkbar">
     <div class="linkbar__entry">
-    <a href="https://gitlab.com/DougInAMug/dougwebb.site" class="noTxtDec">
-      <p class="small-mono">source</p>
-      {% include "./assets/img/icons/source.svg" %}
-    </a>
-  </div>
-    <div class="linkbar__entry">
-    <a href="rss.xml" class="noTxtDec">
-      <p class="small-mono">RSS</p>
-      {% include "./assets/img/icons/rss.svg" %}
-    </a>
+      <a href="https://gitlab.com/DougInAMug/dougwebb.site" class="noTxtDec">
+        <p class="small-mono">source</p>
+        {% include "./assets/img/icons/source.svg" %}
+      </a>
     </div>
-  </div>
-</div>
+    <div class="linkbar__entry">
+      <a href="rss.xml" class="noTxtDec">
+        <p class="small-mono">RSS</p>
+        {% include "./assets/img/icons/rss.svg" %}
+      </a>
+    </div>
 
 {% endblock %}

@@ -12,7 +12,13 @@
   </head>
   <body>
     {% include "layouts/_nav.njk" %}
-    {% block main %}
-    {% endblock %}
+    
+    <div class="page">
+      <div class="scrollBuffer"></div>
+      <div class="page__content">
+        {% block main %}
+        {% endblock %}
+      </div>
+    </div>
   </body>
 </html>

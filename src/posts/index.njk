@@ -6,20 +6,13 @@ postsTab: "nav__tab--current"
 
 {% block main %}
 
-<div class="contentFrame">
-  <div class="desktopScrollbarBuffer"></div>
-  <div id="posts-page" class="page">
-    <div id="posts-page" class="page">
-      {% for post in posts %}
-      <a href="{{ post.paths.dhref }}">
-        <div class="entryBox entryBox--posts">
-          <h1 class="entryBox__title">{{ post.title }}</h1>
-          <p class="entryBox__subtitle">{{ post.date }} — {{ post.wordCount }} words, ~{{ post.readingTime }}</p>
-        </div>
-      </a>
-      {% endfor %}
+  {% for post in posts %}
+  <a href="{{ post.paths.dhref }}">
+    <div class="entryBox entryBox--posts">
+      <h1 class="entryBox__title">{{ post.title }}</h1>
+      <p class="entryBox__subtitle">{{ post.date }} — {{ post.wordCount }} words, ~{{ post.readingTime }}</p>
     </div>
-  </div>
-</div>
+  </a>
+  {% endfor %}
 
 {% endblock %}

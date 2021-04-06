@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Borg backups</title>
+    <!-- <link rel="stylesheet" href="/assets/fonts.css"> -->
     <link rel="stylesheet" href="/assets/normalize_v8.0.0.css">
     <link rel="stylesheet" href="/assets/main.css">
     <link rel="stylesheet" href="/assets/shame.css">
@@ -10,24 +11,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="contentFrame">
-      <div class="page page--post">
+    <div class="page page--post">
+      <div class="scrollBuffer"></div>
+      <div class="page__content">
         
           <h1>Borg backups</h1>
           <p><i>17th Mar 2020</i></p>
           <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
 <p>Until know I’ve been periodically/sporadically backing up my home folder to an external harddrive with <code>rsync</code>:</p>
-<pre><code>rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk </code></pre><p>This is definitely better than copy-pasting, but 1) it is not encrypted, meaning anyone with access to the drive can read my data 2) it takes quite a lot of time 3) it gives only one monolithic backup, meaning I only have the option of reverting to the last backup.</p>
+<pre><code class="language-bash">rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk </code></pre>
+<p>This is definitely better than copy-pasting, but 1) it is not encrypted, meaning anyone with access to the drive can read my data 2) it takes quite a lot of time 3) it gives only one monolithic backup, meaning I only have the option of reverting to the last backup.</p>
 <p><a href="https://www.borgbackup.org/">Borg</a>, a.k.a. ‘Borgbackup’ is a <em>“Deduplicating archiver with compression and encryption”</em>. It is the de facto successor of <a href="https://en.wikipedia.org/wiki/Attic_(backup_software)#Borg">Attic</a> since 2015, from which it was forked <em>“to allow some different approaches to development, goals and policy”</em>[<a href="https://github.com/borgbackup/borg/issues/1">ref</a>] From a user perspective, it lets you make <strong>quick, space-efficient, password-protected backups.</strong></p>
 <p>For Debian/Ubuntu users, installing Borg is a simple <code>sudo apt install borgbackup</code>. Borg is a command line tool! For those not so keen on The Black Box, there is <a href="https://vorta.borgbase.com/">Vorta</a> which provides a nice graphical user interface for Borg. However the Vorta team <a href="https://vorta.borgbase.com/usage/">notes</a> that it <em>“is currently in beta-testing and shouldn’t be your only backup solution.”</em> (2020-03-17) which put me off using it for now (although I know at least one person who is happily using it.) There is also <a href="https://torsion.org/borgmatic/">Borgmatic</a> which essentially allows borg via config files: although this provides some convenience, I couldn’t justify the additional complexity for my relatively modest requirements.</p>
 <p>So to start with I’m just using plain Borg. There is some very nice <a href="https://borgbackup.readthedocs.io/en/stable/">documentation</a> and even a couple of <a href="https://asciinema.org/~borgbackup">screencasts</a>. The <a href="https://borgbackup.readthedocs.io/en/stable/quickstart.html">Quick start</a> is as concise as I can imagine one could be, so I won’t repeat that here. Rather I’ll just go over a couple things that were of particular interest to me</p>
 <h2 id="viewing-backups-via-borg-mount">Viewing backups via <code>borg mount</code></h2>
 <p>After always having done unencrypted backups, where I could directly see the results, it’s important for me know I can really access the archive contents later. The simplest way to do so seems to be with <code>borg mount ...</code>. If you’re backing up files which require root access there are some quirks:</p>
 <p>Create a temporary mount directory…</p>
-<pre><code>mkdir /tmp/tempBorgMount</code></pre><p>Mount the borg archive. Get the names of your archives with <code>borg list ...</code>. Use the special <code>::</code> to indicate a particular archive…</p>
-<pre><code>sudo borg mount /path/to/archives::a-particular-archive /tmp/tempBorgMount</code></pre><p>View files by 1) navigating as root…</p>
-<pre><code>sudo su</code></pre><pre><code>cd /tmp/tempBorgMount</code></pre><p>or 2) opening a file browser with root permission…</p>
-<pre><code>sudo nemo</code></pre><p>The last two points threw me a bit, because when I tried to access the mount point with <code>sudo</code> I received <code>sudo: cd: command not found</code>. <code>cd</code> is not available for <code>sudo</code>, because if you need root privileges to access a folder, you continue to need it to view it’s contents!</p>
+<pre><code class="language-bash">mkdir /tmp/tempBorgMount</code></pre>
+<p>Mount the borg archive. Get the names of your archives with <code>borg list ...</code>. Use the special <code>::</code> to indicate a particular archive…</p>
+<pre><code class="language-bash">sudo borg mount /path/to/archives::a-particular-archive /tmp/tempBorgMount</code></pre>
+<p>View files by 1) navigating as root…</p>
+<pre><code class="language-bash">sudo su</code></pre>
+<pre><code class="language-bash">cd /tmp/tempBorgMount</code></pre>
+<p>or 2) opening a file browser with root permission…</p>
+<pre><code class="language-bash">sudo nemo</code></pre>
+<p>The last two points threw me a bit, because when I tried to access the mount point with <code>sudo</code> I received <code>sudo: cd: command not found</code>. <code>cd</code> is not available for <code>sudo</code>, because if you need root privileges to access a folder, you continue to need it to view it’s contents!</p>
 <h2 id="regular-pruning">Regular pruning</h2>
 <p>Pruning, like the horticultural act, is about removing unwanted bits. As time passes, you might be happy to get rid of more backups. <code>borg prune ...</code> allows you to do this programmatically. You can specify the number of backups you keep over a time interval with options <code>--keep-weekly</code>, <code>--keep-monthly</code>, etc. These options specify <em>the number of copies to keep within that time period</em>.</p>
 <p>For example <code>borg prune --keep-weekly 2</code> will remove all of the oldest backups which exceed 2 for a given week. If you made a backup every day for a week, then ran this command, it would prune Monday to Friday and keep just Saturday and Sunday. By combining daily, weekly, monthly and yearly options, you can have a nicely tapering set of backups, ensuring you always have enough space.</p>
@@ -36,6 +44,9 @@
 
         
       </div>
+      <a href="/posts" class="backButton">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
+      </a>
     </div>  
   </body>
 </html>

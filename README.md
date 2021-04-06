@@ -90,4 +90,35 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 
 - https://tallyco.in/
 
- 
+# CSS notes
+
+- Use external stylesheets
+  - Don't use inline styling
+  - Don't use internal styling
+- Style using classes
+  - Don't style tags ('elements')
+  - Don't style IDs
+  - Don't use `!important`
+- Mobile first
+- Be BEMy http://getbem.com/
+  - Block     independent entity  .block          
+  - Element   dependent entity    .block__element 
+  - Modifier  entity modifier     .block--modifier
+  - use modifier for external geometry (i.e. margin) to reuse blocks anywhere!
+- Margins collapse vertically
+  - Borders and padding don't.
+- 'max-width' shrinks, 'width' adds scrollbar
+- "Percent is a measurement unit relative to the containing block."
+- Initial setting for `display: flex;`
+  - flex-direction: row;
+  - flex-wrap: nowrap;
+  - justify-content: flex-start;
+  - align-content: stretch;
+- http://learnlayout.com
+- http://paulcpederson.com/articles/css-for-people-who-hate-css/
+- "Classes for styles, tags for semantics, IDs for references." https://codeburst.io/how-to-write-css-when-you-hate-css-feb5a235b7f1
+- border-bottom: 0.1rem solid darkslategray; /* Possibly nicer way to style hyperlink underlines
+
+# CSS questions
+- can I use 'css-variables' natively with support? (e.g. `navbar-height`)
+- global selector: * vs html vs body
