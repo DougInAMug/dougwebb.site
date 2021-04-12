@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 06 Apr 2021 12:09:04 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Mon, 12 Apr 2021 23:19:06 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Borg backups</title>
@@ -12,7 +12,6 @@
   </head>
   <body>
     <div class="page page--post">
-      <div class="scrollBuffer"></div>
       <div class="page__content">
         
           <h1>Borg backups</h1>
@@ -64,7 +63,6 @@
   </head>
   <body>
     <div class="page page--post">
-      <div class="scrollBuffer"></div>
       <div class="page__content">
         
           <h1>hello world...</h1>
@@ -101,7 +99,6 @@
   </head>
   <body>
     <div class="page page--post">
-      <div class="scrollBuffer"></div>
       <div class="page__content">
         
           <h1>Talk: Post-consensus, cooperative decision-making</h1>
@@ -151,7 +148,6 @@
   </head>
   <body>
     <div class="page page--post">
-      <div class="scrollBuffer"></div>
       <div class="page__content">
         
           <h1>Talk: Introducing Kanthaus</h1>

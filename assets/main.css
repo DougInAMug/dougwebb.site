@@ -80,6 +80,7 @@ code.language-bash::before {
   border: 0.25rem solid teal;
   background-color: teal;
   overflow: auto; /* scroll if content exceeds container (e.g. mobile) */
+  padding-left: calc(100vw - 100%); /* replace scrollbar buffer as padding */
 }
 
 @media only screen and (min-width: 530px) {
@@ -120,27 +121,25 @@ code.language-bash::before {
     flex-shrink: 0;
   }
   
-/* page content and images* grow up to 35rem, and centered. (*jstransformer-nunkucks wraps img in p for some reason) */
+/* the outermost 'frame' */
 .page {
   display: flex;
-  margin: auto;
+  justify-content: center; /* since default direction is 'row' */
   margin-bottom: 3rem;
-  padding: 0 1rem 0 1rem;
-  width: 100%;
+  padding-left: calc(100vw - 100%); /* replace scrollbar buffer as padding */
 }
 
 @media only screen and (min-width: 530px) {
   .page {
-    margin-bottom: initial;
     margin-top: 2.40rem; /* hmm, not sure why this isn't 2.25 as I calculted... */
   }
 }
 
 .page__content {
-  flex-direction: column;
   max-width: 100%;
   width: 30rem;
-  margin: auto;    
+  margin: auto;
+  padding: 0 1rem;
 }
 
 .page p img {
@@ -167,15 +166,7 @@ code.language-bash::before {
   .linkbar__entry * {
     margin-bottom: 0;
   }
-  
-/* eliminate content jumping by calculating desktop scrollbar width and adding to left side */
-@media only screen and (min-width: 530px) {
-  .scrollBuffer {
-    width: calc(100vw - 100%); 
-    height: 100%;
-  }
-}
-  
+
 .image {
   display: block;
   margin: auto;

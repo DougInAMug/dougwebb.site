@@ -12,7 +12,6 @@
   </head>
   <body>
     <div class="page page--post">
-      <div class="scrollBuffer"></div>
       <div class="page__content">
         
           <h1></h1>
