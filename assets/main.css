@@ -80,7 +80,6 @@ code.language-bash::before {
   border: 0.25rem solid teal;
   background-color: teal;
   overflow: auto; /* scroll if content exceeds container (e.g. mobile) */
-  padding-left: calc(100vw - 100%); /* replace scrollbar buffer as padding */
 }
 
 @media only screen and (min-width: 530px) {
@@ -126,7 +125,6 @@ code.language-bash::before {
   display: flex;
   justify-content: center; /* since default direction is 'row' */
   margin-bottom: 3rem;
-  padding-left: calc(100vw - 100%); /* replace scrollbar buffer as padding */
 }
 
 @media only screen and (min-width: 530px) {
