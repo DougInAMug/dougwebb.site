@@ -3,10 +3,11 @@
 /**********/
 
 /* make all box-sizes include respective paddings and borders, but also but allow inheritance 
- * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -27,6 +28,18 @@ html {
 /*************/
 /* ELEMENTAL */
 /*************/
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+@media only screen and (min-width: 530px) {
+  body {
+    flex-direction: row;
+  }
+}
 
 p, li {
   line-height: 1.36;
@@ -73,63 +86,61 @@ code.language-bash::before {
 /**********/
 
 .nav {
+  display: flex;
+  align-items: flex-end;
+  order: 1;
   position: fixed;
   bottom: 0;
   width: 100%;
-  display: flex;
-  border: 0.25rem solid teal;
-  background-color: teal;
-  overflow: auto; /* scroll if content exceeds container (e.g. mobile) */
+  height: 3rem;
+  border: 0.25rem;
+  overflow: auto;
+  background-image: linear-gradient(transparent, whitesmoke 20%, whitesmoke);  
 }
 
 @media only screen and (min-width: 530px) {
   .nav {
-    top: 0;                   /* move nav to top of screen */
-    bottom: initial;          /* reset to prevent nav filling screen! */
-    justify-content: center;  /* IMPROVE. perhaps nicer to have aligned with content */
+    flex-direction: column;
+    order: 0;
+    position: sticky;
+    top: 3rem;    
+    width: 100%;
+    height: 100%;
   }
+}
+
+.flexGrower {
+  width: 100%;
 }
 
   .nav__tab /* i.e. unpressed */ { 
     font-size: 1.25rem;
-    padding: 0.25rem;
-    color: whitesmoke;
+    padding: 0.125rem;
     text-decoration: none;
-    margin: 0 0.125rem 0 0.125rem;
+    margin: 0.25rem;
   }
 
   .nav__tab--current, .nav__tab:hover, .nav__tab:active {
-    background-color: whitesmoke;
-    color: darkslategray;
+    background-color: teal;
+    color: whitesmoke;
     border-radius: 0.25rem;
   }
 
-  /* fade effect to right of nav to hint options if scrolled  */
-  .nav__fader {
-    position: absolute; /* fixed position relative to last positioned ancestor (.nav) Layered above tabs/spacers */
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 1.5rem;
-    background-image: linear-gradient(to left, teal, transparent);
-  }
-
-  /* 'empty tab' gives definite end to the 'fader' to assure users they're not missing options */
-  .nav__ender {
-    width: 1.5rem;
-    flex-shrink: 0;
-  }
-  
 /* the outermost 'frame' */
 .page {
   display: flex;
   justify-content: center; /* since default direction is 'row' */
-  margin-bottom: 3rem;
+  height: calc(100vh - 3rem);
+}
+
+.page__content > :first-child {
+  display: block; /* because `a` is inline */
+  margin-top: 3rem; /* initial content alignment with nav */
 }
 
 @media only screen and (min-width: 530px) {
   .page {
-    margin-top: 2.40rem; /* hmm, not sure why this isn't 2.25 as I calculted... */
+    height: initial;
   }
 }
 
@@ -137,7 +148,7 @@ code.language-bash::before {
   max-width: 100%;
   width: 30rem;
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .page p img {
