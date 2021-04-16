@@ -32,7 +32,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  height: max-content;
+  height: 100%;
 }
 
 @media only screen and (min-width: 530px) {
@@ -86,7 +86,7 @@ code.language-bash::before {
 /**********/
 
 .nav {
-  display: flex;
+  display: inline-flex;
   align-items: flex-end;
   order: 1;
   position: fixed;
@@ -130,7 +130,6 @@ code.language-bash::before {
 .page {
   display: flex;
   justify-content: center; /* since default direction is 'row' */
-  height: calc(100vh - 3rem);
 }
 
 .page__content > :first-child {
@@ -148,7 +147,7 @@ code.language-bash::before {
   max-width: 100%;
   width: 30rem;
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 2rem 3rem 2rem;
 }
 
 .page p img {
