@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Mon, 12 Apr 2021 23:19:06 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Thu, 15 Apr 2021 23:57:57 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Borg backups</title>
@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    <div class="flexGrower"></div>
     <div class="page page--post">
       <div class="page__content">
         
@@ -46,7 +47,8 @@
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
-    </div>  
+    </div> 
+    <div class="flexGrower"></div> 
   </body>
 </html>
 ]]></description><link>https://dougwebb.site/posts/borg-backups/2020-03-17_Borgbackups.html</link><guid isPermaLink="true">https://dougwebb.site/posts/borg-backups/2020-03-17_Borgbackups.html</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[hello world...]]></title><description><![CDATA[<!DOCTYPE html>
@@ -62,6 +64,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    <div class="flexGrower"></div>
     <div class="page page--post">
       <div class="page__content">
         
@@ -82,7 +85,8 @@
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
-    </div>  
+    </div> 
+    <div class="flexGrower"></div> 
   </body>
 </html>
 ]]></description><link>https://dougwebb.site/posts/hello-world.../2019-02-05_helloWorld.html</link><guid isPermaLink="true">https://dougwebb.site/posts/hello-world.../2019-02-05_helloWorld.html</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Talk: Post-consensus, cooperative decision-making]]></title><description><![CDATA[<!DOCTYPE html>
@@ -98,6 +102,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    <div class="flexGrower"></div>
     <div class="page page--post">
       <div class="page__content">
         
@@ -131,7 +136,8 @@
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
-    </div>  
+    </div> 
+    <div class="flexGrower"></div> 
   </body>
 </html>
 ]]></description><link>https://dougwebb.site/posts/post-consensus-cooperative-decision-making/2018-06-15_coopDecisionsEvent.html</link><guid isPermaLink="true">https://dougwebb.site/posts/post-consensus-cooperative-decision-making/2018-06-15_coopDecisionsEvent.html</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Talk: Introducing Kanthaus]]></title><description><![CDATA[<!DOCTYPE html>
@@ -147,6 +153,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    <div class="flexGrower"></div>
     <div class="page page--post">
       <div class="page__content">
         
@@ -167,7 +174,8 @@
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
-    </div>  
+    </div> 
+    <div class="flexGrower"></div> 
   </body>
 </html>
 ]]></description><link>https://dougwebb.site/posts/introducing-kanthaus/2017-12-04_introducingKanthaus.html</link><guid isPermaLink="true">https://dougwebb.site/posts/introducing-kanthaus/2017-12-04_introducingKanthaus.html</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
