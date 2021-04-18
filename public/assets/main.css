@@ -56,28 +56,28 @@ a:hover, a:active {
 
 /* inline code, from markdown `code` */
 code {
-  color: black;
-  background-color: lightgray;
-  border-radius: 0.25rem;
   padding: 0 0.15rem 0 0.15rem;
+  border-radius: 0.25rem;
+  background: lightgray;
+  color: black;
 }
 
 /* block code, from markdown ``` construction */
 pre code {
   display: inline-block;
-  background-color: black;
-  color: white;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
   max-width: 100%;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  background: black;
+  color: white;
+  overflow-wrap: anywhere;  
+  white-space: pre-wrap;
 }
 
 code.language-bash::before {
   content: "$ ";
+  background: none;  
   color: gray;
-  background-color: none;
 }
 
 /**********/
@@ -85,15 +85,15 @@ code.language-bash::before {
 /**********/
 
 .nav {
+  position: fixed; /* need to used fixed until stuff sorted out https://mind-bending-forks.github.io/css-viewport-percentage-length-units/ */
+  bottom: 0;
   display: flex;
   align-items: flex-end;
   order: 1;
-  position: fixed; /* need to used fixed until stuff sorted out https://mind-bending-forks.github.io/css-viewport-percentage-length-units/ */
-  bottom: 0;
+  overflow: auto;  
   width: 100%;
   border-top: teal solid 0.25rem;
-  overflow: auto;
-  background-color: whitesmoke;
+  background: whitesmoke;
 /*
   background-image: linear-gradient(transparent, whitesmoke 20%, whitesmoke);
 */
@@ -101,60 +101,52 @@ code.language-bash::before {
 
 @media only screen and (min-width: 530px) {
   .nav {
-    flex-direction: column;
-    order: 0;
     position: sticky;
     top: 3rem;    
+    flex-direction: column;
+    order: 0;
     width: 100%;
     height: 100%;
-    margin-left: calc(100vw - 100%); /* to prevent scrollbar related jumping */
-    border-right: teal solid 0.25rem;
     padding-right: 2rem;
+    border-right: teal solid 0.25rem;
     border-top: initial;
+    margin-left: calc(100vw - 100%); /* to prevent scrollbar related jumping */
   }
 }
 
-.flexGrower {
-  width: 100%;
-}
-
-
-  .nav__tab /* i.e. unpressed */ { 
-    font-size: 1.25rem;
+  .nav__tab /* i.e. unpressed */ {
     padding: 0.25rem;
-    text-decoration: none;
-    margin: 0.25rem 0 0.25rem 0.25rem;
     border: teal solid 0.125rem;
     border-radius: 0.25rem;
+    margin: 0.25rem 0 0.25rem 0.25rem;    
+    font-size: 1.25rem;
+    text-decoration: none;
   }
 
-  .nav__tab--current, .nav__tab:hover, .nav__tab:active {
-    background-color: teal;
+  .nav__tab--current, 
+  .nav__tab:hover, 
+  .nav__tab:active {
+    background: teal;
     color: whitesmoke;
   }
 
 /* the outermost 'frame' */
 .page {
   display: flex;
-  justify-content: center; /* since default direction is 'row' */
+  justify-content: center;
 }
 
+/* remove margin from top page content */
 .page__content > :first-child {
   display: block; /* because `a` is inline */
   margin-top: 3rem; /* initial content alignment with nav */
 }
 
-@media only screen and (min-width: 530px) {
-  .page {
-    height: initial;
-  }
-}
-
 .page__content {
-  max-width: 100%;
   width: 30rem;
-  margin: auto;
+  max-width: 100%;
   padding: 0 2rem 3rem 2rem;
+  margin: auto;
 }
 
 .page p img {
@@ -166,33 +158,39 @@ code.language-bash::before {
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
+.flexGrower {
+  width: 100%;
+}
+
 .linkbar {
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
   .linkbar__entry {
+    margin: 0.5rem;
     text-align: center;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
   }
 
   .linkbar__entry * {
-    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 0.75rem;
+    line-height: 0.75;
   }
 
 .image {
   display: block;
-  margin: auto;
   max-width: 50%;
+  margin: auto;
 }
 
   .image--profilePic {
     width: 50%;
     max-width: 12.5rem;
-    border-radius: 50%;
     border: 5px solid teal;
+    border-radius: 50%;
   }
   
 .icon, .svg-inline--fa {
@@ -205,9 +203,9 @@ code.language-bash::before {
   }
 
 .entryBox {
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 15px;
 }
 
   .entryBox--posts {
@@ -215,28 +213,28 @@ code.language-bash::before {
   }  
 
   .entryBox__title {
+    margin: 0px 0px 10px 0px;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0px 0px 10px 0px;
   }
 
   .entryBox__subtitle {
+    margin: 0;
+    font-family: 'FiraSans', Sans;
     font-size: 1.1rem;
     font-weight: lighter;
-    font-family: 'FiraSans', Sans;
-    margin: 0;
   }
 
 .backButton {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
   background-image: radial-gradient(whitesmoke 50%, transparent 65%)
 }
 
