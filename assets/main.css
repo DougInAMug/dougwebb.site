@@ -144,12 +144,6 @@ code.language-bash::before {
   margin-top: 3rem; /* initial content alignment with nav */
 }
 
-@media only screen and (min-width: 530px) {
-  .page {
-    height: initial;
-  }
-}
-
 .page__content {
   max-width: 100%;
   width: 30rem;
