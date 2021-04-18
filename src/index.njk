@@ -8,53 +8,53 @@ dougTab: "nav__tab--current"
 
 
   <p><b>Hey, Doug here.</b> I'm passionate about developing practices for effective cooperation, with a focus on post-consensus decision-making.</p>
+  
   <img src="/assets/img/Smiling_Kirchheim.jpg" class="image image--profilePic" alt="Me, smiling, facing you; there is long grass and trees in the background.">
-  <div class="linkbar">
-    <div class="linkbar__entry">
-      <a href="mailto:doug@dougwebb.site" class="noTxtDec">
-        {% include "./assets/img/icons/email.svg" %} <!-- svg code must be in doc for styling, including nicer than raw -->
-        <p>Email</p>
-      </a>
-    </div>
-    <div class="linkbar__entry">
-      <a href="https://mastodon.xyz/@douginamug" class="noTxtDec">
-        {% include "./assets/img/icons/mastodon.svg" %}
-        <p>Mastodon</p>
-      </a>
-    </div>
-    <div class="linkbar__entry">
-      <a href="https://twitter.com/DougInAMug" class="noTxtDec">
-        {% include "./assets/img/icons/twitter.svg" %}
-        <p>Twitter</p>
-      </a>
-    </div>
-    <div class="linkbar__entry">
-      <a href="https://gitlab.com/DougInAMug" class="noTxtDec">
-        {% include "./assets/img/icons/gitlab.svg" %}
-        <p>Gitlab</p>
-      </a>
-    </div>
-    <div class="linkbar__entry">
-      <a href="https://github.com/DougInAMug" class="noTxtDec">
-        {% include "./assets/img/icons/github.svg" %}
-        <p>Github</p>
-      </a>
-    </div>
-  </div>
   
   <div class="linkbar">
-    <div class="linkbar__entry">
-      <a href="https://gitlab.com/DougInAMug/dougwebb.site" class="noTxtDec">
-        <p class="small-mono">source</p>
-        {% include "./assets/img/icons/source.svg" %}
-      </a>
-    </div>
-    <div class="linkbar__entry">
-      <a href="rss.xml" class="noTxtDec">
-        <p class="small-mono">RSS</p>
-        {% include "./assets/img/icons/rss.svg" %}
-      </a>
-    </div>
+    <a class="linkbar__entry" href="mailto:doug@dougwebb.site">
+      {% include "./assets/img/icons/email.svg" %} <!-- svg code must be in doc for styling, including nicer than raw -->
+      <p>Email</p>
+    </a>
+    <a class="linkbar__entry" href="https://mastodon.xyz/@douginamug">
+      {% include "./assets/img/icons/mastodon.svg" %}
+      <p>Mastodon</p>
+    </a>
+    <a class="linkbar__entry" href="https://twitter.com/DougInAMug">
+      {% include "./assets/img/icons/twitter.svg" %}
+      <p>Twitter</p>
+    </a>
+    <a class="linkbar__entry" href="https://gitlab.com/DougInAMug">
+      {% include "./assets/img/icons/gitlab.svg" %}
+      <p>Gitlab</p>
+    </a>
+    <a class="linkbar__entry" href="https://github.com/DougInAMug">
+      {% include "./assets/img/icons/github.svg" %}
+      <p>Github</p>
+    </a>
+    <a class="linkbar__entry" href="https://matrix.to/#/@douginamug:matrix.org">
+      {% include "./assets/img/icons/matrix-org--mod.svg" %}
+      <p>Matrix</p>
+    </a>
+    <a class="linkbar__entry" href="https://t.me/douginamug">
+      {% include "./assets/img/icons/telegram--mod.svg" %}
+      <p>Telegram</p>
+    </a>
+  </div>
+    
+  <div class="linkbar linkbar--site">
+    <a href="https://gitlab.com/DougInAMug/dougwebb.site">
+      <span class="small-mono">Site source</span>
+      {% include "./assets/img/icons/source.svg" %}
+    </a>
+    <a href="rss.xml">
+      <span class="small-mono">RSS</span>
+      {% include "./assets/img/icons/rss.svg" %}
+    </a>
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+      <span class="small-mono">Free to (re)use</span>
+      {% include "./assets/img/icons/cc0--mod.svg" %}
+    </a>
   </div>
 
 {% endblock %}
