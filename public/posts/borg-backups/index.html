@@ -13,11 +13,10 @@
   <body>
     <div class="flexGrower"></div>
     <div class="page page--post">
-      <div class="page__content">
-        
-          <h1>Borg backups</h1>
-          <p><i>17th Mar 2020</i></p>
-          <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
+      
+        <h1>Borg backups</h1>
+        <p><i>17th Mar 2020</i></p>
+        <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
 <p>Until know I’ve been periodically/sporadically backing up my home folder to an external harddrive with <code>rsync</code>:</p>
 <pre><code class="language-bash">rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk </code></pre>
 <p>This is definitely better than copy-pasting, but 1) it is not encrypted, meaning anyone with access to the drive can read my data 2) it takes quite a lot of time 3) it gives only one monolithic backup, meaning I only have the option of reverting to the last backup.</p>
@@ -42,8 +41,7 @@
 <h2 id="scriptification">Scriptification</h2>
 <p>I don’t like remembering loads of commands :) Fortunately there is a nice borg script templated in <a href="https://borgbackup.readthedocs.io/en/stable/quickstart.html#automating-backups">the docs</a> I made some modifications, such as excluding trash and downloads folders from being backed-up. I also didn’t include my password: I’ll still be ‘manually’ doing back ups for now, and don’t mind entering my password every time.</p>
 
-        
-      </div>
+      
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>

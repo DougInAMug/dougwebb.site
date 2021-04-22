@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sun, 18 Apr 2021 23:51:56 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Thu, 22 Apr 2021 22:41:52 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Borg backups</title>
@@ -13,11 +13,10 @@
   <body>
     <div class="flexGrower"></div>
     <div class="page page--post">
-      <div class="page__content">
-        
-          <h1>Borg backups</h1>
-          <p><i>17th Mar 2020</i></p>
-          <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
+      
+        <h1>Borg backups</h1>
+        <p><i>17th Mar 2020</i></p>
+        <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
 <p>Until know I’ve been periodically/sporadically backing up my home folder to an external harddrive with <code>rsync</code>:</p>
 <pre><code class="language-bash">rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk </code></pre>
 <p>This is definitely better than copy-pasting, but 1) it is not encrypted, meaning anyone with access to the drive can read my data 2) it takes quite a lot of time 3) it gives only one monolithic backup, meaning I only have the option of reverting to the last backup.</p>
@@ -42,8 +41,7 @@
 <h2 id="scriptification">Scriptification</h2>
 <p>I don’t like remembering loads of commands :) Fortunately there is a nice borg script templated in <a href="https://borgbackup.readthedocs.io/en/stable/quickstart.html#automating-backups">the docs</a> I made some modifications, such as excluding trash and downloads folders from being backed-up. I also didn’t include my password: I’ll still be ‘manually’ doing back ups for now, and don’t mind entering my password every time.</p>
 
-        
-      </div>
+      
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
@@ -66,11 +64,10 @@
   <body>
     <div class="flexGrower"></div>
     <div class="page page--post">
-      <div class="page__content">
-        
-          <h1>hello world...</h1>
-          <p><i>5th Feb 2019</i></p>
-          <p>Although this isn’t the first post on this site, it is the first since it went up. Before this I was using <a href="https://gohugo.io/">Hugo</a> which needed go and seemed far too complicated. While far from satisfaction, I’d better swallow the bitter pill of the iterative philosophy I profess and publish my site changes so far, namely:</p>
+      
+        <h1>hello world...</h1>
+        <p><i>5th Feb 2019</i></p>
+        <p>Although this isn’t the first post on this site, it is the first since it went up. Before this I was using <a href="https://gohugo.io/">Hugo</a> which needed go and seemed far too complicated. While far from satisfaction, I’d better swallow the bitter pill of the iterative philosophy I profess and publish my site changes so far, namely:</p>
 <ul>
 <li>moving to <a href="https://metalsmith.io/">metalsmith</a></li>
 <li>a posts section</li>
@@ -80,8 +77,7 @@
 </ul>
 <p>I intend to go into a bit more detail about the technical aspects later. For now I’ll say goodbye (world).</p>
 
-        
-      </div>
+      
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
@@ -104,11 +100,10 @@
   <body>
     <div class="flexGrower"></div>
     <div class="page page--post">
-      <div class="page__content">
-        
-          <h1>Talk: Post-consensus, cooperative decision-making</h1>
-          <p><i>10th Jul 2018</i></p>
-          <p>What should we do when consensus can’t be reached? What if cooperative decision-making is better achieved in such cases with practices other than “reaching consensus”?</p>
+      
+        <h1>Talk: Post-consensus, cooperative decision-making</h1>
+        <p><i>10th Jul 2018</i></p>
+        <p>What should we do when consensus can’t be reached? What if cooperative decision-making is better achieved in such cases with practices other than “reaching consensus”?</p>
 <p><img src="img/pccdm_dmexpanded.png" alt=""></p>
 <p>For decades people wishing to organize in more cooperative ways have been encouraged to make decisions by consensus, and for good reason: when it works well, it’s awesome. However—when it doesn’t work—it can lead to  guilt, frustration; organizational paralysis or disintegration.</p>
 <p>In these talks I will explore how score voting can provide a simple, scalable and systematically cooperative alternative to the often utopian ideal of consensus—and explain how to do it.</p>
@@ -131,8 +126,7 @@
 <li>Links: Please book through <a href="https://www.eventbrite.co.uk/e/round-table-on-post-consensus-cooperative-decision-making-tickets-48757539112">Eventbrite</a>. Also viewable on <a href="https://www.nwspk.com/events">Newspeak House Events page</a> and <a href="https://www.facebook.com/events/253216935292961/?notif_t=plan_user_invited&amp;notif_id=1533410894807171">Facebook event</a></li>
 </ul>
 
-        
-      </div>
+      
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
@@ -155,11 +149,10 @@
   <body>
     <div class="flexGrower"></div>
     <div class="page page--post">
-      <div class="page__content">
-        
-          <h1>Talk: Introducing Kanthaus</h1>
-          <p><i>4th Dec 2017</i></p>
-          <p>Two shabby buildings in a German town you’ve probably never heard of before have become home for a group of post-waste activists: we call it <a href="https://kanthaus.online">Kanthaus</a>. </p>
+      
+        <h1>Talk: Introducing Kanthaus</h1>
+        <p><i>4th Dec 2017</i></p>
+        <p>Two shabby buildings in a German town you’ve probably never heard of before have become home for a group of post-waste activists: we call it <a href="https://kanthaus.online">Kanthaus</a>. </p>
 <p><img src="img/sunnyDayKH.png" alt=""></p>
 <p>Located within the mesh of global challenges is the fact that 1/3 of edible food isn’t eaten. The issue of waste is a focal point for our project, inherited from our involvement with <a href="https://yunity.org/en">yunity.org</a> and <a href="https://foodsharing.de/">foodsharing.de</a>. We believe that waste can be avoided, and relationsips built, through sharing. Kanthaus is a platform for people to promote sharing and/or reduce waste.</p>
 <p>I fell into this project early on and I’ll present about the history, the first 6 months and future plans—</p>
@@ -169,8 +162,7 @@
 </ul>
 <p>Hope to see you there!</p>
 
-        
-      </div>
+      
       <a href="/posts" class="backButton">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
       </a>
