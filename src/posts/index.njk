@@ -10,7 +10,7 @@ postsTab: "nav__tab--current"
   <a href="{{ post.paths.dhref }}">
     <div class="entryBox entryBox--posts">
       <h1 class="entryBox__title">{{ post.title }}</h1>
-      <p class="entryBox__subtitle">{{ post.date }} — {{ post.wordCount }} words, ~{{ post.readingTime }}</p>
+      <p class="entryBox__subtitle">{{ post.date }} — ~{{ (post.wordCount / 100) | round * 100 }} words, ~{{ post.readingTime }}</p>
     </div>
   </a>
   {% endfor %}
