@@ -6,7 +6,6 @@ dougTab: "nav__tab--current"
 
 {% block main %}
 
-
   <p><b>Hey, Doug here.</b> I'm passionate about developing practices for effective cooperation, with a focus on post-consensus decision-making.</p>
   
   <img src="/assets/img/Smiling_Kirchheim.jpg" class="image image--profilePic" alt="Me, smiling, facing you; there is long grass and trees in the background.">
@@ -14,44 +13,44 @@ dougTab: "nav__tab--current"
   <div class="linkbar">
     <a class="linkbar__entry" href="mailto:doug@dougwebb.site">
       {% include "./assets/img/icons/email.svg" %} <!-- svg code must be in doc for styling, including nicer than raw -->
-      <p>Email</p>
+      <span>Email</span>
     </a>
     <a class="linkbar__entry" href="https://mastodon.xyz/@douginamug">
       {% include "./assets/img/icons/mastodon.svg" %}
-      <p>Mastodon</p>
+      <span>Mastodon</span>
     </a>
     <a class="linkbar__entry" href="https://twitter.com/DougInAMug">
       {% include "./assets/img/icons/twitter.svg" %}
-      <p>Twitter</p>
+      <span>Twitter</span>
     </a>
     <a class="linkbar__entry" href="https://gitlab.com/DougInAMug">
       {% include "./assets/img/icons/gitlab.svg" %}
-      <p>Gitlab</p>
+      <span>Gitlab</span>
     </a>
     <a class="linkbar__entry" href="https://github.com/DougInAMug">
       {% include "./assets/img/icons/github.svg" %}
-      <p>Github</p>
+      <span>Github</span>
     </a>
     <a class="linkbar__entry" href="https://matrix.to/#/@douginamug:matrix.org">
       {% include "./assets/img/icons/matrix-org--mod.svg" %}
-      <p>Matrix</p>
+      <span>Matrix</span>
     </a>
     <a class="linkbar__entry" href="https://t.me/douginamug">
       {% include "./assets/img/icons/telegram--mod.svg" %}
-      <p>Telegram</p>
+      <span>Telegram</span>
     </a>
   </div>
     
   <div class="linkbar linkbar--site">
-    <a href="https://gitlab.com/DougInAMug/dougwebb.site">
+    <a class="linkbar__entry linkbar__entry--site" href="https://gitlab.com/DougInAMug/dougwebb.site">
       <span class="small-mono">Site source</span>
       {% include "./assets/img/icons/source.svg" %}
     </a>
-    <a href="rss.xml">
+    <a class="linkbar__entry linkbar__entry--site" href="rss.xml">
       <span class="small-mono">RSS</span>
       {% include "./assets/img/icons/rss.svg" %}
     </a>
-    <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+    <a class="linkbar__entry linkbar__entry--site" href="https://creativecommons.org/publicdomain/zero/1.0/">
       <span class="small-mono">Free to (re)use</span>
       {% include "./assets/img/icons/cc0--mod.svg" %}
     </a>
