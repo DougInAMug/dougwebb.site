@@ -101,14 +101,12 @@ video {
   bottom: 0;
   display: flex;
   align-items: flex-end;
+  justify-content: space-evenly;
   order: 1;
   overflow: auto;  
   width: 100%;
-  border-top: teal solid 0.25rem;
-  background: whitesmoke;
-/*
-  background-image: linear-gradient(transparent, whitesmoke 20%, whitesmoke);
-*/
+  background: teal;
+  box-shadow: 0 -0.25rem 0.5rem gray;
 }
 
 @media only screen and (min-width: 530px) {
@@ -119,27 +117,32 @@ video {
     order: 0;
     width: 100%;
     height: 100%;
-    padding: 0 2rem;
+    padding: 0 1rem;
     border-right: teal solid 0.25rem;
     border-top: initial;
     margin-left: calc(100vw - 100%); /* to prevent scrollbar related jumping */
+    background: initial;
+    box-shadow: initial;
   }
 }
 
   .nav__tab /* i.e. unpressed */ {
     padding: 0.25rem;
-    border: teal solid 0.125rem;
-    border-radius: 0.25rem;
-    margin: 0.25rem 0 0.25rem 0.25rem;    
     font-size: 1.25rem;
     text-decoration: none;
+    color: whitesmoke;
+  }
+  
+  @media only screen and (min-width: 530px) {
+    .nav__tab {
+      color: darkslategray;
+    }
   }
 
   .nav__tab--current, 
   .nav__tab:hover, 
   .nav__tab:active {
-    background: teal;
-    color: whitesmoke;
+    font-weight: bold;
   }
 
 /* the outermost 'frame' */
@@ -148,7 +151,7 @@ video {
   flex-direction: column;
   width: 30rem;
   max-width: 100%;
-  padding: 0 2rem 3rem 2rem;
+  padding: 0 1rem 3rem 1rem;
   margin: auto;
 }
 
@@ -164,7 +167,13 @@ video {
 
 /* remove margin from top page content */
 .page > :first-child {
-  margin-top: 3rem; /* initial content alignment with nav */
+  margin-top: 1rem; /* initial content alignment with nav */
+}
+
+@media only screen and (min-width: 530px) {
+  .page > :first-child {
+    margin-top: 3rem; /* initial content alignment with nav */
+  }
 }
 
 .page * {
@@ -195,7 +204,7 @@ video {
 }
   
 .linkbar * svg {
-  height: 2rem;
+  height: 3rem;
   margin: 0 0.25rem 0.25rem 0.25rem;
   fill: darkslategray;
 }
