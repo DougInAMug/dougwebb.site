@@ -3,7 +3,7 @@
 /**********/
 
 /* make all box-sizes include respective paddings and borders, but also but allow inheritance 
-* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
   box-sizing: border-box;
 }
@@ -20,9 +20,9 @@ html {
 
 /* other global defaults */
 html {
-  color: darkslategray;
-  background-color: whitesmoke;
-  font-family: Roboto, 'FiraSans', Sans;
+  color: darkslategray; /* because who likes black? */
+  background-color: whitesmoke; /* ... or white? */
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Ubuntu, roboto, noto, helvetica, arial, sans-serif; /* stack from https://systemfontstack.com/ with helvetica moved down the stack */
 }
 
 /*************/
@@ -41,12 +41,11 @@ body {
 }
 
 p, li {
-  line-height: 1.36;
+  line-height: 1.48;
 }
 
 a {
   color: darkslategray;
-  font-family: inherit;
   cursor: pointer;
 }
 
@@ -60,6 +59,7 @@ code {
   border-radius: 0.25rem;
   background: lightgray;
   color: black;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
 /* block code, from markdown ``` construction */
@@ -162,7 +162,7 @@ video {
 }
 
 .page--post {
-  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif; 
 }
 
 /* remove margin from top page content */
@@ -243,7 +243,6 @@ video {
 
   .entryBox__subtitle {
     margin: 0;
-    font-family: 'FiraSans', Sans;
     font-size: 1.1rem;
     font-weight: lighter;
   }
