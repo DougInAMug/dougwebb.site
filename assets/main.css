@@ -1,3 +1,25 @@
+/************/
+/* VARIABLE */
+/************/
+
+:root {
+  --sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Ubuntu, roboto, noto, helvetica, arial, sans-serif; /* stack from https://systemfontstack.com/ with helvetica moved down the stack */
+  --serif: charter, Georgia, Cambria, "Times New Roman", Times, serif; 
+  --mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
+.sans {
+  font-family: var(--sans);
+}
+
+.serif {
+  font-family: var(--serif);
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
 /**********/
 /* GLOBAL */
 /**********/
@@ -15,14 +37,14 @@ html {
 /* 'Fluid typography' → https://css-tricks.com/snippets/css/fluid-typography/
  * font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width]))) */
 html {
-  font-size: calc(16px + 4.5 * ((100vw - 320px) / 1200));
+  font-size: calc(18px + 4.5 * ((100vw - 320px) / 1200));
 }
 
 /* other global defaults */
 html {
   color: darkslategray; /* because who likes black? */
   background-color: whitesmoke; /* ... or white? */
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Ubuntu, roboto, noto, helvetica, arial, sans-serif; /* stack from https://systemfontstack.com/ with helvetica moved down the stack */
+  font-family: var(--sans);
 }
 
 /*************/
@@ -45,7 +67,7 @@ p, li {
 }
 
 a {
-  color: darkslategray;
+  color: darkslategray; /* i.e. keep color once clicked */
   cursor: pointer;
 }
 
@@ -53,13 +75,13 @@ a:hover, a:active {
   color: darkturquoise;
 }
 
-/* inline code, from markdown `code` */
+/* inline code, from markdown `code` construction */
 code {
-  padding: 0 0.15rem 0 0.15rem;
+  padding: 0 0.15rem;
   border-radius: 0.25rem;
   background: lightgray;
   color: black;
-  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  font-family: var(--mono);
 }
 
 /* block code, from markdown ``` construction */
@@ -97,16 +119,14 @@ video {
 /**********/
 
 .nav {
-  position: fixed; /* need to used fixed until stuff sorted out https://mind-bending-forks.github.io/css-viewport-percentage-length-units/ */
+  position: fixed; /* need to used fixed until vw units sorted out https://mind-bending-forks.github.io/css-viewport-percentage-length-units/ */
   bottom: 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
-  order: 1;
-  overflow: auto;  
   width: 100%;
   background: teal;
-  box-shadow: 0 -0.25rem 0.5rem gray;
+  box-shadow: 0 -0.125rem 0.5rem gray;
 }
 
 @media only screen and (min-width: 530px) {
@@ -114,15 +134,16 @@ video {
     position: sticky;
     top: 3rem;    
     flex-direction: column;
-    order: 0;
     width: 100%;
-    height: 100%;
     padding: 0 1rem;
     border-right: teal solid 0.25rem;
     border-top: initial;
-    margin-left: calc(100vw - 100%); /* to prevent scrollbar related jumping */
     background: initial;
     box-shadow: initial;
+  }
+
+  .scrollBuffer {
+    margin-left: calc(100vw - 100%); /* to prevent scrollbar related jumping */
   }
 }
 
@@ -148,32 +169,24 @@ video {
 /* the outermost 'frame' */
 .page {
   display: flex;
-  flex-direction: column;
-  width: 30rem;
-  max-width: 100%;
-  padding: 0 1rem 3rem 1rem;
-  margin: auto;
+  flex-direction: column; /* note: flex disables margin-collapse of text, see `.page *` */
+  max-width: 30rem;
+  min-width: min-content; /* to prevent content flowing off */
+  margin: 1rem 1rem 3rem 1rem
 }
 
-.page__side {
-  width: 100%;
-  min-width: min-content; /* to not let nav overflow off page */
-  flex-shrink: 100;
-}
-
-.page--post {
-  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif; 
-}
-
-/* remove margin from top page content */
-.page > :first-child {
-  margin-top: 1rem; /* initial content alignment with nav */
-}
-
+/* add margin to align first  page item with first nav tab nav */
 @media only screen and (min-width: 530px) {
-  .page > :first-child {
-    margin-top: 3rem; /* initial content alignment with nav */
+  .page {
+    margin-top: 3.25rem; 
   }
+}
+
+/* class used on both 'sides' to center .page */
+.page__side {
+  flex-shrink: 10000; /* shrink  with near total preference to page */
+  width: 100%; /* to grow into any space left by page */
+  min-width: min-content; /* to prevent nav flowing off */
 }
 
 .page * {
@@ -192,7 +205,7 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0.5rem 1rem 0.5rem;
+  margin: 0.5rem;
   text-decoration: none;
   font-size: 0.75rem;
   line-height: 0.75;
@@ -204,8 +217,8 @@ video {
 }
   
 .linkbar * svg {
-  height: 3rem;
-  margin: 0 0.25rem 0.25rem 0.25rem;
+  height: 2.5rem;
+  margin: 0.25rem;
   fill: darkslategray;
 }
 
@@ -225,28 +238,6 @@ video {
     border-radius: 50%;
   }
 
-.entryBox {
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-  .entryBox--posts {
-    margin: 0 0 1rem 0;
-  }  
-
-  .entryBox__title {
-    margin: 0px 0px 10px 0px;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .entryBox__subtitle {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: lighter;
-  }
-
 .backButton {
   position: fixed;
   bottom: 0;
@@ -262,4 +253,29 @@ video {
 
 .backButton .svg-inline--fa {
   height: 60%;
+}
+
+.small-mono {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+/**********/
+/* ATOMIC */
+/**********/
+
+.noTxtDec {
+  text-decoration: none;
+}
+
+.noTopMargin {
+  margin-top: 0;
+}
+
+.noBottomMargin {
+  margin-bottom: 0;
+}
+
+.alignSelfFlexStart {
+  align-self: flex-start;
 }

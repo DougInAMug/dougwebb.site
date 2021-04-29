@@ -7,11 +7,9 @@ postsTab: "nav__tab--current"
 {% block main %}
 
   {% for post in posts %}
-  <a href="{{ post.paths.dhref }}">
-    <div class="entryBox entryBox--posts">
-      <h1 class="entryBox__title">{{ post.title }}</h1>
-      <p class="entryBox__subtitle">{{ post.date }} — ~{{ (post.wordCount / 100) | round * 100 }} words, ~{{ post.readingTime }}</p>
-    </div>
+  <a class="alignSelfFlexStart" href="{{ post.paths.dhref }}">
+    <h1 class="noBottomMargin">{{ post.title }}</h1>
+    <p class="noTopMargin">{{ post.date }} — ~{{ (post.wordCount / 100) | round * 100 }} words, ~{{ post.readingTime }}</p>
   </a>
   {% endfor %}
 

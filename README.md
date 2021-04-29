@@ -69,6 +69,10 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - on css writing styles, BEM+ http://getbem.com/introduction/
 - Performance freaking: https://varvy.com/pagespeed/wicked-fast.html
 - js-free table filtering https://nddt-webdevelopment.de/html-css/filter-html-table-without-javascript-just-css
+- modern font-stacks https://systemfontstack.com/
+- web almanac https://almanac.httparchive.org/en/2020/
+- butterick's practical Typography https://practicaltypography.com/
+- devdocs reference https://devdocs.io
 
 ## Inspiring websites
 - Aral Balkan's website: https://ar.al/
