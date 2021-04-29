@@ -2,10 +2,43 @@
 /* VARIABLE */
 /************/
 
+/* font stacks from https://github.com/csstools/sanitize.css/blob/master/typography.css */
 :root {
-  --sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Ubuntu, roboto, noto, helvetica, arial, sans-serif; /* stack from https://systemfontstack.com/ with helvetica moved down the stack */
-  --serif: charter, Georgia, Cambria, "Times New Roman", Times, serif; 
-  --mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --sans:
+    system-ui,
+    /* macOS 10.11-10.12 */ -apple-system,
+    /* Windows 6+ */ "Segoe UI",
+    /* Android 4+ */ "Roboto",
+    /* Ubuntu 10.10+ */ "Ubuntu",
+    /* Gnome 3+ */ "Cantarell",
+    /* KDE Plasma 5+ */ "Noto Sans",
+    /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
+
+--serif: 
+  charter,
+  Georgia,
+  Cambria,
+  "Times New Roman",
+  Times, serif; 
+
+--mono:
+    /* macOS 10.10+ */ "Menlo",
+    /* Windows 6+ */ "Consolas",
+    /* Android 4+ */ "Roboto Mono",
+    /* Ubuntu 10.10+ */ "Ubuntu Monospace",
+    /* KDE Plasma 5+ */ "Noto Mono",
+    /* KDE Plasma 4+ */ "Oxygen Mono",
+    /* Linux/OpenOffice fallback */ "Liberation Mono",
+    /* fallback */ monospace,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
+
 }
 
 .sans {
@@ -23,16 +56,6 @@
 /**********/
 /* GLOBAL */
 /**********/
-
-/* make all box-sizes include respective paddings and borders, but also but allow inheritance 
- * https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
 /* 'Fluid typography' → https://css-tricks.com/snippets/css/fluid-typography/
  * font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width]))) */
