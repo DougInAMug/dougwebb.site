@@ -9,13 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set device width as page width, set initial zoom. -->
   </head>
   <body>
-    <div class="page__side scrollBuffer">
-      {% include "layouts/_nav.njk" %}
-    </div>
+    <div class="page__side scrollBuffer"></div>
+    {% include "layouts/_nav.njk" %}
     <div class="page">
       {% block main %}
       {% endblock %}
     </div>
-    <div class="page__side"></div>
+    <div class="page__side page__side--right"></div>
   </body>
 </html>

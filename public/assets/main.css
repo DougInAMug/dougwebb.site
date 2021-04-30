@@ -66,7 +66,7 @@ html {
 /* other global defaults */
 html {
   color: darkslategray; /* because who likes black? */
-  background-color: whitesmoke; /* ... or white? */
+  background-color: aliceblue; /* ... or white? */
   font-family: var(--sans);
 }
 
@@ -85,8 +85,9 @@ body {
   }
 }
 
-p, li {
-  line-height: 1.48;
+/* decrease line-height, because otherwise wrapping looks weird */
+h1 {
+  line-height: 1.1;
 }
 
 a {
@@ -110,9 +111,7 @@ code {
 /* block code, from markdown ``` construction */
 pre code {
   display: inline-block;
-  max-width: 100%;
   padding: 0.5rem;
-  border-radius: 0.25rem;
   background: black;
   color: white;
   overflow-wrap: anywhere;  
@@ -141,32 +140,46 @@ video {
 /* CLASSY */
 /**********/
 
+/* class used on both 'sides' to center .page */
+.page__side {
+  flex-shrink: 10000; /* shrink  with near total preference to page */
+  width: 100%; /* to grow into any space left by page */
+}
+
+/* factor in absent nav bar to center main pages */
+.page__side--right {
+  width: 100%
+}
+
+.scrollBuffer {
+  margin-left: calc(100vw - 100%); /* to prevent scrollbar related jumping */
+}
+
 .nav {
-  position: fixed; /* need to used fixed until vw units sorted out https://mind-bending-forks.github.io/css-viewport-percentage-length-units/ */
+  position: fixed; /* 'fixed' required until vw units fixed https://mind-bending-forks.github.io/css-viewport-percentage-length-units/ */
   bottom: 0;
   display: flex;
-  align-items: flex-end;
   justify-content: space-evenly;
   width: 100%;
   background: teal;
-  box-shadow: 0 -0.125rem 0.5rem gray;
+  box-shadow: gray 0 0 1rem;
 }
 
 @media only screen and (min-width: 530px) {
   .nav {
     position: sticky;
-    top: 3rem;    
+    top: 5rem;
+    bottom: initial;     
     flex-direction: column;
-    width: 100%;
-    padding: 0 1rem;
-    border-right: teal solid 0.25rem;
-    border-top: initial;
-    background: initial;
-    box-shadow: initial;
-  }
-
-  .scrollBuffer {
-    margin-left: calc(100vw - 100%); /* to prevent scrollbar related jumping */
+    align-items: flex-end;
+    flex-shrink: 0;
+    width: 8rem;
+    height: 100%;    
+    padding: 1rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+    margin-left: 1rem;
+    color: whitesmoke;
+    box-shadow: gray -0.25rem 0.25rem 0.5rem, inset darkslategray -0.5rem 0 0.5rem -0.25rem;
   }
 }
 
@@ -175,12 +188,6 @@ video {
     font-size: 1.25rem;
     text-decoration: none;
     color: whitesmoke;
-  }
-  
-  @media only screen and (min-width: 530px) {
-    .nav__tab {
-      color: darkslategray;
-    }
   }
 
   .nav__tab--current, 
@@ -193,28 +200,25 @@ video {
 .page {
   display: flex;
   flex-direction: column; /* note: flex disables margin-collapse of text, see `.page *` */
-  max-width: 30rem;
+  max-width: 35rem;
   min-width: min-content; /* to prevent content flowing off */
-  margin: 1rem 1rem 3rem 1rem
+  margin: 1rem 1rem 3rem 1rem;
+  box-shadow: gray 0 0 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background: whitesmoke;
 }
 
 /* add margin to align first  page item with first nav tab nav */
 @media only screen and (min-width: 530px) {
   .page {
-    margin-top: 3.25rem; 
+    margin: 2.5rem 1rem 3rem 0;
   }
-}
-
-/* class used on both 'sides' to center .page */
-.page__side {
-  flex-shrink: 10000; /* shrink  with near total preference to page */
-  width: 100%; /* to grow into any space left by page */
-  min-width: min-content; /* to prevent nav flowing off */
 }
 
 .page * {
     margin-top: 0; /* remove top margins, because margin collapsing no worky in flex */
-    max-width: 100% /* prevent images from overflowing */
+    max-width: 100% /* prevent things (e.g. images) from overflowing */
 }
 
 .linkbar {
@@ -248,7 +252,8 @@ video {
 .linkbar--site * svg {
   height: 1rem;
 }
-  
+
+/* Possibly superfluous */
 .image {
   width: 50%;
   align-self: center;
