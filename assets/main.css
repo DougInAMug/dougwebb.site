@@ -193,7 +193,7 @@ video {
   .nav__tab--current, 
   .nav__tab:hover, 
   .nav__tab:active {
-    font-weight: bold;
+    text-shadow: currentColor -0.05rem 0 0, currentColor 0.05rem 0 0;
   }
 
 /* the outermost 'frame' */
