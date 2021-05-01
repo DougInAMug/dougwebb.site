@@ -7,7 +7,7 @@ tags: [borg, backups, linux, bash]
 
 Long overdue a proper backup setup, prompted by a housemate's presentation on the topic, I decided to give Borg a bash.
 
-Until know I've been periodically/sporadically backing up my home folder to an external harddrive with `rsync`:
+Until now I've been periodically/sporadically backing up my home folder to an external harddrive with `rsync`:
 
 ```bash
 rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk 

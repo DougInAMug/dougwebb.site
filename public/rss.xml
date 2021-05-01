@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 01 May 2021 14:33:38 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 01 May 2021 17:30:48 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Borg backups</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/sanitize_12.0.1.css">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
   </head>
   <body>
@@ -15,7 +15,7 @@
         <h1 class="noBottomMargin">Borg backups</h1>
         <p><i><time>17th Mar 2020</time></i></p>
         <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
-<p>Until know I’ve been periodically/sporadically backing up my home folder to an external harddrive with <code>rsync</code>:</p>
+<p>Until now I’ve been periodically/sporadically backing up my home folder to an external harddrive with <code>rsync</code>:</p>
 <pre><code class="language-bash">rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk </code></pre>
 <p>This is definitely better than copy-pasting, but 1) it is not encrypted, meaning anyone with access to the drive can read my data 2) it takes quite a lot of time 3) it gives only one monolithic backup, meaning I only have the option of reverting to the last backup.</p>
 <p><a href="https://www.borgbackup.org/">Borg</a>, a.k.a. ‘Borgbackup’ is a <em>“Deduplicating archiver with compression and encryption”</em>. It is the de facto successor of <a href="https://en.wikipedia.org/wiki/Attic_(backup_software)#Borg">Attic</a> since 2015, from which it was forked <em>“to allow some different approaches to development, goals and policy”</em>[<a href="https://github.com/borgbackup/borg/issues/1">ref</a>] From a user perspective, it lets you make <strong>quick, space-efficient, password-protected backups.</strong></p>
@@ -52,8 +52,8 @@
     <title>hello world...</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/sanitize_12.0.1.css">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
   </head>
   <body>
@@ -85,8 +85,8 @@
     <title>Talk: Post-consensus, cooperative decision-making</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/sanitize_12.0.1.css">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
   </head>
   <body>
@@ -131,8 +131,8 @@
     <title>Talk: Introducing Kanthaus</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/sanitize_12.0.1.css">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
   </head>
   <body>

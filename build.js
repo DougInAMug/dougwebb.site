@@ -46,7 +46,6 @@ Metalsmith(__dirname)
   // `posts/*.md` --transpile-to-html--> `posts/*.html`
   // (Used instead of inplace for table and html support since the jstransformer componenet is not updated)
   .use(markdown({
-    pattern: 'posts/*/*.md',
     smartypants: true
   }))
   
@@ -87,7 +86,7 @@ Metalsmith(__dirname)
   // Layouts specified with YFM `layout`
   .use(layouts({
     default: "post.njk",
-    pattern: ['**' ,'!slides/**'], // `/*` since URLs have been prettified at this point
+    pattern: ['**'], // `/*` since URLs have been prettified at this point
   }))
   
   // Adds property with different paths
