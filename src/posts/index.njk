@@ -5,12 +5,10 @@ postsTab: "nav__tab--current"
 {% extends "./layouts/base.njk" %}
 
 {% block main %}
-
   {% for post in posts %}
   <a class="alignSelfFlexStart" href="{{ post.paths.dhref }}">
-    <h1 class="noBottomMargin">{{ post.title }}</h1>
-    <p class="noTopMargin">{{ post.date }} — ~{{ (post.wordCount / 100) | round * 100 }} words, ~{{ post.readingTime }}</p>
+    <h2 class="noBottomMargin">{{ post.title }}</h2>
+    <p class="noTopMargin"><time>{{ post.date }}</time> — ~{{ (post.wordCount / 100) | round * 100 }} words, ~{{ post.readingTime }}</p>
   </a>
   {% endfor %}
-
 {% endblock %}
