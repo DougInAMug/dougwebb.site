@@ -20,6 +20,14 @@ const chalk         = require('chalk')
 const renamer       = require('metalsmith-renamer')
 const paths         = require('metalsmith-paths')
 const assets         = require('metalsmith-assets')
+const request         = require('metalsmith-request')
+
+
+
+const metalsmith = new Metalsmith(__dirname)
+  .use(request({
+    foo: 'https://gitlab.com/DougInAMug/octosol/-/raw/main/README.md'
+  }))
 
 // Start
 // In Node.js, `__dirname` is always the directory in which the currently executing script resides

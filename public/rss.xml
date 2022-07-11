@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 01 May 2021 17:36:39 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Mon, 11 Jul 2022 21:15:42 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Contribute upstream]]></title><description><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contribute upstream</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+  </head>
+  <body>
+    <div class="scrollBuffer"></div>
+    <article class="serif">
+      
+        <h1 class="noBottomMargin">Contribute upstream</h1>
+        <p><i><time>11th Jul 2022</time></i></p>
+        <p>I’ve been getting more into editing Wikipedia. Despite all of its shortcomings, it is <em>the</em> encyclopedia; you can be sure a thing really exists if there’s a Wikipedia page of it.</p>
+<p>What motivated me was the topic that’s been motivating me for years: collective organization. But rather than writing yet another opinionated, unreferenced blog post, I thought it would be better to contribute upsteam, all the way up the stream, to Wikipedia.</p>
+<p>You don’t need to advertise the platform: people come to it, audience is almost assured. You don’t need to worry about hosting, and can indeed be fairly secure it’ll be up for years to come. You’re forced to write better than you would on your blog, or else people will revert your work. For better than worse, you’re forced to collaborate.</p>
+<p>Of course, there are limits to what you can do. <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research">“No original research”</a>, prevents you from expressing The Amazing Idea You Just Had, and you can’t write in a lyrical, poetic or polemic prose: there is still room for blogs. But for anything encyclopedic enough, why not go all the way? It is unquestionably more work—following rules, customs and working with internet strangers—but the value of your contribution is almost certainly way higher to the universe.</p>
+<p>A friend of mine recently packaged something for Debian. Said it was horrendous, that he’d never had to do so much testing, auditing and feedback integration. But now it’s in Debian, which means it’s in Ubuntu and a thousand other distros and thus installed in millions of computers around the world. Certainly more work, but an almost exponential impact compared to some hobby code on your machine.</p>
+<p>I’m curious to think about other ways I can contribute further upstream in different ways. Political institutions in particular. I fear the very low barrier to entry for Wikipedia is exceptional.</p>
+
+      
+      <a href="/posts" class="backButton">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
+      </a>
+    </article>
+  </body>
+</html>
+]]></description><link>https://dougwebb.site/posts/contribute-upstream/2022-07-11_contributeUpstream.html</link><guid isPermaLink="true">https://dougwebb.site/posts/contribute-upstream/2022-07-11_contributeUpstream.html</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Borg backups]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Borg backups</title>

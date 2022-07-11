@@ -24,6 +24,7 @@
     "metalsmith-markdown": "^1.3.0",
     "metalsmith-paths": "^3.0.1",
     "metalsmith-renamer": "^0.5.85",
+    "metalsmith-request": "^3.0.0",
     "metalsmith-word-count": "0.0.4",
     "nodemon": "^2.0.2"
   }
