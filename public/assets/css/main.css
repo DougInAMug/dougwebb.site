@@ -82,7 +82,7 @@ body {
 
 @media only screen and (min-width: 530px) {
   body {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 }
 
@@ -159,20 +159,13 @@ nav {
   nav {
     position: sticky;
     top: 5rem;
-    bottom: initial;     
     flex-direction: column;
-    align-items: flex-end;
-    flex-shrink: 0;
     width: initial;
     height: 100%;    
-    padding: 1rem;
-    padding-right: 0;
-    border-radius: 0.25rem 0 0 0.25rem;
-    margin-left: 1rem;
     color: whitesmoke;
-    box-shadow: 
-      gray -0.25rem 0.25rem 0.5rem, 
-      inset darkslategray -0.5rem 0 0.5rem -0.25rem;
+    background: initial;
+    box-shadow: none;
+
   }
 }
 
@@ -182,7 +175,7 @@ nav {
     text-decoration: none;
     color: whitesmoke;
     background-color: cadetblue;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 1rem;
   }
 
   .nav__tab--current, 
@@ -202,10 +195,6 @@ main, article {
   max-width: 35rem;
   min-width: min-content; /* to prevent content flowing off */
   margin: 1rem 1rem 3rem 1rem;
-  box-shadow: gray -0.25rem 0.25rem 0.5rem;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  background: whitesmoke;
 }
 
 /* add margin to align first  page item with first nav tab nav */
