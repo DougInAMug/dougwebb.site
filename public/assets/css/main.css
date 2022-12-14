@@ -77,13 +77,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-@media only screen and (min-width: 530px) {
-  body {
-    flex-direction: row-reverse;
-  }
+  align-items: center;
 }
 
 /* decrease line-height, because otherwise wrapping looks weird */
@@ -146,46 +140,28 @@ video {
 }
 
 nav {
-  position: fixed; /* 'fixed' required until vw units fixed https://mind-bending-forks.github.io/css-viewport-percentage-length-units/ */
-  bottom: 0;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
-  background: teal;
-  box-shadow: gray 0 0 1rem;
-}
-
-@media only screen and (min-width: 530px) {
-  nav {
-    position: sticky;
-    top: 5rem;
-    flex-direction: column;
-    width: initial;
-    height: 100%;    
-    color: whitesmoke;
-    background: initial;
-    box-shadow: none;
-
-  }
+  background: lightblue;
 }
 
   .nav__tab /* i.e. unpressed */ {
-    padding: 0.25rem;
+    padding: 0 0.25rem 0 0.25rem;
     font-size: 1.25rem;
     text-decoration: none;
-    color: whitesmoke;
-    background-color: cadetblue;
-    border-radius: 1rem;
+    color: teal;
+    background-color: aliceblue;
+    border-radius: 0.25rem;
+    margin: 0.25rem;
   }
 
   .nav__tab--current, 
   .nav__tab:hover, 
   .nav__tab:active {
-    text-shadow: 
-      currentColor -0.025rem 0 0, 
-      currentColor 0.025rem 0 0, 
-      currentColor 0 -0.025rem 0, 
-      currentColor 0 0.025rem 0;
+	color: aliceblue;
+    background-color: teal;
   }
 
 /* the outermost 'frame' */
