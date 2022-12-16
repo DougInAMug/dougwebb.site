@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Wed, 14 Dec 2022 15:39:00 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Contribute upstream]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Fri, 16 Dec 2022 20:58:55 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[Custom is consent]]></title><description><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Custom is consent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+  </head>
+  <body>
+    <div class="scrollBuffer"></div>
+    <article class="serif">
+      
+        <h1 class="noBottomMargin">Custom is consent</h1>
+        <p><i><time>16th Dec 2022</time></i></p>
+        <p>I used to think that customs were bad. Unwritten, unspoken rules, only there to separate the uninitiated from the elders.</p>
+<p>I’ve made a U-turn—with caveats.</p>
+<p>Customs are perhaps the freest expression of self-organization. Like the stigmergy of ants, who in following the pheremone trail laid by previous ants, form orderly lines towards desirable destinations. Or like those well-used yet unpaved paths through parks: we don’t know who starts them, but in following we contribute. </p>
+<figure>
+    <img src="img/antline.jpg">
+    <figcaption><i>It's unclear who started it, but it's apparently worth following...</i></figcaption>
+</figure>
+
+<p>Not all action can be coordinated beforehand: we don’t (yet!) have a hive-mind. Even in the most communicative groups, individuals will sometimes need to make decisions without consulting the others. A fraction of these autonomous actions will ‘stick’ — customs are inevitable.</p>
+<p>Customs provide a space to iteratively experiment. One might slightly rearrange a living room, and the next a little more, until a steady-state is achieved without discourse or explicit agreement. It is in the space and freedom given by minimal coordination we reach maximal agency.</p>
+<p>The custom can therefore be seen as a chain of consent, to be changed or ended also by consent. It is not a collective decision, even if all members of a collective follow it. From this perspective, in a non-hierarchical association, a person who doesn’t consent to a custom may not be sanctioned.</p>
+<p>A custom can become so well accepted by a group it assumes the status of a rule. That is, when someone (usually a new person) doesn’t follow it, they can be sanctioned by anyone in the group with collective authority. This is tradition creep, and that’s bad, because tradition is an archive, not an authority. If the traditionalist can say <em>“but we’ve always done it that way!”</em>, slowly the hierarchy of memory takes over. </p>
+<figure>
+    <img src="img/antspiral.jpg">
+    <figcaption><i>... blind/short-sighted following not so much.</i></figcaption>
+</figure>
+
+<p>The consent argument against traditionalism rests on there never having been an explicit agreement. It seems obvious not to be held accountable for breaking an agreement you never made. However, if customs hold no power at all, all decisions must be made collectively. If the legalist can say <em>“but it’s not written anywhere!”</em>, slowly the living group is replaced by a bureaucracy.</p>
+<p>A respectful dialogue between the positions is possible, assuming the custom-holder accepts the custom-breaker never consented to follow, and the breaker acknowledges some wisdom may lie in the chain of consent. The holders may invite others to join the custom, <em>“We normally do X because Y, is that OK with you?”</em>, and if the answer is no… well, no means no. The holder can then consent to the non-compliance as an alteration of the custom, or initiate a collective process.</p>
+<p>It should be telling if new people regularly deviate from a custom that it lacks sufficient intuitiveness and may the issue may be better addressed with a design intervention (e.g. affordance, restriction, signage) or governance intervention (e.g. rule)</p>
+<p>Customs are living consent.</p>
+
+      
+      <a href="/posts" class="backButton">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
+      </a>
+    </article>
+  </body>
+</html>
+]]></description><link>https://dougwebb.site/posts/custom-is-consent/2022-12-16_CustomIsConsent.html</link><guid isPermaLink="true">https://dougwebb.site/posts/custom-is-consent/2022-12-16_CustomIsConsent.html</guid><dc:creator><![CDATA[Doug Webb]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[Contribute upstream]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Contribute upstream</title>

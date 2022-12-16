@@ -131,6 +131,16 @@ video {
   }
 }
 
+figure {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+img {
+	border-radius: 0.25rem;
+}
+
 /**************/
 /* STRUCTURAL */
 /**************/
