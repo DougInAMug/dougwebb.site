@@ -12,7 +12,7 @@ I've made a U-turn—with caveats.
 Customs are perhaps the freest expression of self-organization. Like the stigmergy of ants, who in following the pheremone trail laid by previous ants, form orderly lines towards desirable destinations. Or like those well-used yet unpaved paths through parks: we don't know who starts them, but in following we contribute. 
 
 <figure>
-	<img src="img/antline.jpg">
+	<img src="img/antline.jpg" alt="A mass of ants, walking in a broad line together.">
 	<figcaption><i>It's unclear who started it, but it's apparently worth following...</i></figcaption>
 </figure>
 
@@ -25,7 +25,7 @@ The custom can therefore be seen as a chain of consent, to be changed or ended a
 A custom can become so well accepted by a group it assumes the status of a rule. That is, when someone (usually a new person) doesn't follow it, they can be sanctioned by anyone in the group with collective authority. This is tradition creep, and that's bad, because tradition is an archive, not an authority. If the traditionalist can say _"but we've always done it that way!"_, slowly the hierarchy of memory takes over. 
 
 <figure>
-	<img src="img/antspiral.jpg">
+	<img src="img/antspiral.jpg" alt="A mass of ants, rotating in a spiral.">
 	<figcaption><i>... blind/short-sighted following not so much.</i></figcaption>
 </figure>
 
