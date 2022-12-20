@@ -9,7 +9,7 @@ I used to think that customs were bad. Unwritten, unspoken rules, only there to 
 
 I've made a U-turn—with caveats.
 
-Customs are perhaps the freest expression of self-organization. Like the stigmergy of ants, who in following the pheremone trail laid by previous ants, form orderly lines towards desirable destinations. Or like those well-used yet unpaved paths through parks: we don't know who starts them, but in following we contribute. 
+Customs are perhaps the freest expression of self-organization. Like the stigmergy of ants, who in following the pheromone trail laid by previous ants, form orderly lines towards desirable destinations. Or like those well-used yet unpaved paths through parks: we don't know who starts them, but in following we contribute. 
 
 <figure>
 	<img src="img/antline.jpg" alt="A mass of ants, walking in a broad line together.">
