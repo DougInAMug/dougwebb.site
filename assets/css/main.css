@@ -139,6 +139,7 @@ figure {
 
 img {
 	border-radius: 0.25rem;
+  max-width: 100%;
 }
 
 /**************/
@@ -177,16 +178,9 @@ nav {
 
 /* the outermost 'frame' */
 main, article {
-  display: flex;
-  flex-direction: column; /* note: flex disables margin-collapse of text, see `.page *` */
   max-width: 35rem;
   min-width: min-content; /* to prevent content flowing off */
   margin-top: 2rem;
-}
-
-main *, article * {
-    margin-top: 0; /* remove top margins, because margin collapsing no worky in flex */
-    max-width: 100% /* prevent things (e.g. images) from overflowing */
 }
 
 .linkbar {
