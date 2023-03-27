@@ -6,7 +6,7 @@ postsTab: "nav__tab--current"
 
 {% block main %}
   {% for post in posts %}
-  <a class="alignSelfFlexStart" href="{{ post.paths.dhref }}">
+  <a href="{{ post.paths.dhref }}">
     <h2 class="noBottomMargin">{{ post.title }}</h2>
     <p class="noTopMargin"><time>{{ post.date }}</time> — ~{{ (post.wordCount / 100) | round * 100 }} words, ~{{ post.readingTime }}</p>
   </a>

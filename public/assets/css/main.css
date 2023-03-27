@@ -57,10 +57,13 @@
 /* GLOBAL */
 /**********/
 
-/* 'Fluid typography' → https://css-tricks.com/snippets/css/fluid-typography/
- * font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width]))) */
-html {
-  font-size: calc(16px + 4.5 * ((100vw - 320px) / 1200));
+/* fluid typography base size, which respects user defined base size + sane breaking
+ * https://css-tricks.com/simplified-fluid-typography/ 
+ * sanitize.css */
+ html {
+  font-size: clamp(1em, 1em + 0.2vw, 3em);
+  word-break: break-word;
+  line-height: 1.35;
 }
 
 /* other global defaults */
@@ -113,6 +116,7 @@ pre code {
   white-space: pre-wrap;
 }
 
+ /* to prefix $ in bash in a way that isn't selected on tripple click */
 code.language-bash::before {
   content: "$ ";
   background: none;  
@@ -139,6 +143,9 @@ figure {
 
 img {
 	border-radius: 0.25rem;
+  max-width: 100%;
+  display: block;
+  margin: auto;
 }
 
 /**************/
@@ -177,16 +184,9 @@ nav {
 
 /* the outermost 'frame' */
 main, article {
-  display: flex;
-  flex-direction: column; /* note: flex disables margin-collapse of text, see `.page *` */
   max-width: 35rem;
   min-width: min-content; /* to prevent content flowing off */
   margin-top: 2rem;
-}
-
-main *, article * {
-    margin-top: 0; /* remove top margins, because margin collapsing no worky in flex */
-    max-width: 100% /* prevent things (e.g. images) from overflowing */
 }
 
 .linkbar {
@@ -204,7 +204,7 @@ main *, article * {
   text-decoration: none;
   font-size: 0.75rem;
   line-height: 0.75;
-  gap:0.25rem;
+  gap: 0.25rem;
 }
   
 .linkbar__entry--site {
@@ -222,17 +222,12 @@ main *, article * {
 }
 
 /* Possibly superfluous */
-.image {
-  width: 50%;
-  align-self: center;
-  margin-top: 1rem;
-}
 
-  .image--profilePic {
-    max-width: 12.5rem;
-    border: 5px solid teal;
-    border-radius: 50%;
-  }
+.image--profilePic {
+  max-width: 12.5rem;
+  border: 5px solid teal;
+  border-radius: 50%;
+}
 
 .backButton {
   position: fixed;
@@ -260,6 +255,10 @@ main *, article * {
 /* ATOMIC */
 /**********/
 
+.w-50pc {
+  width: 50%;
+}
+
 .noTxtDec {
   text-decoration: none;
 }
@@ -270,8 +269,4 @@ main *, article * {
 
 .noBottomMargin {
   margin-bottom: 0;
-}
-
-.alignSelfFlexStart {
-  align-self: flex-start;
 }
