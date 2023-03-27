@@ -4,30 +4,27 @@
 
 // build.js: metalsmith API method (alternative method: metalsmith.json https://github.com/segmentio/metalsmith/wiki/The-basics-of-Metalsmith)
 
-// Recommendation to use `const` when the identifier won't be reassigned https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75
-
 const Metalsmith    = require('metalsmith')
 const debug         = require('metalsmith-debug')
-const layouts       = require('metalsmith-layouts')
+const layouts       = require('@metalsmith/layouts')
 const dateFormatter = require('metalsmith-date-formatter')
-const inplace       = require('metalsmith-in-place')
-const collections   = require('metalsmith-collections')
-const drafts        = require('metalsmith-drafts')
+const inplace       = require('@metalsmith/in-place')
+const collections   = require('@metalsmith/collections')
+const drafts        = require('@metalsmith/drafts') // could do without this
 const wordcount     = require('metalsmith-word-count')
 const markdown      = require('metalsmith-markdown')
 const feed          = require('metalsmith-feed')
-const chalk         = require('chalk')
 const renamer       = require('metalsmith-renamer')
 const paths         = require('metalsmith-paths')
-const assets         = require('metalsmith-assets')
-const request         = require('metalsmith-request')
+const assets        = require('metalsmith-assets')
+// const request       = require('metalsmith-request') unneeded?
 
 
 
 const metalsmith = new Metalsmith(__dirname)
-  .use(request({
-    foo: 'https://gitlab.com/DougInAMug/octosol/-/raw/main/README.md'
-  }))
+  // .use(request({
+  //   foo: 'https://gitlab.com/DougInAMug/octosol/-/raw/main/README.md'
+  // }))
 
 // Start
 // In Node.js, `__dirname` is always the directory in which the currently executing script resides
@@ -152,6 +149,6 @@ Metalsmith(__dirname)
     if (err) { // error handling is required
       throw err 
     } else {
-      console.log(chalk.bgGreen.bold('✓ Build successful'))
+      console.log("Build successful!");
     }
   })

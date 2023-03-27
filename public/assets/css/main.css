@@ -155,6 +155,8 @@ nav {
   justify-content: center;
   width: 100%;
   background: lightblue;
+  gap: 0.25rem;
+  padding: 0.25rem;
 }
 
   .nav__tab /* i.e. unpressed */ {
@@ -164,7 +166,6 @@ nav {
     color: teal;
     background-color: aliceblue;
     border-radius: 0.25rem;
-    margin: 0.25rem;
   }
 
   .nav__tab--current, 
@@ -180,14 +181,7 @@ main, article {
   flex-direction: column; /* note: flex disables margin-collapse of text, see `.page *` */
   max-width: 35rem;
   min-width: min-content; /* to prevent content flowing off */
-  margin: 1rem 1rem 3rem 1rem;
-}
-
-/* add margin to align first  page item with first nav tab nav */
-@media only screen and (min-width: 530px) {
-  main, article {
-    margin: 2.5rem 1rem 3rem 0;
-  }
+  margin-top: 2rem;
 }
 
 main *, article * {
@@ -199,17 +193,18 @@ main *, article * {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  gap: 1rem
 }
 
 .linkbar__entry {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0.5rem;
   text-decoration: none;
   font-size: 0.75rem;
   line-height: 0.75;
+  gap:0.25rem;
 }
   
 .linkbar__entry--site {
@@ -219,7 +214,6 @@ main *, article * {
   
 .linkbar * svg {
   height: 2.5rem;
-  margin: 0.25rem;
   fill: darkslategray;
 }
 
@@ -231,7 +225,7 @@ main *, article * {
 .image {
   width: 50%;
   align-self: center;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
   .image--profilePic {
