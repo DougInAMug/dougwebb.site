@@ -5,7 +5,6 @@ subtitle: "Edinburgh 26th July, Glasgow 30th July, London 16th August"
 description: "Talks about the philosophy, theory and practice of making cooperative decisions when consensus is not possible."
 tags: [event]
 date: 2018-07-10
-draft: false
 layout: post.njk
 ---
 

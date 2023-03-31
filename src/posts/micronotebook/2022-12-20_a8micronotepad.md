@@ -5,7 +5,6 @@ subtitle: "Why and how to make a really small notepad"
 description: ""
 tags: [analog, notes, PIM]
 date: 2022-12-20
-draft: false
 ---
 
 If you've met me in the last years, there's a good chance you've seen me whip out a tiny notepad at some point to write something down. This notepad is pretty much two bank cards, with a bit of duct tape as a 'spine' and an elastic band to keep the paper in. This design came out of a need to have a completely portable way to take notes. 

@@ -10,21 +10,14 @@ const layouts       = require('@metalsmith/layouts')
 const dateFormatter = require('metalsmith-date-formatter')
 const inplace       = require('@metalsmith/in-place')
 const collections   = require('@metalsmith/collections')
-const drafts        = require('@metalsmith/drafts') // could do without this
 const wordcount     = require('metalsmith-word-count')
 const markdown      = require('metalsmith-markdown')
 const feed          = require('metalsmith-feed')
 const renamer       = require('metalsmith-renamer')
 const paths         = require('metalsmith-paths')
 const assets        = require('metalsmith-assets')
-// const request       = require('metalsmith-request') unneeded?
-
-
 
 const metalsmith = new Metalsmith(__dirname)
-  // .use(request({
-  //   foo: 'https://gitlab.com/DougInAMug/octosol/-/raw/main/README.md'
-  // }))
 
 // Start
 // In Node.js, `__dirname` is always the directory in which the currently executing script resides
@@ -43,10 +36,7 @@ Metalsmith(__dirname)
   .source('./src')              
   
   // Specify destination directory
-  .destination('./public')
-  
-  // Omit drafts (i.e. `draft: true`) 
-  .use(drafts())                
+  .destination('./public')              
 
   // `posts/*.md` --transpile-to-html--> `posts/*.html`
   // (Used instead of inplace for table and html support since the jstransformer componenet is not updated)
