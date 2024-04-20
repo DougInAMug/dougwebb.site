@@ -10,6 +10,9 @@ dependencies:
   '@metalsmith/layouts':
     specifier: ^2.7.0
     version: 2.7.0(metalsmith@2.6.3)
+  '@metalsmith/markdown':
+    specifier: ^1.10.0
+    version: 1.10.0(metalsmith@2.6.3)
   jstransformer-markdown:
     specifier: ^1.2.1
     version: 1.2.1
@@ -80,6 +83,18 @@ packages:
       inputformat-to-jstransformer: 1.4.0
       is-utf8: 0.2.1
       jstransformer: 1.0.0
+      metalsmith: 2.6.3
+    dev: false
+
+  /@metalsmith/markdown@1.10.0(metalsmith@2.6.3):
+    resolution: {integrity: sha512-DudINS2a9TlYjAVoOpAxlXutyCd6w6pC85RdBmByvkJiYEna+1Qwo3Z2si622URum9saAyG8mGuknoLS0A6beg==}
+    engines: {node: '>=14.14.0'}
+    peerDependencies:
+      metalsmith: ^2.5.0
+    dependencies:
+      dlv: 1.1.3
+      dset: 3.1.3
+      marked: 4.3.0
       metalsmith: 2.6.3
     dev: false
 
@@ -293,6 +308,10 @@ packages:
     engines: {node: '>=0.3.1'}
     dev: false
 
+  /dlv@1.1.3:
+    resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
+    dev: false
+
   /dom-serializer@0.0.1:
     resolution: {integrity: sha512-evvizoLtT5uMpDT3iKRAx1NmTCk2ZdOD7ATqmL27QJkCv8XQmGKv/eFuvAjHhySNBACREAcXGBqozYhV1dOdag==}
     dependencies:
@@ -325,6 +344,11 @@ packages:
     dependencies:
       dom-serializer: 0.0.1
       domelementtype: 1.3.1
+    dev: false
+
+  /dset@3.1.3:
+    resolution: {integrity: sha512-20TuZZHCEZ2O71q9/+8BwKwZ0QtD9D8ObhrihJPr+vLLYlSuAU3/zL4cSlgbfeoGHTjCSJBa7NGcrF9/Bx/WJQ==}
+    engines: {node: '>=4'}
     dev: false
 
   /entities@1.0.0:
@@ -628,6 +652,12 @@ packages:
   /marked@0.7.0:
     resolution: {integrity: sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==}
     engines: {node: '>=0.10.0'}
+    hasBin: true
+    dev: false
+
+  /marked@4.3.0:
+    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
+    engines: {node: '>= 12'}
     hasBin: true
     dev: false
 

@@ -2,28 +2,24 @@
 
 'use strict'
 
-// build.js: metalsmith API method (alternative method: metalsmith.json https://github.com/segmentio/metalsmith/wiki/The-basics-of-Metalsmith)
+import Metalsmith from 'metalsmith'
+import debug from 'metalsmith-debug'
+import layouts from '@metalsmith/layouts'
+import dateFormatter from "metalsmith-date-formatter"
+import inPlace from "@metalsmith/in-place"
+import collections from "@metalsmith/collections"
+import wordcount from "metalsmith-word-count"
+import markdown from "@metalsmith/markdown"
+import feed from 'metalsmith-feed'
+import renamer from 'metalsmith-renamer'
+import paths from "metalsmith-paths"
+import assets from 'metalsmith-assets'
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
 
-const Metalsmith    = require('metalsmith')
-const debug         = require('metalsmith-debug')
-const layouts       = require('@metalsmith/layouts')
-const dateFormatter = require('metalsmith-date-formatter')
-const inPlace       = require('@metalsmith/in-place')
-const collections   = require('@metalsmith/collections')
-const wordcount     = require('metalsmith-word-count')
-const markdown      = require('metalsmith-markdown')
-const feed          = require('metalsmith-feed')
-const renamer       = require('metalsmith-renamer')
-const paths         = require('metalsmith-paths')
-const assets        = require('metalsmith-assets')
+const __dirname = dirname( fileURLToPath( import.meta.url ) );
 
-const metalsmith = new Metalsmith(__dirname)
-
-// Start
-// In Node.js, `__dirname` is always the directory in which the currently executing script resides
 Metalsmith(__dirname)
-
-  // Define global metadata
   .metadata({
     site: {
       name: 'dougwebb.site',
@@ -31,14 +27,10 @@ Metalsmith(__dirname)
       author: 'Doug Webb'
     }
   })
-      
-  // Specify source file directory
   .source('./src')              
-  
-  // Specify destination directory
   .destination('./public')              
 
-  // `posts/*.md` --transpile-to-html--> `posts/*.html`
+  // `*.md` -> `*.html`
   // (Used instead of inplace for table and html support since the jstransformer componenet is not updated)
   .use(markdown({
     smartypants: true
@@ -58,9 +50,7 @@ Metalsmith(__dirname)
     }    
   }))
   
-  // Calculate reading data
-  // REQUIRES .html Counts words, adds `wordCount` and `readingTime` metadata
-  .use(wordcount())
+  .use(wordcount()) // Requires files to be html
   
   // Prettify date format
   // Uses 'moment' date formats: http://momentjs.com/
