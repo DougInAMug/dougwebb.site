@@ -8,7 +8,7 @@ const Metalsmith    = require('metalsmith')
 const debug         = require('metalsmith-debug')
 const layouts       = require('@metalsmith/layouts')
 const dateFormatter = require('metalsmith-date-formatter')
-const inplace       = require('@metalsmith/in-place')
+const inPlace       = require('@metalsmith/in-place')
 const collections   = require('@metalsmith/collections')
 const wordcount     = require('metalsmith-word-count')
 const markdown      = require('metalsmith-markdown')
@@ -113,7 +113,7 @@ Metalsmith(__dirname)
   
   // Transpile `base` pages (index.html, 404, 403)
   // N.B. At this point `collection`, `wordCount`, etc now available: this allows the posts index to be built
-  .use(inplace())
+  .use(inPlace({ transform: 'nunjucks' }))
   
   .use(assets({
     source: './assets', // relative to the working directory
