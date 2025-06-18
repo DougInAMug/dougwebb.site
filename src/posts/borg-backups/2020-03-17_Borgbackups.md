@@ -5,6 +5,10 @@ subtitle: "Compressed, deduplicated and encrypted backups"
 tags: [borg, backups, linux, bash]
 ---
 
+2024-08-21 update: I now use and recommend [Vorta](https://vorta.borgbase.com/), a GUI for borg which I mention later
+
+---
+
 Long overdue a proper backup setup, prompted by a housemate's presentation on the topic, I decided to give Borg a bash.
 
 Until now I've been periodically/sporadically backing up my home folder to an external harddrive with `rsync`:
