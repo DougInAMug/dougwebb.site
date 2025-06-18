@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 20 Apr 2024 22:36:48 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[A8 micronotepad]]></title><description><![CDATA[<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://dougwebb.site</link><generator>metalsmith-feed</generator><lastBuildDate>Wed, 18 Jun 2025 22:40:42 GMT</lastBuildDate><atom:link href="https://dougwebb.site/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Doug Webb]]></author><item><title><![CDATA[A8 micronotepad]]></title><description><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>A8 micronotepad</title>
@@ -130,7 +130,9 @@
       
         <h1 class="noBottomMargin">Borg backups</h1>
         <p><i><time>17th Mar 2020</time></i></p>
-        <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
+        <p>2024-08-21 update: I now use and recommend <a href="https://vorta.borgbase.com/">Vorta</a>, a GUI for borg which I mention later</p>
+<hr>
+<p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
 <p>Until now I’ve been periodically/sporadically backing up my home folder to an external harddrive with <code>rsync</code>:</p>
 <pre><code class="language-bash">rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk 
 </code></pre>

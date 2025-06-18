@@ -14,7 +14,9 @@
       
         <h1 class="noBottomMargin">Borg backups</h1>
         <p><i><time>17th Mar 2020</time></i></p>
-        <p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
+        <p>2024-08-21 update: I now use and recommend <a href="https://vorta.borgbase.com/">Vorta</a>, a GUI for borg which I mention later</p>
+<hr>
+<p>Long overdue a proper backup setup, prompted by a housemate’s presentation on the topic, I decided to give Borg a bash.</p>
 <p>Until now I’ve been periodically/sporadically backing up my home folder to an external harddrive with <code>rsync</code>:</p>
 <pre><code class="language-bash">rsync -r -t -v -p -t -E --progress --delete -l -H -s /home/doug/ /run/var/media/harddisk 
 </code></pre>
