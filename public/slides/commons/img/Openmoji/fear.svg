@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
+  </head>
+  <body>
+    <div class="scrollBuffer"></div>
+    <article class="serif">
+      
+        <h1 class="noBottomMargin"></h1>
+        <p><i><time></time></i></p>
+        <svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <g id="line-supplement">
+    <path d="M42.8472,45.6583c0-2.592-3.834-4.694-6.869-4.694s-6.869,2.101-6.869,4.694,3.659.9248,6.694.9248S42.8472,48.25,42.8472,45.6583Z"/>
+  </g>
+  <g id="color">
+    <path fill="#fcea2b" d="M35.9772,12.9583a23,23,0,1,0,23,23A23.026,23.026,0,0,0,35.9772,12.9583Z"/>
+    <path fill="#92d3f5" d="M35.9772,24.7689A23.0392,23.0392,0,0,1,58.2053,41.8636a23,23,0,1,0-44.4561,0A23.0389,23.0389,0,0,1,35.9772,24.7689Z"/>
+    <path d="M42.8472,45.6583c0-2.592-3.834-4.694-6.869-4.694s-6.869,2.101-6.869,4.694,3.659.9248,6.694.9248S42.8472,48.25,42.8472,45.6583Z"/>
+  </g>
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.3564,22.669a8.44,8.44,0,0,0-9.0659,4.4981"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51.664,27.1671a8.44,8.44,0,0,0-9.0659-4.4981"/>
+    <circle cx="35.9772" cy="35.9583" r="23" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M42.8472,45.6583c0-2.592-3.834-4.694-6.869-4.694s-6.869,2.101-6.869,4.694,3.659.9248,6.694.9248S42.8472,48.25,42.8472,45.6583Z"/>
+    <path d="M29.9772,32.9583a3,3,0,1,1-3-3,3.0011,3.0011,0,0,1,3,3"/>
+    <path d="M47.9772,32.9583a3,3,0,1,1-3-3,3.0011,3.0011,0,0,1,3,3"/>
+  </g>
+</svg>
+
+      
+      <a href="/posts" class="backButton">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
+      </a>
+    </article>
+  </body>
+</html>

@@ -3,23 +3,13 @@ slidesTab: "nav__tab--current"
 ---
 
 {% extends "./layouts/base.njk" %}
-
 {% block main %}
-
-<div class="contentFrame">
-  <div class="desktopScrollbarBuffer"></div>
-  <div id="slides-page" class="page">
-    <div id="slides-page" class="page">
-      {% for slide in slides %}
-      <a href="{{ slide.paths.dhref }}">
-        <div class="entryBox entryBox--slides">
-          <h1 class="entryBox__title">{{ slide.title }}</h1>
-          <p class="entryBox__subtitle">{{ slide.date }} — {{ slide.wordCount }} words, ~{{ slide.readingTime }}</p>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
+  {% for slide in slides %}
+    <a href="{{ slide.paths.dhref }}">
+      <h2 class="noBottomMargin">{{ slide.title }}</h2>
+      <p class="noTopMargin">
+        <time>{{ slide.date }}</time>
+        — ~{{ (slide.wordCount / 100) | round * 100 }} words, ~{{ slide.readingTime }}</p>
+    </a>
+  {% endfor %}
 {% endblock %}
