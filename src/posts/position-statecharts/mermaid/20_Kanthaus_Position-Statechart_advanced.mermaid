@@ -1,0 +1,49 @@
+stateDiagram-v2
+	[*]
+	state "No position" as NoPosition
+	state "Kanthaus" as Kanthaus {
+	    state Visitor {
+			state "(Default)" as VisitorDefault
+			state "Due for checkin" as VisitorDue
+			state VisitorEvaluation <<choice>>
+	
+			VisitorDefault --> VisitorDue : after 7 days
+			VisitorDue --> VisitorDefault : checkin
+			VisitorDefault --> VisitorEvaluation : [3+ checkins?]<br/> evaluation
+			VisitorDue --> VisitorEvaluation : [3+ checkins?]<br/> evaluation
+			VisitorEvaluation --> VisitorDefault : accepted as Visitor
+		}
+	    state Volunteer {
+			state "(Default)" as VolunteerDefault
+			state "Due for evaluation" as VolunteerDue
+			state VolunteerEvaluation <<choice>>
+	
+			VolunteerDefault --> VolunteerDue : after 60 days
+			VolunteerDue --> VolunteerEvaluation : evaluation
+			VolunteerEvaluation --> VolunteerDefault : accepted as Volunteer
+		}
+	    state Member {
+			state "(Default)" as MemberDefault
+			state "Due for evaluation" as MemberDue
+			state MemberEvaluation <<choice>>
+	
+			MemberDefault --> MemberDue : after 180 days
+			MemberDue --> MemberEvaluation : evaluation
+			MemberEvaluation --> MemberDefault : accepted as Member
+		}
+    }
+
+    [*] --> NoPosition
+    
+    NoPosition --> VisitorDefault : hosting agreement starts
+    
+    Visitor --> NoPosition : hosting agreement ends
+    VisitorEvaluation --> VolunteerDefault : accepted as Volunteer
+    
+    VolunteerDue --> NoPosition : eval timeout
+    VolunteerEvaluation --> NoPosition : accepted as Visitor
+    VolunteerEvaluation --> MemberDefault : accepted as Member result
+    
+    MemberEvaluation --> NoPosition : accepted as VisitorDefault
+    MemberEvaluation--> VolunteerDefault : accepted as Volunteer result
+    MemberDue --> VolunteerDefault : eval timeout

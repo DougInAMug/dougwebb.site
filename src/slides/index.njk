@@ -2,14 +2,17 @@
 slidesTab: "nav__tab--current"
 ---
 
-{% extends "./layouts/base.njk" %}
+{% extends "base.njk" %}
 {% block main %}
-  {% for slide in slides %}
-    <a href="{{ slide.paths.dhref }}">
-      <h2 class="noBottomMargin">{{ slide.title }}</h2>
-      <p class="noTopMargin">
-        <time>{{ slide.date }}</time>
-        — ~{{ (slide.wordCount / 100) | round * 100 }} words, ~{{ slide.readingTime }}</p>
-    </a>
-  {% endfor %}
+  {% include "nav.njk" %}
+  <main class="slides">
+    {% for slide in slides %}
+      <a href="{{ slide.paths.dhref }}">
+        <h2 class="noBottomMargin noTopMargin">{{ slide.title }}</h2>
+        <p class="noTopMargin">
+          <time>{{ slide.date }}</time>
+          — ~{{ (slide.wordCount / 100) | round * 100 }} words, ~{{ slide.readingTime }}</p>
+      </a>
+    {% endfor %}
+  </main>
 {% endblock %}

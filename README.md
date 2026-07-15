@@ -12,6 +12,13 @@
   1. how I can support people/vice-versa.
 1. To learn and enjoy what's possible with modern web-design.
 
+## Todo
+- [ ] nav to bottom on mobile
+  - [ ] mobile nav to hide/show on scroll https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+- [ ] links on homepage -> grid
+- [ ] color palette and variable
+- [ ] more fluidity... on elements https://css-tricks.com/consistent-fluidly-scaling-type-and-spacing/
+
 ## Design desires 
 - mobile first
   - all other devices a close second
@@ -91,7 +98,6 @@ $$('*').map((A,B)=>A.style.outline=`1px solid hsl(${B*B},99%,50%`)
 - Douglas Blank's site: https://cs.brynmawr.edu/~dblank/
 - Wu-lee, metalsmith example: https://git.coop/wu-lee/metalsmith-ssg/tree/master
 - Glen Weyls (Quadratic voting guy) http://glenweyl.com
-
 - https://tallyco.in/
 
 # CSS notes

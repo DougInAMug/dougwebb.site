@@ -1,0 +1,24 @@
+stateDiagram-v2
+    [*]
+    state "Off 💤" as Off
+    state "On ⚡" as On {
+	    [*]
+        state "Heating ♨️" as Heating
+        state "Cooling 🧊" as Cooling
+        
+        [*] --> Heating
+	    Heating --> Cooling : toggle temperature
+	    Cooling --> Heating : toggle temperature
+        --
+        [*]
+        state "Fan on 🌬️" as FanOn
+        state "Fan auto 🤖" as FanAuto
+        
+        [*] --> FanOn
+	    FanOn --> FanAuto : toggle fan
+	    FanAuto --> FanOn : toggle fan
+    }
+
+    [*] --> Off
+    Off --> On : switch on
+    On --> Off : switch off

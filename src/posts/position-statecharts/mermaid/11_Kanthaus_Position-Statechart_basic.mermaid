@@ -1,0 +1,17 @@
+stateDiagram-v2
+	state "no position" as NoPosition
+	state "Kanthaus" as Kanthaus {
+	    Visitor
+	    Volunteer
+	    Member 
+	    
+	    Visitor --> Volunteer
+	    Volunteer --> Member
+	    Member --> Volunteer
+    }
+
+    [*] --> NoPosition
+    NoPosition --> Visitor
+    Visitor --> NoPosition
+    Volunteer --> NoPosition
+    Member --> NoPosition

@@ -1,0 +1,8 @@
+stateDiagram-v2
+    [*]
+    state "Off 🌚" as Off
+    state "On 🌝" as On
+
+    [*] --> Off
+    Off --> On : switch on
+    On --> Off : switch off

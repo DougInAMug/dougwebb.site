@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
-  </head>
-  <body>
-    <div class="scrollBuffer"></div>
-    <article class="serif">
-      
-        <h1 class="noBottomMargin"></h1>
-        <p><i><time></time></i></p>
-        <svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+<svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
   <g id="color">
     <path fill="#92d3f5" d="M16.9208,59.496S15.1563,45.87,26.92,45.87c3.1288,2.0859,5.81,3.5274,8.8225,3.5213H35.62c3.013.0061,6.1836-1.5334,9.3126-3.6193,11.3366-.034,9.42,13.6258,9.6459,13.7239"/>
     <path fill="#61b2e4" d="M45.0648,44.7917c-3.1074,2.0716-4.9749,3.2349-8.9573,3.8119,12.8049.4033,12.8049,6.9712,13.552,10.8923h5.0121S56.8282,44.7917,45.0648,44.7917Z"/>
@@ -59,11 +43,3 @@
     </g>
   </g>
 </svg>
-
-      
-      <a href="/posts" class="backButton">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
-      </a>
-    </article>
-  </body>
-</html>

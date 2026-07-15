@@ -1,0 +1,17 @@
+stateDiagram-v2
+	state Member {
+		(Default)
+		state "Due for evaluation" as DueForEvaluation
+		state Evaluation <<choice>>
+	
+		[*] --> (Default)
+		(Default) --> DueForEvaluation : after 180 days
+		DueForEvaluation --> Evaluation : evaluation
+		Evaluation --> (Default) : accepted as Member
+	}
+	Volunteer
+	state "No position" as NoPosition
+	
+	DueForEvaluation --> Volunteer : <strong>after 180 days<strong> <br /> (1 year total)
+	Evaluation --> Volunteer : accepted as Volunteer
+	Evaluation --> NoPosition : accepted as Visitor

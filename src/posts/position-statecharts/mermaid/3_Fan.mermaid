@@ -1,0 +1,15 @@
+stateDiagram-v2
+    [*]
+    state "Off 💤" as Off
+    state "On ⚡ <br/> Fan on 🌬️" as OnFanOn
+    state "On ⚡ <br/> Fan auto 🤖" as OnFanAuto
+
+    [*] --> Off
+    
+    Off --> OnFanOn : switch on
+    
+    OnFanOn --> OnFanAuto : toggle fan
+    OnFanOn --> Off : switch off
+    
+    OnFanAuto --> OnFanOn : toggle fan
+    OnFanAuto --> Off : switch off

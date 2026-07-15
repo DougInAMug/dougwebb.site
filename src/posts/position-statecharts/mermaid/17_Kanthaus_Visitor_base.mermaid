@@ -1,0 +1,15 @@
+stateDiagram-v2
+	[*]
+	state "No position" as NoPosition
+	state Visitor {
+		(Default)
+		state "Due for checkin" as DueForCheckin
+	
+		[*] --> (Default)
+		(Default) --> DueForCheckin : after 7 days
+		DueForCheckin --> (Default) : checkin
+	}
+	
+	[*] --> NoPosition
+	NoPosition --> Visitor : hosting agreement
+	Visitor --> NoPosition : hosting agreement ends

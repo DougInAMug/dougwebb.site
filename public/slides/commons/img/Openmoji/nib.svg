@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
-  </head>
-  <body>
-    <div class="scrollBuffer"></div>
-    <article class="serif">
-      
-        <h1 class="noBottomMargin"></h1>
-        <p><i><time></time></i></p>
-        <svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+<svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
   <g id="color">
     <path fill="#3f3f3f" d="M50.8751,34.0285a2.7147,2.7147,0,0,1-1.9317-.8h0L38.7169,23.0021a2.7308,2.7308,0,0,1,.0009-3.8628l9.5557-9.5566a1.0168,1.0168,0,0,1,1.3965,0L62.3634,22.276a.988.988,0,0,1,0,1.3955l-9.5567,9.5571A2.714,2.714,0,0,1,50.8751,34.0285Z"/>
     <path fill="#fcea2b" d="M48.1407,35.0242a1.8386,1.8386,0,0,1-1.2992-.54h0L37.48,25.1205a1.8007,1.8007,0,0,1-.03-2.5431l1.1156-1.1156a1.0078,1.0078,0,0,1,1.4266,0l10.51,10.51a1.0087,1.0087,0,0,1,0,1.426L49.3856,34.513A1.7548,1.7548,0,0,1,48.1407,35.0242Zm.1264-1.9679.0009.0015v-.0005Z"/>
@@ -29,11 +13,3 @@
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.9721,10.28l-9.5573,9.5573a1.7446,1.7446,0,0,0-.155,2.29l-1.1337,1.1307a.7948.7948,0,0,0,.03,1.123L47.565,33.79a.7948.7948,0,0,0,1.123.03l1.1291-1.1349a1.7446,1.7446,0,0,0,2.2911-.1539l9.5573-9.5572"/>
   </g>
 </svg>
-
-      
-      <a href="/posts" class="backButton">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
-      </a>
-    </article>
-  </body>
-</html>

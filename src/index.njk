@@ -2,50 +2,53 @@
 homeTab: "nav__tab--current"
 ---
 
-{% extends "./layouts/base.njk" %}
-
+{% extends "base.njk" %}
 {% block main %}
-
-  <p><b>Hey, Doug here.</b> I'm passionate about developing practices for effective cooperation, with a focus on post-consensus decision-making.</p>
-  
-  <img src="/assets/img/Smiling_Kirchheim.jpg" class="image image--profilePic" alt="Me, smiling, facing you; there is long grass and trees in the background.">
-  
+{% include "nav.njk" %}
+<main class="home">
+  <p>
+    <b>Hey, Doug here.</b>
+    I'm passionate about developing practices for effective cooperation, with a focus on post-consensus decision-making.</p>
+  <img
+    src="./assets/img/Smiling_Kirchheim.jpg"
+    class="image--profilePic"
+    alt="Me, smiling, facing you; there is long grass and trees in the background.">
   <div class="linkbar">
     <a class="linkbar__entry" href="mailto:doug@dougwebb.site">
-      {% include "./assets/img/icons/email.svg" %} <!-- svg code must be in doc for styling, including nicer than raw -->
+      {% include "layout-icons/email.svg" %}
+      <!-- svg code must be in doc for styling, including nicer than raw -->
       <span>Email</span>
     </a>
     <a class="linkbar__entry" href="https://mastodon.xyz/@douginamug">
-      {% include "./assets/img/icons/mastodon.svg" %}
+      {% include "layout-icons/mastodon.svg" %}
       <span>Mastodon</span>
     </a>
     <a class="linkbar__entry" href="https://github.com/DougInAMug">
-      {% include "./assets/img/icons/github.svg" %}
+      {% include "layout-icons/github.svg" %}
       <span>Github</span>
     </a>
     <a class="linkbar__entry" href="https://matrix.to/#/@douginamug:matrix.org">
-      {% include "./assets/img/icons/matrix-org--mod.svg" %}
+      {% include "layout-icons/matrix-org--mod.svg" %}
       <span>Matrix</span>
     </a>
     <a class="linkbar__entry" href="https://t.me/douginamug">
-      {% include "./assets/img/icons/telegram--mod.svg" %}
+      {% include "layout-icons/telegram--mod.svg" %}
       <span>Telegram</span>
     </a>
   </div>
-    
-  <div class="linkbar linkbar--site">
-    <a class="linkbar__entry linkbar__entry--site" href="https://gitlab.com/DougInAMug/dougwebb.site">
-      <span class="small-mono">Source</span>
-      {% include "./assets/img/icons/source.svg" %}
+  <div class="linkbar">
+    <a class="linkbar__entry" href="https://gitlab.com/DougInAMug/dougwebb.site">
+      {% include "layout-icons/source.svg" %}
+      <span>Source</span>
     </a>
-    <a class="linkbar__entry linkbar__entry--site" href="rss.xml">
-      <span class="small-mono">RSS</span>
-      {% include "./assets/img/icons/rss.svg" %}
+    <a class="linkbar__entry" href="rss.xml">
+      {% include "layout-icons/rss.svg" %}
+      <span>RSS</span>
     </a>
-    <a class="linkbar__entry linkbar__entry--site" href="https://creativecommons.org/publicdomain/zero/1.0/">
-      <span class="small-mono">CC0</span>
-      {% include "./assets/img/icons/cc0--mod.svg" %}
+    <a class="linkbar__entry" href="https://creativecommons.org/publicdomain/zero/1.0/">
+      {% include "layout-icons/cc0--mod.svg" %}
+      <span>CC0</span>
     </a>
   </div>
-
+</main>
 {% endblock %}

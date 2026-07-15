@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
-  </head>
-  <body>
-    <div class="scrollBuffer"></div>
-    <article class="serif">
-      
-        <h1 class="noBottomMargin"></h1>
-        <p><i><time></time></i></p>
-        <svg id="emoji" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg id="emoji" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <g id="color">
     <path fill="#D0CFCE" d="M64.8,43.8l-1.1-0.6c-0.4-0.2-0.6-0.6-0.5-1c0.3-1.9,0.5-8.5-9.7-11.5c-0.2-0.1-0.4-0.1-0.6-0.1l-19.6,0.1 c-0.4,0-0.8,0.1-1.1,0.3l-10.3,6.9c-0.2,0.1-0.4,0.2-0.6,0.2c-1.9-0.1-3.7,0.1-5.6,0.4c-5.4,1.1-7.6,4-8.4,5.5 c-0.2,0.3-0.2,0.7-0.2,1c0.1,2.4-1.5,5.1,0.9,7.3l19.4-0.1l20.4-0.5l16.1-0.2c0.9-0.1,2.4-1.4,2.8-2.2C68.4,46.6,65,43.9,64.8,43.8 z"/>
     <path fill="#9B9B9A" d="M17.3,46.2c-2.2,0-4,1.8-4,4s1.8,4,4,4s4-1.8,4-4S19.5,46.2,17.3,46.2z"/>
@@ -40,11 +24,3 @@
     <line id="xx" x1="24.1" x2="50.1" y1="43.2" y2="43.2" fill="none" stroke="#61B2E4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.1"/>
   </g>
 </svg>
-
-      
-      <a href="/posts" class="backButton">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg-inline--fa fa-arrow-alt-circle-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
-      </a>
-    </article>
-  </body>
-</html>

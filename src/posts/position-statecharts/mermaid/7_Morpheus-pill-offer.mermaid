@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*]
+    state "🕶️ Morpheus offering you pills" as MorpheusOffer
+    state "<em>story ends</em>" as StoryEnds
+    state "<em>stay in Wonderland</em>" as Wonderland
+    state choice <<choice>>
+
+    [*] --> MorpheusOffer
+    
+    MorpheusOffer --> choice : decision
+    
+    choice --> StoryEnds : 🔵 take blue pill
+    choice --> Wonderland : 🔴 take red pill
+    choice --> ? : refuse both

@@ -1,0 +1,8 @@
+stateDiagram-v2
+	state Member {
+		(Default)
+		state "Due for evaluation" as DueForEvaluation
+	
+		[*] --> (Default)
+		(Default) --> DueForEvaluation : after 180 days
+	}

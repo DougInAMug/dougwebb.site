@@ -1,0 +1,17 @@
+stateDiagram-v2
+	state "no position" as NoPosition
+    state "Kanthaus" as Kanthaus {
+	    Visitor
+	    Volunteer
+	    Member 
+    
+	    Visitor --> Volunteer : [3+ checkins?] <br /> evaluation result
+	    Volunteer --> Member : evaluation result
+	    Member --> Volunteer : evaluation result,<br/> evaluation timeout,<br/> conflict intervention,<br/> voluntary
+    }
+
+    [*] --> NoPosition
+    NoPosition --> Visitor : hosting agreement starts
+    Visitor --> NoPosition : hosting agreement ends,<br/> voluntary
+    Volunteer --> NoPosition : evaluation result,<br/> evaluation timeout,<br/> conflict intervention,<br/> voluntary
+    Member --> NoPosition : evaluation result,<br/> conflict intervention,<br/> voluntary

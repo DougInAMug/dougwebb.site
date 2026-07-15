@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Doug Webb</title>
+    <title>Doug Webb's site</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/css/sanitize_12.0.1.css">
@@ -9,24 +9,35 @@
     <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
   </head>
   <body>
-    <div class="scrollBuffer"></div>
-    <nav>
-      <a href="/"          class="nav__tab nav__tab--current">      Home </a>
-      <a href="/projects"  class="nav__tab ">  Projects </a>
-      <a href="/slides"    class="nav__tab ">     Slides </a>
-      <a href="/posts"     class="nav__tab ">     Posts </a>
-    </nav>
-    <main>
-      
-
-  <p><b>Hey, Doug here.</b> I'm passionate about developing practices for effective cooperation, with a focus on post-consensus decision-making.</p>
-  
-  <img src="/assets/img/Smiling_Kirchheim.jpg" class="image image--profilePic" alt="Me, smiling, facing you; there is long grass and trees in the background.">
-  
+    
+<div class="scrollBuffer"></div>
+<nav>
+    <a href="/" class="nav__tab nav__tab--current">
+        Home
+    </a>
+    <a href="/projects" class="nav__tab ">
+        Projects
+    </a>
+    <a href="/slides" class="nav__tab ">
+        Slides
+    </a>
+    <a href="/posts" class="nav__tab ">
+        Posts
+    </a>
+</nav>
+<main class="home">
+  <p>
+    <b>Hey, Doug here.</b>
+    I'm passionate about developing practices for effective cooperation, with a focus on post-consensus decision-making.</p>
+  <img
+    src="./assets/img/Smiling_Kirchheim.jpg"
+    class="image--profilePic"
+    alt="Me, smiling, facing you; there is long grass and trees in the background.">
   <div class="linkbar">
     <a class="linkbar__entry" href="mailto:doug@dougwebb.site">
       <svg aria-hidden="true" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
- <!-- svg code must be in doc for styling, including nicer than raw -->
+
+      <!-- svg code must be in doc for styling, including nicer than raw -->
       <span>Email</span>
     </a>
     <a class="linkbar__entry" href="https://mastodon.xyz/@douginamug">
@@ -52,18 +63,16 @@
       <span>Telegram</span>
     </a>
   </div>
-    
-  <div class="linkbar linkbar--site">
-    <a class="linkbar__entry linkbar__entry--site" href="https://gitlab.com/DougInAMug/dougwebb.site">
-      <span class="small-mono">Source</span>
+  <div class="linkbar">
+    <a class="linkbar__entry" href="https://gitlab.com/DougInAMug/dougwebb.site">
       <svg aria-hidden="true" data-prefix="fas" data-icon="file-code" class="svg-inline--fa fa-file-code fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M384 121.941V128H256V0h6.059c6.365 0 12.47 2.529 16.971 7.029l97.941 97.941A24.005 24.005 0 0 1 384 121.941zM248 160c-13.2 0-24-10.8-24-24V0H24C10.745 0 0 10.745 0 24v464c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V160H248zM123.206 400.505a5.4 5.4 0 0 1-7.633.246l-64.866-60.812a5.4 5.4 0 0 1 0-7.879l64.866-60.812a5.4 5.4 0 0 1 7.633.246l19.579 20.885a5.4 5.4 0 0 1-.372 7.747L101.65 336l40.763 35.874a5.4 5.4 0 0 1 .372 7.747l-19.579 20.884zm51.295 50.479l-27.453-7.97a5.402 5.402 0 0 1-3.681-6.692l61.44-211.626a5.402 5.402 0 0 1 6.692-3.681l27.452 7.97a5.4 5.4 0 0 1 3.68 6.692l-61.44 211.626a5.397 5.397 0 0 1-6.69 3.681zm160.792-111.045l-64.866 60.812a5.4 5.4 0 0 1-7.633-.246l-19.58-20.885a5.4 5.4 0 0 1 .372-7.747L284.35 336l-40.763-35.874a5.4 5.4 0 0 1-.372-7.747l19.58-20.885a5.4 5.4 0 0 1 7.633-.246l64.866 60.812a5.4 5.4 0 0 1-.001 7.879z"></path></svg>
+      <span>Source</span>
     </a>
-    <a class="linkbar__entry linkbar__entry--site" href="rss.xml">
-      <span class="small-mono">RSS</span>
+    <a class="linkbar__entry" href="rss.xml">
       <svg aria-hidden="true" data-prefix="fas" data-icon="rss" class="svg-inline--fa fa-rss fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg>
+      <span>RSS</span>
     </a>
-    <a class="linkbar__entry linkbar__entry--site" href="https://creativecommons.org/publicdomain/zero/1.0/">
-      <span class="small-mono">CC0</span>
+    <a class="linkbar__entry" href="https://creativecommons.org/publicdomain/zero/1.0/">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="-0.5 0.5 64 64" enable-background="new -0.5 0.5 64 64" xml:space="preserve">
 <g>
 	<circle fill="#FFFFFF" cx="31.325" cy="32.873" r="30.096"/>
@@ -72,10 +81,10 @@
 </g>
 </svg>
 
+      <span>CC0</span>
     </a>
   </div>
+</main>
 
-
-    </main>
   </body>
 </html>

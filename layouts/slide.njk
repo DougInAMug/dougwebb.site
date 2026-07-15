@@ -1,54 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>{{ title }}</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="/assets/img/icons/favicon-256.png">
-    <style type="text/css">
-      html {
-        font-family: charter;
-      }
-      p,
-      li {
-        line-height: 1.5;
-      }
-      img {
-        max-width: 100%;
-        max-height: 28em;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      img > * {
-        text-align: center;
-      }
-      .ref {
-        font-size: 0.8rem;
-      }
-      .remark-slide-content {
-        vertical-align: middle;
-      }
-    </style>
-  </head>
-  <body>
+{% extends "base.njk" %}
+{% block main %}
+  {% include "nav.njk" %}
+  <main class="slide">
     <textarea id="source">
       {% block body %}
         {{ contents | safe }}
       {% endblock %}
     </textarea>
-    <script src="/assets/js/remark-latest.min.js"></script>
-    <script type="text/javascript">
-      remark.macros.height = function (value) {
-        var url = this;
-        return '<img src="' + url + '" style="height: ' + value + '" />';
-      };
-      var slideshow = remark.create();
-    </script>
-  </body>
-</html>
+  </main>
+  <script src="/assets/js/remark-latest.min.js"></script>
+  <script type="text/javascript">
+    var slideshow = remark.create();
+  </script>
+{% endblock %}

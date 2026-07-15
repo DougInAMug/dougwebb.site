@@ -1,0 +1,15 @@
+stateDiagram-v2
+	state Visitor {
+		(Default)
+		state "Due for checkin" as DueForCheckin
+		state Evaluation <<choice>>
+	
+		[*] --> (Default)
+		(Default) --> DueForCheckin : after 7 days
+		DueForCheckin --> (Default) : checkin
+		(Default) --> Evaluation : [3+ checkins?]<br/> evaluation
+		DueForCheckin --> Evaluation : [3+ checkins?]<br/> evaluation
+		Evaluation --> (Default) : accepted as Visitor
+	}
+	
+	Evaluation --> Volunteer : accepted as Volunteer
